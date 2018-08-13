@@ -11,7 +11,7 @@ namespace app\index\controller;
 
 use app\common\controller\Frontend;
 use think\Lang;
-use think\db;
+use think\Db;
 use QL\QueryList;
 
 /**
@@ -24,6 +24,7 @@ class Caiji
     private $rule = array();
     private $bigCategory = '';
     private $smallCategory = array();
+    private $parent_id = 0;
 
 
     public function _initialize()
@@ -50,13 +51,37 @@ class Caiji
         //其它禽类
         $data['other_qinlei'] = QueryList::get($url)->find('div.category_sub:nth-child(7) > ul > li > a')->attrs('title');
 
+        $temp = [];
+        $param = [];
         foreach($data as $key => $value){
-            var_dump($value);
+            foreach($value as $k => $v){
+
+                if ($k == 0){
+                    $temp[$k]['parent_id'] = 0;
+                    $temp[$k]['category_name'] = $v;
+                    $temp[$k]['create_time'] = date('Y-m-d H:i:s');
+                    $temp[$k]['update_time'] = date('Y-m-d H:i:s');
+                    $res = db::name('shicai_category')->insert();
+                    if ($res){
+                        $this->parent_id = db::name('shicai_category')->getLastInsID();
+                    }
+                    unset($temp[$k]);
+                }else{
+                    $temp[$k]['parent_id'] = $this->parent_id;
+                    $temp[$k]['category_name'] = $v;
+                    $temp[$k]['create_time'] = date('Y-m-d H:i:s');
+                    $temp[$k]['update_time'] = date('Y-m-d H:i:s');
+                }
+                $res = db::name('shicai_category')->insertAll($temp);
+                if ($res){
+                    echo $k.'-';
+                }
+            }
         }
-//        db::name('shicai_category')
+
         //打印结果
-        echo '<pre>';
-        print_r($data['niurou']->all());
+//        echo '<pre>';
+//        print_r($data['niurou']->all());
     }
 
 }
