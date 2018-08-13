@@ -57,25 +57,26 @@ class Caiji
             foreach($value as $k => $v){
 
                 if ($k == 0){
-                    $temp[$k]['parent_id'] = 0;
-                    $temp[$k]['category_name'] = $v;
-                    $temp[$k]['create_time'] = date('Y-m-d H:i:s');
-                    $temp[$k]['update_time'] = date('Y-m-d H:i:s');
-                    $res = db::name('shicai_category')->insert();
+                    $temp['parent_id'] = 0;
+                    $temp['category_name'] = $v;
+                    $temp['create_time'] = date('Y-m-d H:i:s');
+                    $temp['update_time'] = date('Y-m-d H:i:s');
+
+                    $res = db::name('shicai_category')->insert($temp);
                     if ($res){
                         $this->parent_id = db::name('shicai_category')->getLastInsID();
                     }
-                    unset($temp[$k]);
                 }else{
-                    $temp[$k]['parent_id'] = $this->parent_id;
-                    $temp[$k]['category_name'] = $v;
-                    $temp[$k]['create_time'] = date('Y-m-d H:i:s');
-                    $temp[$k]['update_time'] = date('Y-m-d H:i:s');
+                    $temp['parent_id'] = $this->parent_id;
+                    $temp['category_name'] = $v;
+                    $temp['create_time'] = date('Y-m-d H:i:s');
+                    $temp['update_time'] = date('Y-m-d H:i:s');
+                    $res = db::name('shicai_category')->insert($temp);
+                    if ($res){
+                        echo '采集分类成功';
+                    }
                 }
-                $res = db::name('shicai_category')->insertAll($temp);
-                if ($res){
-                    echo $k.'-';
-                }
+
             }
         }
 
