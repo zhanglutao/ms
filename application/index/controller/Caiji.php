@@ -123,7 +123,7 @@ class Caiji
         $url = 'https://home.meishichina.com/recipe/recai/';
         //菜名
         $data['title'] = QueryList::get($url)->find('#J_list > ul > li > div.pic > a')->attrs('title');
-        $data['image'] = QueryList::get($url)->find('#J_list > ul > li > div.pic > a > img')->attrs('src');
+        $data['image'] = QueryList::get($url)->find('#J_list > ul > li > div.pic > a > img')->attrs('data-src');
         var_dump($data);
     }
 }
