@@ -20,10 +20,6 @@ use QL\QueryList;
  */
 class Caiji
 {
-    private $url = '';
-    private $rule = array();
-    private $bigCategory = '';
-    private $smallCategory = array();
     private $parent_id = 0;
 
 
@@ -52,7 +48,6 @@ class Caiji
         $data['other_qinlei'] = QueryList::get($url)->find('div.category_sub:nth-child(7) > ul > li > a')->attrs('title');
 
         $temp = [];
-        $param = [];
         foreach($data as $key => $value){
             foreach($value as $k => $v){
 
@@ -61,7 +56,6 @@ class Caiji
                     $temp['category_name'] = $v;
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
-
                     $res = db::name('shicai_category')->insert($temp);
                     if ($res){
                         $this->parent_id = db::name('shicai_category')->getLastInsID();
@@ -79,10 +73,57 @@ class Caiji
 
             }
         }
-
-        //打印结果
-//        echo '<pre>';
-//        print_r($data['niurou']->all());
     }
 
+    public function shuichanpin(){
+        //采集某页面所有的图片
+        $url = 'https://www.meishichina.com/YuanLiao/category/scl/';
+        $data = [];
+        //淡水鱼
+        $data['danshuiyu'] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
+        //海水鱼
+        $data['haishuiyu'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+        //虾类
+        $data['xia'] = QueryList::get($url)->find('div.category_sub:nth-child(3) > ul > li > a')->attrs('title');
+        //蟹类
+        $data['xie'] = QueryList::get($url)->find('div.category_sub:nth-child(4) > ul > li > a')->attrs('title');
+        //贝类
+        $data['bei'] = QueryList::get($url)->find('div.category_sub:nth-child(5) > ul > li > a')->attrs('title');
+        //其他水产类
+        $data['other'] = QueryList::get($url)->find('div.category_sub:nth-child(6) > ul > li > a')->attrs('title');
+
+        $temp = [];
+        foreach($data as $key => $value){
+            foreach($value as $k => $v){
+
+                if ($k == 0){
+                    $temp['parent_id'] = 0;
+                    $temp['category_name'] = $v;
+                    $temp['create_time'] = date('Y-m-d H:i:s');
+                    $temp['update_time'] = date('Y-m-d H:i:s');
+                    $res = db::name('shicai_category')->insert($temp);
+                    if ($res){
+                        $this->parent_id = db::name('shicai_category')->getLastInsID();
+                    }
+                }else{
+                    $temp['parent_id'] = $this->parent_id;
+                    $temp['category_name'] = $v;
+                    $temp['create_time'] = date('Y-m-d H:i:s');
+                    $temp['update_time'] = date('Y-m-d H:i:s');
+                    $res = db::name('shicai_category')->insert($temp);
+                    if ($res){
+                        echo '采集分类成功';
+                    }
+                }
+
+            }
+        }
+    }
+    public function recai(){
+        $url = 'https://home.meishichina.com/recipe/recai/';
+        //菜名
+        $data['title'] = QueryList::get($url)->find('#J_list > ul > li > div.pic > a')->attrs('title');
+        $data['image'] = QueryList::get($url)->find('#J_list > ul > li > div.pic > a > img')->attrs('src');
+        var_dump($data);
+    }
 }
