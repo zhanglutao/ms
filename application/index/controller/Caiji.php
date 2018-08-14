@@ -119,6 +119,205 @@ class Caiji
             }
         }
     }
+
+    public function shucai(){
+        //采集某页面所有的图片
+        $url = 'https://www.meishichina.com/YuanLiao/category/shucailei/';
+        $data = [];
+        //茎叶类
+        $data['jingye'] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
+        //瓜菜类
+        $data['guacai'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+        //果实类
+        $data['guoshi'] = QueryList::get($url)->find('div.category_sub:nth-child(3) > ul > li > a')->attrs('title');
+        //根茎类
+        $data['genjing'] = QueryList::get($url)->find('div.category_sub:nth-child(4) > ul > li > a')->attrs('title');
+        //菌类
+        $data['jun'] = QueryList::get($url)->find('div.category_sub:nth-child(5) > ul > li > a')->attrs('title');
+        //其他
+        $data['other'] = QueryList::get($url)->find('div.category_sub:nth-child(6) > ul > li > a')->attrs('title');
+
+        $temp = [];
+        foreach($data as $key => $value){
+            foreach($value as $k => $v){
+
+                if ($k == 0){
+                    $temp['parent_id'] = 0;
+                    $temp['category_name'] = $v;
+                    $temp['create_time'] = date('Y-m-d H:i:s');
+                    $temp['update_time'] = date('Y-m-d H:i:s');
+                    $res = db::name('shicai_category')->insert($temp);
+                    if ($res){
+                        $this->parent_id = db::name('shicai_category')->getLastInsID();
+                    }
+                }else{
+                    $temp['parent_id'] = $this->parent_id;
+                    $temp['category_name'] = $v;
+                    $temp['create_time'] = date('Y-m-d H:i:s');
+                    $temp['update_time'] = date('Y-m-d H:i:s');
+                    $res = db::name('shicai_category')->insert($temp);
+                    if ($res){
+                        echo '采集分类成功';
+                    }
+                }
+
+            }
+        }
+    }
+
+    public function guopin(){
+        //采集某页面所有的图片
+        $url = 'https://www.meishichina.com/YuanLiao/category/guopinlei/';
+        $data = [];
+        //鲜果类
+        $data['xianguo'] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
+        //干果类
+        $data['ganguo'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+
+        $temp = [];
+        foreach($data as $key => $value){
+            foreach($value as $k => $v){
+
+                if ($k == 0){
+                    $temp['parent_id'] = 0;
+                    $temp['category_name'] = $v;
+                    $temp['create_time'] = date('Y-m-d H:i:s');
+                    $temp['update_time'] = date('Y-m-d H:i:s');
+                    $res = db::name('shicai_category')->insert($temp);
+                    if ($res){
+                        $this->parent_id = db::name('shicai_category')->getLastInsID();
+                    }
+                }else{
+                    $temp['parent_id'] = $this->parent_id;
+                    $temp['category_name'] = $v;
+                    $temp['create_time'] = date('Y-m-d H:i:s');
+                    $temp['update_time'] = date('Y-m-d H:i:s');
+                    $res = db::name('shicai_category')->insert($temp);
+                    if ($res){
+                        echo '.';
+                    }
+                }
+
+            }
+        }
+    }
+
+    public function mimian(){
+        //采集某页面所有的图片
+        $url = 'https://www.meishichina.com/YuanLiao/category/mmdr/';
+        $data = [];
+        //米类
+        $data['mi'] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
+        //面类
+        $data['mian'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+        //豆类
+        $data['dou'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+        //豆制品
+        $data['douzhipin'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+        //乳类
+        $data['ru'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+        //方便食品类
+        $data['fangbian'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+
+        $temp = [];
+        foreach($data as $key => $value){
+            foreach($value as $k => $v){
+
+                if ($k == 0){
+                    $temp['parent_id'] = 0;
+                    $temp['category_name'] = $v;
+                    $temp['create_time'] = date('Y-m-d H:i:s');
+                    $temp['update_time'] = date('Y-m-d H:i:s');
+                    $res = db::name('shicai_category')->insert($temp);
+                    if ($res){
+                        $this->parent_id = db::name('shicai_category')->getLastInsID();
+                    }
+                }else{
+                    $temp['parent_id'] = $this->parent_id;
+                    $temp['category_name'] = $v;
+                    $temp['create_time'] = date('Y-m-d H:i:s');
+                    $temp['update_time'] = date('Y-m-d H:i:s');
+                    $res = db::name('shicai_category')->insert($temp);
+                    if ($res){
+                        echo '.';
+                    }
+                }
+
+            }
+        }
+    }
+
+    public function tiaoweipin(){
+        $url = 'https://www.meishichina.com/YuanLiao/category/tiaoweipinl/';
+        $data = [];
+        //调味品
+        $data['tiaoweipin'] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
+        //食用油
+        $data['shiyongyou'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+
+        $temp = [];
+        foreach($data as $key => $value){
+            foreach($value as $k => $v){
+
+                if ($k == 0){
+                    $temp['parent_id'] = 0;
+                    $temp['category_name'] = $v;
+                    $temp['create_time'] = date('Y-m-d H:i:s');
+                    $temp['update_time'] = date('Y-m-d H:i:s');
+                    $res = db::name('shicai_category')->insert($temp);
+                    if ($res){
+                        $this->parent_id = db::name('shicai_category')->getLastInsID();
+                    }
+                }else{
+                    $temp['parent_id'] = $this->parent_id;
+                    $temp['category_name'] = $v;
+                    $temp['create_time'] = date('Y-m-d H:i:s');
+                    $temp['update_time'] = date('Y-m-d H:i:s');
+                    $res = db::name('shicai_category')->insert($temp);
+                    if ($res){
+                        echo '.';
+                    }
+                }
+
+            }
+        }
+    }
+
+    public function yaoshi(){
+        $url = 'https://www.meishichina.com/YuanLiao/category/yaoshiqita/';
+        $data = [];
+        //药食
+        $data['tiaoweipin'] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
+
+        $temp = [];
+        foreach($data as $key => $value){
+            foreach($value as $k => $v){
+
+                if ($k == 0){
+                    $temp['parent_id'] = 0;
+                    $temp['category_name'] = $v;
+                    $temp['create_time'] = date('Y-m-d H:i:s');
+                    $temp['update_time'] = date('Y-m-d H:i:s');
+                    $res = db::name('shicai_category')->insert($temp);
+                    if ($res){
+                        $this->parent_id = db::name('shicai_category')->getLastInsID();
+                    }
+                }else{
+                    $temp['parent_id'] = $this->parent_id;
+                    $temp['category_name'] = $v;
+                    $temp['create_time'] = date('Y-m-d H:i:s');
+                    $temp['update_time'] = date('Y-m-d H:i:s');
+                    $res = db::name('shicai_category')->insert($temp);
+                    if ($res){
+                        echo '.';
+                    }
+                }
+
+            }
+        }
+    }
+
+
     public function recai(){
         $url = 'https://home.meishichina.com/recipe/recai/';
         //菜名
