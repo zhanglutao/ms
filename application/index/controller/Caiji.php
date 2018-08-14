@@ -319,10 +319,19 @@ class Caiji
 
 
     public function recai(){
-        $url = 'https://home.meishichina.com/recipe/recai/';
-        //菜名
-        $data['title'] = QueryList::get($url)->find('#J_list > ul > li > div.pic > a')->attrs('title');
-        $data['image'] = QueryList::get($url)->find('#J_list > ul > li > div.pic > a > img')->attrs('data-src');
+        $url = file_get_contents('https://home.meishichina.com/recipe/recai/');
+
+        $ql = QueryList::rules(array(
+            'title' => array('#J_list >ul > li >.detail > h2>a','text'),
+            'reffer_url' => array('#J_list >ul > li >.detail > h2>a','href'),
+            'tags' => array('#J_list >ul > li >.detail > p.subcontent','text'),
+            'thumb' => array('#J_list > ul > li > div.pic > a > img','data-src'),
+            'author' => array('#J_list > ul > li > div.detail > p.subline > a','text'),
+            'author_url' => array('#J_list > ul > li > div.detail > p.subline > a','href'),
+//            'read' => array('#J_list > ul > li > div.detail > div > span','text'),
+            'page' => array('.ui-page-inner .now_page','text'),
+        ));
+        $data = $ql->setHtml($url)->removeHead()->query()->getData();
         var_dump($data);
     }
 }
