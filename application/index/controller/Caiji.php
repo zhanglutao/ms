@@ -211,13 +211,13 @@ class Caiji
         //面类
         $data['mian'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
         //豆类
-        $data['dou'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+        $data['dou'] = QueryList::get($url)->find('div.category_sub:nth-child(3) > ul > li > a')->attrs('title');
         //豆制品
-        $data['douzhipin'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+        $data['douzhipin'] = QueryList::get($url)->find('div.category_sub:nth-child(4) > ul > li > a')->attrs('title');
         //乳类
-        $data['ru'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+        $data['ru'] = QueryList::get($url)->find('div.category_sub:nth-child(5) > ul > li > a')->attrs('title');
         //方便食品类
-        $data['fangbian'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+        $data['fangbian'] = QueryList::get($url)->find('div.category_sub:nth-child(6) > ul > li > a')->attrs('title');
 
         $temp = [];
         foreach($data as $key => $value){
@@ -317,6 +317,73 @@ class Caiji
         }
     }
 
+    public function food_category(){
+        $url = 'https://home.meishichina.com/recipe-type.html';
+        $data = [];
+        //常见菜式
+        $data['jiachangcai'] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
+        //主食/小吃
+        $data['xiaochi'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+        //甜品/饮品
+        $data['tianpin'] = QueryList::get($url)->find('div.category_sub:nth-child(3) > ul > li > a')->attrs('title');
+        //适宜人群
+        $data['tianpin'] = QueryList::get($url)->find('div.category_sub:nth-child(4) > ul > li > a')->attrs('title');
+        //食疗食补
+        $data['shibu'] = QueryList::get($url)->find('div.category_sub:nth-child(5) > ul > li > a')->attrs('title');
+        //场景
+        $data['changjing'] = QueryList::get($url)->find('div.category_sub:nth-child(6) > ul > li > a')->attrs('title');
+        //饮食方式
+        $data['yingshi'] = QueryList::get($url)->find('div.category_sub:nth-child(7) > ul > li > a')->attrs('title');
+        //中式菜式
+        $data['china'] = QueryList::get($url)->find('div.category_sub:nth-child(8) > ul > li > a')->attrs('title');
+        //外国美食
+        $data['world'] = QueryList::get($url)->find('div.category_sub:nth-child(9) > ul > li > a')->attrs('title');
+        //烘焙
+        $data['hongpei'] = QueryList::get($url)->find('div.category_sub:nth-child(10) > ul > li > a')->attrs('title');
+        //传统美食
+        $data['chuantong'] = QueryList::get($url)->find('div.category_sub:nth-child(11) > ul > li > a')->attrs('title');
+        //节日食俗
+        $data['jieri'] = QueryList::get($url)->find('div.category_sub:nth-child(12) > ul > li > a')->attrs('title');
+        //按制作难度
+        $data['hard'] = QueryList::get($url)->find('div.category_sub:nth-child(13) > ul > li > a')->attrs('html');
+//        var_dump($data);exit;
+        //按所需时间
+        $data['time'] = QueryList::get($url)->find('div.category_sub:nth-child(14) > ul > li > a')->attrs('text');
+        //按菜品口味
+        $data['kouwei'] = QueryList::get($url)->find('div.category_sub:nth-child(15) > ul > li > a')->attrs('text');
+        //按主要工艺
+        $data['gongyi'] = QueryList::get($url)->find('div.category_sub:nth-child(16) > ul > li > a')->attrs('text');
+
+        $url = file_get_contents('https://home.meishichina.com/recipe-type.html');
+
+        $temp = [];
+        foreach($data as $key => $value){
+            foreach($value as $k => $v){
+
+                if ($k == 0){
+                    $temp['parent_id'] = 0;
+                    $temp['food_category_name'] = $v;
+                    $temp['create_time'] = date('Y-m-d H:i:s');
+                    $temp['update_time'] = date('Y-m-d H:i:s');
+                    $res = db::name('food_category')->insert($temp);
+                    if ($res){
+                        $this->parent_id = db::name('food_category')->getLastInsID();
+                    }
+                }else{
+                    $temp['parent_id'] = $this->parent_id;
+                    $temp['food_category_name'] = $v;
+                    $temp['create_time'] = date('Y-m-d H:i:s');
+                    $temp['update_time'] = date('Y-m-d H:i:s');
+                    $res = db::name('food_category')->insert($temp);
+                    if ($res){
+                        echo '.';
+                    }
+                }
+
+            }
+        }
+    }
+
 
     public function recai(){
         $url = file_get_contents('https://home.meishichina.com/recipe/recai/');
@@ -328,7 +395,6 @@ class Caiji
             'thumb' => array('#J_list > ul > li > div.pic > a > img','data-src'),
             'author' => array('#J_list > ul > li > div.detail > p.subline > a','text'),
             'author_url' => array('#J_list > ul > li > div.detail > p.subline > a','href'),
-//            'read' => array('#J_list > ul > li > div.detail > div > span','text'),
             'page' => array('.ui-page-inner .now_page','text'),
         ));
         $data = $ql->setHtml($url)->removeHead()->query()->getData();
