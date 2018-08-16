@@ -389,15 +389,66 @@ class Caiji
         $url = file_get_contents('https://home.meishichina.com/recipe/recai/');
 
         $ql = QueryList::rules(array(
-            'title' => array('#J_list >ul > li >.detail > h2>a','text'),
-            'reffer_url' => array('#J_list >ul > li >.detail > h2>a','href'),
+            'food_name' => array('#J_list >ul > li >.detail > h2>a','text'),
+            'food_url' => array('#J_list >ul > li >.detail > h2>a','href'),
             'tags' => array('#J_list >ul > li >.detail > p.subcontent','text'),
-            'thumb' => array('#J_list > ul > li > div.pic > a > img','data-src'),
-            'author' => array('#J_list > ul > li > div.detail > p.subline > a','text'),
-            'author_url' => array('#J_list > ul > li > div.detail > p.subline > a','href'),
+            'images' => array('#J_list > ul > li > div.pic > a > img','data-src'),
+            'author_name' => array('#J_list > ul > li > div.detail > p.subline > a','text'),
+//            'author_url' => array('#J_list > ul > li > div.detail > p.subline > a','href'),
             'page' => array('.ui-page-inner .now_page','text'),
         ));
         $data = $ql->setHtml($url)->removeHead()->query()->getData();
         var_dump($data);
+        Db::startTrans();
+        foreach($data as $key => $value){
+            if ($key == 0){
+                unset($value['page']);
+            }
+            $value['create_time'] = $value['update_time'] = date('Y-m-d H:i:s');
+            $value['images'] = explode('?',$value['images'])[0];
+            $res = db::name('food_list')->insert($value);
+            echo db::name('food_list')->getLastSql();
+            if (!$res){
+                DB::rollback();
+            }else{
+                $html = file_get_contents($value['food_url']);
+                $food = QueryList::rules(array(
+                    'title' => array('#recipe_title','text'),
+                    'top_image' => array('#recipe_De_imgBox > a > img','src'),
+                    'tag1' => array('div.recipeCategory_sub_R.clear','html'),
+                    'tag3' => array('body > div.wrap > div > div.space_left > div.space_box_home > div > fieldset:nth-child(8) > div > ul','html'),
+                    'tag2' => array('div.recipeCategory_sub_R.mt30.clear','html'),
+                ));
+                $data = $food->setHtml($html)->removeHead()->query()->getData();
+                var_dump($data);
+                preg_match_all('/<b>(.+?)<\/b>/', $data[0]['tag1'], $tag1);
+                preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['tag1'], $tag2);
+
+                str_replace('<b>','',$tag1[1]);
+                str_replace('</b>','',$tag1[1]);
+
+                $table1 = array_combine($tag1[1],$tag2[1]);
+
+                preg_match_all('/target="_blank">(.+?)<\/a>/', $data[0]['tag2'], $tag3);
+                preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['tag2'], $tag4);
+
+                str_replace('<b>','',$tag3[1]);
+                str_replace('</b>','',$tag3[1]);
+
+                $table2 = array_combine($tag3[1],$tag4[1]);
+
+                preg_match_all('/target="_blank">(.+?)<\/a>/', $data[0]['tag3'], $tag3);
+                preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['tag3'], $tag4);
+
+                str_replace('<b>','',$tag3[1]);
+                str_replace('</b>','',$tag3[1]);
+
+                $table3 = array_combine($tag3[1],$tag4[1]);
+                var_dump($table1);
+                var_dump($table2);
+                var_dump($table3);
+                exit;
+            }
+        }
     }
 }
