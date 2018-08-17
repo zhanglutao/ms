@@ -413,15 +413,23 @@ class Caiji
             }else{
                 $html = file_get_contents($value['food_url']);
                 $food = QueryList::rules(array(
+                    'big_category' => array('#path','text'),
                     'title' => array('#recipe_title','text'),
                     'top_image' => array('#recipe_De_imgBox > a > img','src'),
                     'tag1' => array('div.recipeCategory_sub_R.clear','html'),
                     'tag3' => array('body > div.wrap > div > div.space_left > div.space_box_home > div > fieldset > div > ul','html'),
                     'tag2' => array('div.recipeCategory_sub_R.mt30.clear','html'),
+                    'descrption' => array('#block_txt1','text'),
+                    'images' => array('.recipeStep_img > img','src'),
+                    'qiaomen1' => array('.body > div.wrap > div > div.space_left > div.space_box_home > div > div','text'),
+                    'qiaomen2' => array('.recipeTip.mt16','text'),
                 ));
                 $data = $food->setHtml($html)->removeHead()->query()->getData();
                 echo '<pre>';
-//                var_dump($data);exit;
+                $data[0]['big_category'] = str_replace(' 家常菜谱   手机菜谱 您的位置：美食天下 > 菜谱 > ','',$data[0]['big_category']);
+
+                print_r($data);exit;
+                $data[0]['descrption'] = htmlspecialchars($data[0]['descrption']);
                 preg_match_all('/<b>(.+?)<\/b>/', $data[0]['tag1'], $tag1);
                 preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['tag1'], $tag2);
 
