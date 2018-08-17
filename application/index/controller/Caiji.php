@@ -416,11 +416,12 @@ class Caiji
                     'title' => array('#recipe_title','text'),
                     'top_image' => array('#recipe_De_imgBox > a > img','src'),
                     'tag1' => array('div.recipeCategory_sub_R.clear','html'),
-                    'tag3' => array('body > div.wrap > div > div.space_left > div.space_box_home > div > fieldset:nth-child(8) > div > ul','html'),
+                    'tag3' => array('body > div.wrap > div > div.space_left > div.space_box_home > div > fieldset > div > ul','html'),
                     'tag2' => array('div.recipeCategory_sub_R.mt30.clear','html'),
                 ));
                 $data = $food->setHtml($html)->removeHead()->query()->getData();
-                var_dump($data);
+                echo '<pre>';
+//                var_dump($data);exit;
                 preg_match_all('/<b>(.+?)<\/b>/', $data[0]['tag1'], $tag1);
                 preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['tag1'], $tag2);
 
@@ -428,8 +429,9 @@ class Caiji
                 str_replace('</b>','',$tag1[1]);
 
                 $table1 = array_combine($tag1[1],$tag2[1]);
-
+//                var_dump($data[0]['tag2']);
                 preg_match_all('/target="_blank">(.+?)<\/a>/', $data[0]['tag2'], $tag3);
+//                var_dump($tag3);
                 preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['tag2'], $tag4);
 
                 str_replace('<b>','',$tag3[1]);
@@ -437,16 +439,19 @@ class Caiji
 
                 $table2 = array_combine($tag3[1],$tag4[1]);
 
-                preg_match_all('/target="_blank">(.+?)<\/a>/', $data[0]['tag3'], $tag3);
-                preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['tag3'], $tag4);
+                preg_match_all('/<b>(.+?)<\/b>/', $data[1]['tag3'], $tag33);
+//                var_dump($tag33);
+                preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[1]['tag3'], $tag44);
+//                var_dump($tag44);exit;
 
-                str_replace('<b>','',$tag3[1]);
-                str_replace('</b>','',$tag3[1]);
+                str_replace('<b>','',$tag33[1]);
+                str_replace('</b>','',$tag33[1]);
 
-                $table3 = array_combine($tag3[1],$tag4[1]);
-                var_dump($table1);
-                var_dump($table2);
-                var_dump($table3);
+                $table3 = array_combine($tag33[1],$tag44[1]);
+
+                print_r($table1);
+                print_r($table2);
+                print_r($table3);
                 exit;
             }
         }
