@@ -44,6 +44,7 @@ class ComposerStaticInitd15e2bd93c7f83bfccc320b8bde0c0e9
         ),
         'Q' => 
         array (
+            'Qcloud\\Sms\\' => 11,
             'QL\\' => 3,
         ),
         'P' => 
@@ -127,6 +128,10 @@ class ComposerStaticInitd15e2bd93c7f83bfccc320b8bde0c0e9
         'Symfony\\Bridge\\PsrHttpMessage\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/psr-http-message-bridge',
+        ),
+        'Qcloud\\Sms\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/qcloudsms/qcloudsms_php/src',
         ),
         'QL\\' => 
         array (

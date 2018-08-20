@@ -416,9 +416,9 @@ class Caiji
                     'big_category' => array('#path','text'),
                     'title' => array('#recipe_title','text'),
                     'top_image' => array('#recipe_De_imgBox > a > img','src'),
-                    'tag1' => array('div.recipeCategory_sub_R.clear','html'),
-                    'tag3' => array('body > div.wrap > div > div.space_left > div.space_box_home > div > fieldset > div > ul','html'),
-                    'tag2' => array('div.recipeCategory_sub_R.mt30.clear','html'),
+                    'main_material' => array('div.recipeCategory_sub_R.clear','html'),
+                    'other_tags' => array('body > div.wrap > div > div.space_left > div.space_box_home > div > fieldset > div > ul','html'),
+                    'assist_material' => array('div.recipeCategory_sub_R.mt30.clear','html'),
                     'descrption' => array('#block_txt1','text'),
                     'images' => array('.recipeStep_img > img','src'),
                     'qiaomen1' => array('.body > div.wrap > div > div.space_left > div.space_box_home > div > div','text'),
@@ -426,7 +426,7 @@ class Caiji
                 ));
                 $data = $food->setHtml($html)->removeHead()->query()->getData();
                 echo '<pre>';
-                $data[0]['big_category'] = str_replace(' 家常菜谱   手机菜谱 您的位置：美食天下 > 菜谱 > ','',$data[0]['big_category']);
+//                $data[0]['big_category'] = str_replace(' 家常菜谱   手机菜谱 您的位置：美食天下 > 菜谱 > ','',$data[0]['big_category']);
 
                 print_r($data);exit;
                 $data[0]['descrption'] = htmlspecialchars($data[0]['descrption']);
@@ -457,9 +457,14 @@ class Caiji
 
                 $table3 = array_combine($tag33[1],$tag44[1]);
 
-                print_r($table1);
-                print_r($table2);
-                print_r($table3);
+                $data['main_material'] = $table1;
+                $data['assist_material'] = $table3;
+                $data['other_tags'] = $table2;
+
+                var_dump($data);exit;
+//                print_r($table1);
+//                print_r($table2);
+//                print_r($table3);
                 exit;
             }
         }
