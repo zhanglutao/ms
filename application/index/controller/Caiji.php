@@ -407,64 +407,105 @@ class Caiji
             $value['create_time'] = $value['update_time'] = date('Y-m-d H:i:s');
             $value['images'] = explode('?',$value['images'])[0];
             $res = db::name('food_list')->insert($value);
-            echo db::name('food_list')->getLastSql();
+//            echo db::name('food_list')->getLastSql();
             if (!$res){
                 DB::rollback();
             }else{
                 $html = file_get_contents($value['food_url']);
+                $html = file_get_contents('https://home.meishichina.com/recipe-151200.html');
+                $food1 = QueryList::rules(array(
+                    'tips' => array('.recipeTip','text'),
+                ));
+                $data2 = $food1->setHtml($html)->removeHead()->query()->getData();
+                $length = count($data2);
+                $food1->destruct();
+//                var_dump($data2);exit;
                 $food = QueryList::rules(array(
-                    'big_category' => array('#path','text'),
-                    'title' => array('#recipe_title','text'),
+                    'food_name' => array('#recipe_title','text'),
+                    'descrption' => array('#block_txt1','text'),
                     'top_image' => array('#recipe_De_imgBox > a > img','src'),
                     'main_material' => array('div.recipeCategory_sub_R.clear','html'),
                     'other_tags' => array('body > div.wrap > div > div.space_left > div.space_box_home > div > fieldset > div > ul','html'),
                     'assist_material' => array('div.recipeCategory_sub_R.mt30.clear','html'),
-                    'descrption' => array('#block_txt1','text'),
                     'images' => array('.recipeStep_img > img','src'),
-                    'qiaomen1' => array('.body > div.wrap > div > div.space_left > div.space_box_home > div > div','text'),
-                    'qiaomen2' => array('.recipeTip.mt16','text'),
                 ));
+
+
                 $data = $food->setHtml($html)->removeHead()->query()->getData();
+//                var_dump($data);exit;
                 echo '<pre>';
+//                print_r($data);exit;
+//                $length = count($data2);
+
 //                $data[0]['big_category'] = str_replace(' 家常菜谱   手机菜谱 您的位置：美食天下 > 菜谱 > ','',$data[0]['big_category']);
 
-                print_r($data);exit;
-                $data[0]['descrption'] = htmlspecialchars($data[0]['descrption']);
-                preg_match_all('/<b>(.+?)<\/b>/', $data[0]['tag1'], $tag1);
-                preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['tag1'], $tag2);
+                if (!isset($data[0]['food_name'])){
+                    $data1['food_name'] = '';
+                }else{
+                    $data1['food_name']= htmlspecialchars($data[0]['food_name']);
+                }
+
+                if (!isset($data[0]['description'])){
+                    $data1['description'] = '';
+                }else{
+                    $data1['description'] = htmlspecialchars($data[0]['description']);
+                }
+
+                if (!isset($data[0]['top_image'])){
+                    $data1['top_image'] = '';
+                }else{
+                    $data1['top_image'] = explode("?",$data[0]['top_image'])[0];
+                }
+
+                $count = count($data);
+                for ($i = 0; $i < $count; $i++){
+                    $data1['images'][$i] = explode('?',$data[$i]['images'])[0];
+                }
+
+                preg_match_all('/<b>(.+?)<\/b>/', $data[0]['main_material'], $tag1);
+                preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['main_material'], $tag2);
 
                 str_replace('<b>','',$tag1[1]);
                 str_replace('</b>','',$tag1[1]);
 
-                $table1 = array_combine($tag1[1],$tag2[1]);
+                $main_material = array_combine($tag1[1],$tag2[1]);
 //                var_dump($data[0]['tag2']);
-                preg_match_all('/target="_blank">(.+?)<\/a>/', $data[0]['tag2'], $tag3);
+                preg_match_all('/target="_blank">(.+?)<\/a>/', $data[0]['assist_material'], $tag3);
 //                var_dump($tag3);
-                preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['tag2'], $tag4);
+                preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['assist_material'], $tag4);
 
                 str_replace('<b>','',$tag3[1]);
                 str_replace('</b>','',$tag3[1]);
 
-                $table2 = array_combine($tag3[1],$tag4[1]);
+                $other_tags = array_combine($tag3[1],$tag4[1]);
 
-                preg_match_all('/<b>(.+?)<\/b>/', $data[1]['tag3'], $tag33);
+                preg_match_all('/<b>(.+?)<\/b>/', $data[1]['other_tags'], $tag33);
 //                var_dump($tag33);
-                preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[1]['tag3'], $tag44);
+                preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[1]['other_tags'], $tag44);
 //                var_dump($tag44);exit;
 
                 str_replace('<b>','',$tag33[1]);
                 str_replace('</b>','',$tag33[1]);
 
-                $table3 = array_combine($tag33[1],$tag44[1]);
+                $assist_material= array_combine($tag33[1],$tag44[1]);
 
-                $data['main_material'] = $table1;
-                $data['assist_material'] = $table3;
-                $data['other_tags'] = $table2;
+                $data1['main_material'] = $main_material;
+                $data1['other_tags'] = $other_tags;
+                $data1['assist_material'] = $assist_material;
+                if ($length > 3){
+                    $data1['tips'] = $data2[$length-4]['tips'];
+                }
+                $data1['author'] = $data2[$length-3]['tips'];
+                $data1['kitchen_ware'] = explode('：',$data2[$length-2]['tips'])[1];
+                $data1['big_category'] = explode('|',str_replace('&nbsp;&nbsp;','|', htmlentities(trim(explode('：',$data2[$length-1]['tips'])[1]))));
+                foreach ($data1['big_category'] as $k => $v){
+                        $data1['big_category'][$k] = trim($v);
+                }
+                $count = count($data1['big_category']);
+                unset($data1['big_category'][$count-1]);
 
-                var_dump($data);exit;
-//                print_r($table1);
-//                print_r($table2);
-//                print_r($table3);
+
+                print_r($data1);exit;
                 exit;
             }
         }
