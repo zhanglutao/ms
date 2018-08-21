@@ -398,7 +398,7 @@ class Caiji
             'page' => array('.ui-page-inner .now_page','text'),
         ));
         $data = $ql->setHtml($url)->removeHead()->query()->getData();
-        var_dump($data);
+//        var_dump($data);
         Db::startTrans();
         foreach($data as $key => $value){
             if ($key == 0){
@@ -413,6 +413,7 @@ class Caiji
             }else{
                 $html = file_get_contents($value['food_url']);
                 $html = file_get_contents('https://home.meishichina.com/recipe-151200.html');
+                $html = file_get_contents('https://home.meishichina.com/recipe-151106.html');
                 $food1 = QueryList::rules(array(
                     'tips' => array('.recipeTip','text'),
                 ));
