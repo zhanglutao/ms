@@ -414,8 +414,17 @@ class Caiji
                 $html = file_get_contents($value['food_url']);
                 $html = file_get_contents('https://home.meishichina.com/recipe-151200.html');
                 $html = file_get_contents('https://home.meishichina.com/recipe-151106.html');
+                $html = file_get_contents('https://home.meishichina.com/recipe-181606.html');
+
+                $food2 = QueryList::rules(array(
+                    'space_id' => array('body > div.wrap > div > div.space_left > div.space_box_home > div > div > a','href')
+                ));
+                $data3 = $food2->setHtml($html)->removeHead()->query()->getData();
+//                var_dump($data3);
+
                 $food1 = QueryList::rules(array(
                     'tips' => array('.recipeTip','text'),
+//                    'author_id' => array('body > div.wrap > div > div.space_left > div.space_box_home > div > div > a','href')
                 ));
                 $data2 = $food1->setHtml($html)->removeHead()->query()->getData();
                 $length = count($data2);
@@ -423,7 +432,7 @@ class Caiji
 
                 $food = QueryList::rules(array(
                     'food_name' => array('#recipe_title','text'),
-                    'descrption' => array('#block_txt1','text'),
+                    'descrpition' => array('#block_txt1','text'),
                     'top_image' => array('#recipe_De_imgBox > a > img','src'),
                     'main_material' => array('div.recipeCategory_sub_R.clear','html'),
                     'other_tags' => array('body > div.wrap > div > div.space_left > div.space_box_home > div > fieldset > div > ul','html'),
@@ -434,17 +443,17 @@ class Caiji
                 $data = $food->setHtml($html)->removeHead()->query()->getData();
 
                 echo '<pre>';
-
+//                print_r($data);exit;
                 if (!isset($data[0]['food_name'])){
                     $data1['food_name'] = '';
                 }else{
                     $data1['food_name']= htmlspecialchars($data[0]['food_name']);
                 }
 
-                if (!isset($data[0]['description'])){
-                    $data1['description'] = '';
+                if (!isset($data[0]['descrpition'])){
+                    $data1['descrpition'] = '';
                 }else{
-                    $data1['description'] = htmlspecialchars($data[0]['description']);
+                    $data1['descrpition'] = htmlspecialchars($data[0]['descrpition']);
                 }
 
                 if (!isset($data[0]['top_image'])){
@@ -482,7 +491,8 @@ class Caiji
                 if ($length > 3){
                     $data1['tips'] = $data2[$length-4]['tips'];
                 }
-                $data1['author'] = $data2[$length-3]['tips'];
+//                $data1['author'] = $data2[$length-3]['tips'];
+                $data1['space_id'] = explode('.',explode('-',$data3[1]['space_id'])[1])[0];
                 $data1['kitchen_ware'] = explode('：',$data2[$length-2]['tips'])[1];
                 $data1['big_category'] = explode('|',str_replace('&nbsp;&nbsp;','|', htmlentities(trim(explode('：',$data2[$length-1]['tips'])[1]))));
                 foreach ($data1['big_category'] as $k => $v){
