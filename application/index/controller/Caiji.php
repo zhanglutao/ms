@@ -407,7 +407,7 @@ class Caiji
             $value['create_time'] = $value['update_time'] = date('Y-m-d H:i:s');
             $value['images'] = explode('?',$value['images'])[0];
             $res = db::name('food_list')->insert($value);
-//            echo db::name('food_list')->getLastSql();
+
             if (!$res){
                 DB::rollback();
             }else{
@@ -420,7 +420,7 @@ class Caiji
                 $data2 = $food1->setHtml($html)->removeHead()->query()->getData();
                 $length = count($data2);
                 $food1->destruct();
-//                var_dump($data2);exit;
+
                 $food = QueryList::rules(array(
                     'food_name' => array('#recipe_title','text'),
                     'descrption' => array('#block_txt1','text'),
@@ -431,14 +431,9 @@ class Caiji
                     'images' => array('.recipeStep_img > img','src'),
                 ));
 
-
                 $data = $food->setHtml($html)->removeHead()->query()->getData();
-//                var_dump($data);exit;
-                echo '<pre>';
-//                print_r($data);exit;
-//                $length = count($data2);
 
-//                $data[0]['big_category'] = str_replace(' 家常菜谱   手机菜谱 您的位置：美食天下 > 菜谱 > ','',$data[0]['big_category']);
+                echo '<pre>';
 
                 if (!isset($data[0]['food_name'])){
                     $data1['food_name'] = '';
@@ -465,29 +460,20 @@ class Caiji
 
                 preg_match_all('/<b>(.+?)<\/b>/', $data[0]['main_material'], $tag1);
                 preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['main_material'], $tag2);
-
                 str_replace('<b>','',$tag1[1]);
                 str_replace('</b>','',$tag1[1]);
-
                 $main_material = array_combine($tag1[1],$tag2[1]);
-//                var_dump($data[0]['tag2']);
-                preg_match_all('/target="_blank">(.+?)<\/a>/', $data[0]['assist_material'], $tag3);
-//                var_dump($tag3);
-                preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['assist_material'], $tag4);
 
+                preg_match_all('/target="_blank">(.+?)<\/a>/', $data[0]['assist_material'], $tag3);
+                preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['assist_material'], $tag4);
                 str_replace('<b>','',$tag3[1]);
                 str_replace('</b>','',$tag3[1]);
-
                 $other_tags = array_combine($tag3[1],$tag4[1]);
 
                 preg_match_all('/<b>(.+?)<\/b>/', $data[1]['other_tags'], $tag33);
-//                var_dump($tag33);
                 preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[1]['other_tags'], $tag44);
-//                var_dump($tag44);exit;
-
                 str_replace('<b>','',$tag33[1]);
                 str_replace('</b>','',$tag33[1]);
-
                 $assist_material= array_combine($tag33[1],$tag44[1]);
 
                 $data1['main_material'] = $main_material;
