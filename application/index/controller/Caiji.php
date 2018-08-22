@@ -414,17 +414,15 @@ class Caiji
                 $html = file_get_contents($value['food_url']);
                 $html = file_get_contents('https://home.meishichina.com/recipe-151200.html');
                 $html = file_get_contents('https://home.meishichina.com/recipe-151106.html');
-                $html = file_get_contents('https://home.meishichina.com/recipe-181606.html');
-
+//                $html = file_get_contents('https://home.meishichina.com/recipe-181606.html');
+                $data1['old_id'] = explode('.',explode('-',$value['food_url'])[1])[0];
                 $food2 = QueryList::rules(array(
                     'space_id' => array('body > div.wrap > div > div.space_left > div.space_box_home > div > div > a','href')
                 ));
                 $data3 = $food2->setHtml($html)->removeHead()->query()->getData();
-//                var_dump($data3);
 
                 $food1 = QueryList::rules(array(
                     'tips' => array('.recipeTip','text'),
-//                    'author_id' => array('body > div.wrap > div > div.space_left > div.space_box_home > div > div > a','href')
                 ));
                 $data2 = $food1->setHtml($html)->removeHead()->query()->getData();
                 $length = count($data2);
@@ -466,6 +464,7 @@ class Caiji
                 for ($i = 0; $i < $count; $i++){
                     $data1['images'][$i] = explode('?',$data[$i]['images'])[0];
                 }
+                $data1['images'] = json_encode($data1['images']);
 
                 preg_match_all('/<b>(.+?)<\/b>/', $data[0]['main_material'], $tag1);
                 preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['main_material'], $tag2);
@@ -485,9 +484,9 @@ class Caiji
                 str_replace('</b>','',$tag33[1]);
                 $assist_material= array_combine($tag33[1],$tag44[1]);
 
-                $data1['main_material'] = $main_material;
-                $data1['other_tags'] = $other_tags;
-                $data1['assist_material'] = $assist_material;
+                $data1['main_material'] = json_encode($main_material);
+                $data1['other_tags'] = json_encode($other_tags);
+                $data1['assist_material'] = json_encode($assist_material);
                 if ($length > 3){
                     $data1['tips'] = $data2[$length-4]['tips'];
                 }
@@ -500,10 +499,27 @@ class Caiji
                 }
                 $count = count($data1['big_category']);
                 unset($data1['big_category'][$count-1]);
-
-
+                $big_category = $data1['big_category'];
+                unset($data1['big_category']);
+                var_dump($big_category);
+                $data1['create_time'] = date('Y-m-d H:i:s');
+                $data1['update_time'] = date('Y-m-d H:i:s');
                 print_r($data1);exit;
-                exit;
+                $res = db::name('food')->insert($data1);
+//                echo db::name('food')->getLastSql();
+//                exit;
+                if (!$res){
+
+                    DB::rollback();
+                }else{
+
+                    foreach ($big_category as $value){
+                        $where['food_category_name'] = $value;
+                        $food_category = db::name('food_category')->where($where)->find();
+                        echo db::name('food_category')->getLastSql();
+                        var_dump($food_category);
+                    }
+                }
             }
         }
     }
