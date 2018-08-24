@@ -52,20 +52,30 @@ class Caiji
             foreach($value as $k => $v){
 
                 if ($k == 0){
+                    $result = self::_checkShiCaiCategory($v);
                     $temp['parent_id'] = 0;
                     $temp['category_name'] = $v;
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
-                    $res = db::name('shicai_category')->insert($temp);
+                    if ($result){
+                        $res = db::name('shicai_category')->insert($temp);
+                    }else{
+                        $res = false;
+                    }
                     if ($res){
                         $this->parent_id = db::name('shicai_category')->getLastInsID();
                     }
                 }else{
+                    $result = self::_checkShiCaiCategory($v);
                     $temp['parent_id'] = $this->parent_id;
                     $temp['category_name'] = $v;
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
-                    $res = db::name('shicai_category')->insert($temp);
+                    if ($result){
+                        $res = db::name('shicai_category')->insert($temp);
+                    }else{
+                        $res = false;
+                    }
                     if ($res){
                         echo '采集分类成功';
                     }
@@ -97,20 +107,30 @@ class Caiji
             foreach($value as $k => $v){
 
                 if ($k == 0){
+                    $result = self::_checkShiCaiCategory($v);
                     $temp['parent_id'] = 0;
                     $temp['category_name'] = $v;
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
-                    $res = db::name('shicai_category')->insert($temp);
+                    if ($result){
+                        $res = db::name('shicai_category')->insert($temp);
+                    }else{
+                        $res = false;
+                    }
                     if ($res){
                         $this->parent_id = db::name('shicai_category')->getLastInsID();
                     }
                 }else{
+                    $result = self::_checkShiCaiCategory($v);
                     $temp['parent_id'] = $this->parent_id;
                     $temp['category_name'] = $v;
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
-                    $res = db::name('shicai_category')->insert($temp);
+                    if ($result){
+                        $res = db::name('shicai_category')->insert($temp);
+                    }else{
+                        $res = false;
+                    }
                     if ($res){
                         echo '采集分类成功';
                     }
@@ -142,20 +162,30 @@ class Caiji
             foreach($value as $k => $v){
 
                 if ($k == 0){
+                    $result = self::_checkShiCaiCategory($v);
                     $temp['parent_id'] = 0;
                     $temp['category_name'] = $v;
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
-                    $res = db::name('shicai_category')->insert($temp);
+                    if ($result){
+                        $res = db::name('shicai_category')->insert($temp);
+                    }else{
+                        $res = false;
+                    }
                     if ($res){
                         $this->parent_id = db::name('shicai_category')->getLastInsID();
                     }
                 }else{
+                    $result = self::_checkShiCaiCategory($v);
                     $temp['parent_id'] = $this->parent_id;
                     $temp['category_name'] = $v;
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
-                    $res = db::name('shicai_category')->insert($temp);
+                    if ($result){
+                        $res = db::name('shicai_category')->insert($temp);
+                    }else{
+                        $res = false;
+                    }
                     if ($res){
                         echo '采集分类成功';
                     }
@@ -179,20 +209,30 @@ class Caiji
             foreach($value as $k => $v){
 
                 if ($k == 0){
+                    $result = self::_checkShiCaiCategory($v);
                     $temp['parent_id'] = 0;
                     $temp['category_name'] = $v;
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
-                    $res = db::name('shicai_category')->insert($temp);
+                    if ($result){
+                        $res = db::name('shicai_category')->insert($temp);
+                    }else{
+                        $res = false;
+                    }
                     if ($res){
                         $this->parent_id = db::name('shicai_category')->getLastInsID();
                     }
                 }else{
+                    $result = self::_checkShiCaiCategory($v);
                     $temp['parent_id'] = $this->parent_id;
                     $temp['category_name'] = $v;
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
-                    $res = db::name('shicai_category')->insert($temp);
+                    if ($result){
+                        $res = db::name('shicai_category')->insert($temp);
+                    }else{
+                        $res = false;
+                    }
                     if ($res){
                         echo '.';
                     }
@@ -224,20 +264,30 @@ class Caiji
             foreach($value as $k => $v){
 
                 if ($k == 0){
+                    $result = self::_checkShiCaiCategory($v);
                     $temp['parent_id'] = 0;
                     $temp['category_name'] = $v;
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
-                    $res = db::name('shicai_category')->insert($temp);
+                    if ($result){
+                        $res = db::name('shicai_category')->insert($temp);
+                    }else{
+                        $res = false;
+                    }
                     if ($res){
                         $this->parent_id = db::name('shicai_category')->getLastInsID();
                     }
                 }else{
+                    $result = self::_checkShiCaiCategory($v);
                     $temp['parent_id'] = $this->parent_id;
                     $temp['category_name'] = $v;
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
-                    $res = db::name('shicai_category')->insert($temp);
+                    if ($result){
+                        $res = db::name('shicai_category')->insert($temp);
+                    }else{
+                        $res = false;
+                    }
                     if ($res){
                         echo '.';
                     }
@@ -260,20 +310,30 @@ class Caiji
             foreach($value as $k => $v){
 
                 if ($k == 0){
+                    $result = self::_checkShiCaiCategory($v);
                     $temp['parent_id'] = 0;
                     $temp['category_name'] = $v;
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
-                    $res = db::name('shicai_category')->insert($temp);
+                    if ($result){
+                        $res = db::name('shicai_category')->insert($temp);
+                    }else{
+                        $res = false;
+                    }
                     if ($res){
                         $this->parent_id = db::name('shicai_category')->getLastInsID();
                     }
                 }else{
+                    $result = self::_checkShiCaiCategory($v);
                     $temp['parent_id'] = $this->parent_id;
                     $temp['category_name'] = $v;
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
-                    $res = db::name('shicai_category')->insert($temp);
+                    if ($result){
+                        $res = db::name('shicai_category')->insert($temp);
+                    }else{
+                        $res = false;
+                    }
                     if ($res){
                         echo '.';
                     }
@@ -294,20 +354,30 @@ class Caiji
             foreach($value as $k => $v){
 
                 if ($k == 0){
+                    $result = self::_checkShiCaiCategory($v);
                     $temp['parent_id'] = 0;
                     $temp['category_name'] = $v;
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
-                    $res = db::name('shicai_category')->insert($temp);
+                    if ($result){
+                        $res = db::name('shicai_category')->insert($temp);
+                    }else{
+                        $res = false;
+                    }
                     if ($res){
                         $this->parent_id = db::name('shicai_category')->getLastInsID();
                     }
                 }else{
+                    $result = self::_checkShiCaiCategory($v);
                     $temp['parent_id'] = $this->parent_id;
                     $temp['category_name'] = $v;
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
-                    $res = db::name('shicai_category')->insert($temp);
+                    if ($result){
+                        $res = db::name('shicai_category')->insert($temp);
+                    }else{
+                        $res = false;
+                    }
                     if ($res){
                         echo '.';
                     }
@@ -361,20 +431,30 @@ class Caiji
             foreach($value as $k => $v){
 
                 if ($k == 0){
+                    $result = self::_checkFoodCategory($v);
                     $temp['parent_id'] = 0;
                     $temp['food_category_name'] = $v;
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
-                    $res = db::name('food_category')->insert($temp);
+                    if ($result){
+                        $res = db::name('food_category')->insert($temp);
+                    }else{
+                        $res = false;
+                    }
                     if ($res){
                         $this->parent_id = db::name('food_category')->getLastInsID();
                     }
                 }else{
+                    $result = self::_checkFoodCategory($v);
                     $temp['parent_id'] = $this->parent_id;
                     $temp['food_category_name'] = $v;
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
-                    $res = db::name('food_category')->insert($temp);
+                    if ($result){
+                        $res = db::name('food_category')->insert($temp);
+                    }else{
+                        $res = false;
+                    }
                     if ($res){
                         echo '.';
                     }
@@ -521,6 +601,25 @@ class Caiji
                     }
                 }
             }
+        }
+    }
+
+    private static function _checkShiCaiCategory($category){
+        $res = Db::name('shicai_category')->where('category_name="'.$category.'"')->find();
+//        echo Db::name('shicai_category')->getLastSql();exit;
+        if ($res){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    private static function _checkFoodCategory($category){
+        $res = Db::name('food_category')->where('food_category_name="'.$category.'"')->find();
+        if ($res){
+            return false;
+        }else{
+            return true;
         }
     }
 }
