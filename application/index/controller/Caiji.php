@@ -13,6 +13,7 @@ use app\common\controller\Frontend;
 use think\Lang;
 use think\Db;
 use QL\QueryList;
+use think\Log;
 
 /**
  * Ajax异步请求接口
@@ -474,7 +475,7 @@ class Caiji
             'food_url' => array('#J_list >ul > li >.detail > h2>a','href'),
             'tags' => array('#J_list >ul > li >.detail > p.subcontent','text'),
             'images' => array('#J_list > ul > li > div.pic > a > img','data-src'),
-            'author_name' => array('#J_list > ul > li > div.detail > p.subline > a','text'),
+//            'author_name' => array('#J_list > ul > li > div.detail > p.subline > a','text'),
             'page' => array('.ui-page-inner .now_page','text'),
         ));
         $data = $ql->setHtml($url)->removeHead()->query()->getData();
@@ -592,6 +593,49 @@ class Caiji
                 if (!$old){
                     $res = Db::name('food')->insert($data1);
                     $this->last_id = Db::name('food')->getLastInsID();
+                    $main_material = json_decode($data1['main_material']);
+                    foreach ($main_material as $key => $value){
+                        $r = Db::name('shicai_category')->where('category_name="'.$key.'"')->find();
+                        if ($r) {
+                            $shicai_category1[] = $r['category_id'];
+                        }
+                    }
+                    $assist_material = json_decode($data1['assist_material']);
+                    foreach ($assist_material as $key => $value){
+                        $r = Db::name('shicai_category')->where('category_name="'.$key.'"')->find();
+                        if ($r) {
+                            $shicai_category2[] = $r['category_id'];
+                        }
+                    }
+//                    echo Db::name('shicai_category')->getLastSql();exit;
+                    $other_tags = json_decode($data1['other_tags']);
+                    foreach ($other_tags as $key => $value){
+                        echo $key;
+                        $r = Db::name('food_category')->where('food_category_name="'.$key.'"')->find();
+                        if ($r) {
+                            $food_category[] = $r['food_category_id'];
+                        }
+                    }
+//                    var_dump($shicai_category1);
+//                    var_dump($shicai_category2);
+//                    var_dump($food_category);exit;
+                    if (!empty($shicai_category1)){
+                        foreach ($shicai_category1 as $value){
+                            $where1['shicai_category_id'] = $value;
+                            $where1['food_id'] = $this->last_id ;
+                            $s = Db::name('shicai_category_relation')->where($where1)->find();
+                            echo Db::name('shicai_category_relation')->getLastSql();
+                            if (!$s){
+                                $where1['create_time'] = $where1['update_time'] =date('Y-m-d H:i:s');
+                                $t = Db::name('shicai_category_relation')->insert($where1);
+                                if (!$t){
+                                    Log::record('菜谱'.$where1['food_id'].'分类'.$where1['shicai_category_id'].'没有创建','error');
+                                }
+                                unset($where1);
+                            }
+                        }
+                    }
+
                 }else{
                     continue;
                 }
