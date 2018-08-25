@@ -516,6 +516,7 @@ class Caiji
                     'other_tags' => array('body > div.wrap > div > div.space_left > div.space_box_home > div > fieldset > div > ul','html'),
                     'assist_material' => array('div.recipeCategory_sub_R.mt30.clear','html'),
                     'images' => array('.recipeStep_img > img','src'),
+                    'cooking_process' => array('.recipeStep_word','text'),
                 ));
 
                 $data = $food->setHtml($html)->removeHead()->query()->getData();
@@ -543,8 +544,10 @@ class Caiji
                 $count = count($data);
                 for ($i = 0; $i < $count; $i++){
                     $data1['images'][$i] = explode('?',$data[$i]['images'])[0];
+                    $data1['cooking_process'][$i] = $data[$i]['cooking_process'];
                 }
                 $data1['images'] = json_encode($data1['images']);
+                $data1['cooking_process'] = json_encode($data1['cooking_process']);
 
                 preg_match_all('/<b>(.+?)<\/b>/', $data[0]['main_material'], $tag1);
                 preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['main_material'], $tag2);
@@ -585,8 +588,13 @@ class Caiji
                 $data1['create_time'] = date('Y-m-d H:i:s');
                 $data1['update_time'] = date('Y-m-d H:i:s');
 
-                $res = Db::name('food')->insert($data1);
-                $this->last_id = Db::name('food')->getLastInsID();
+                $old = Db::name('food')->where('old_id='.$data1['old_id'])->find();
+                if (!$old){
+                    $res = Db::name('food')->insert($data1);
+                    $this->last_id = Db::name('food')->getLastInsID();
+                }else{
+                    continue;
+                }
 
                 if (!$res){
                     Db::rollback();
