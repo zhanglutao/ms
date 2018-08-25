@@ -21,6 +21,7 @@ use QL\QueryList;
 class Caiji
 {
     private $parent_id = 0;
+    private $last_id = 0;
 
 
     public function _initialize()
@@ -58,7 +59,7 @@ class Caiji
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
                     if ($result){
-                        $res = db::name('shicai_category')->insert($temp);
+                        $res = Db::name('shicai_category')->insert($temp);
                     }else{
                         $res = false;
                     }
@@ -72,7 +73,7 @@ class Caiji
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
                     if ($result){
-                        $res = db::name('shicai_category')->insert($temp);
+                        $res = Db::name('shicai_category')->insert($temp);
                     }else{
                         $res = false;
                     }
@@ -113,7 +114,7 @@ class Caiji
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
                     if ($result){
-                        $res = db::name('shicai_category')->insert($temp);
+                        $res = Db::name('shicai_category')->insert($temp);
                     }else{
                         $res = false;
                     }
@@ -127,7 +128,7 @@ class Caiji
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
                     if ($result){
-                        $res = db::name('shicai_category')->insert($temp);
+                        $res = Db::name('shicai_category')->insert($temp);
                     }else{
                         $res = false;
                     }
@@ -168,7 +169,7 @@ class Caiji
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
                     if ($result){
-                        $res = db::name('shicai_category')->insert($temp);
+                        $res = Db::name('shicai_category')->insert($temp);
                     }else{
                         $res = false;
                     }
@@ -182,7 +183,7 @@ class Caiji
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
                     if ($result){
-                        $res = db::name('shicai_category')->insert($temp);
+                        $res = Db::name('shicai_category')->insert($temp);
                     }else{
                         $res = false;
                     }
@@ -215,7 +216,7 @@ class Caiji
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
                     if ($result){
-                        $res = db::name('shicai_category')->insert($temp);
+                        $res = Db::name('shicai_category')->insert($temp);
                     }else{
                         $res = false;
                     }
@@ -229,7 +230,7 @@ class Caiji
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
                     if ($result){
-                        $res = db::name('shicai_category')->insert($temp);
+                        $res = Db::name('shicai_category')->insert($temp);
                     }else{
                         $res = false;
                     }
@@ -270,7 +271,7 @@ class Caiji
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
                     if ($result){
-                        $res = db::name('shicai_category')->insert($temp);
+                        $res = Db::name('shicai_category')->insert($temp);
                     }else{
                         $res = false;
                     }
@@ -284,7 +285,7 @@ class Caiji
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
                     if ($result){
-                        $res = db::name('shicai_category')->insert($temp);
+                        $res = Db::name('shicai_category')->insert($temp);
                     }else{
                         $res = false;
                     }
@@ -316,7 +317,7 @@ class Caiji
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
                     if ($result){
-                        $res = db::name('shicai_category')->insert($temp);
+                        $res = Db::name('shicai_category')->insert($temp);
                     }else{
                         $res = false;
                     }
@@ -330,7 +331,7 @@ class Caiji
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
                     if ($result){
-                        $res = db::name('shicai_category')->insert($temp);
+                        $res = Db::name('shicai_category')->insert($temp);
                     }else{
                         $res = false;
                     }
@@ -360,7 +361,7 @@ class Caiji
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
                     if ($result){
-                        $res = db::name('shicai_category')->insert($temp);
+                        $res = Db::name('shicai_category')->insert($temp);
                     }else{
                         $res = false;
                     }
@@ -374,7 +375,7 @@ class Caiji
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
                     if ($result){
-                        $res = db::name('shicai_category')->insert($temp);
+                        $res = Db::name('shicai_category')->insert($temp);
                     }else{
                         $res = false;
                     }
@@ -437,7 +438,7 @@ class Caiji
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
                     if ($result){
-                        $res = db::name('food_category')->insert($temp);
+                        $res = Db::name('food_category')->insert($temp);
                     }else{
                         $res = false;
                     }
@@ -451,7 +452,7 @@ class Caiji
                     $temp['create_time'] = date('Y-m-d H:i:s');
                     $temp['update_time'] = date('Y-m-d H:i:s');
                     if ($result){
-                        $res = db::name('food_category')->insert($temp);
+                        $res = Db::name('food_category')->insert($temp);
                     }else{
                         $res = false;
                     }
@@ -474,11 +475,10 @@ class Caiji
             'tags' => array('#J_list >ul > li >.detail > p.subcontent','text'),
             'images' => array('#J_list > ul > li > div.pic > a > img','data-src'),
             'author_name' => array('#J_list > ul > li > div.detail > p.subline > a','text'),
-//            'author_url' => array('#J_list > ul > li > div.detail > p.subline > a','href'),
             'page' => array('.ui-page-inner .now_page','text'),
         ));
         $data = $ql->setHtml($url)->removeHead()->query()->getData();
-//        var_dump($data);
+
         Db::startTrans();
         foreach($data as $key => $value){
             if ($key == 0){
@@ -486,14 +486,14 @@ class Caiji
             }
             $value['create_time'] = $value['update_time'] = date('Y-m-d H:i:s');
             $value['images'] = explode('?',$value['images'])[0];
-            $res = db::name('food_list')->insert($value);
+            $res = Db::name('food_list')->insert($value);
 
             if (!$res){
                 DB::rollback();
             }else{
                 $html = file_get_contents($value['food_url']);
-                $html = file_get_contents('https://home.meishichina.com/recipe-151200.html');
-                $html = file_get_contents('https://home.meishichina.com/recipe-151106.html');
+//                $html = file_get_contents('https://home.meishichina.com/recipe-151200.html');
+//                $html = file_get_contents('https://home.meishichina.com/recipe-151106.html');
 //                $html = file_get_contents('https://home.meishichina.com/recipe-181606.html');
                 $data1['old_id'] = explode('.',explode('-',$value['food_url'])[1])[0];
                 $food2 = QueryList::rules(array(
@@ -520,7 +520,7 @@ class Caiji
 
                 $data = $food->setHtml($html)->removeHead()->query()->getData();
 
-                echo '<pre>';
+//                echo '<pre>';
 //                print_r($data);exit;
                 if (!isset($data[0]['food_name'])){
                     $data1['food_name'] = '';
@@ -531,7 +531,7 @@ class Caiji
                 if (!isset($data[0]['descrpition'])){
                     $data1['descrpition'] = '';
                 }else{
-                    $data1['descrpition'] = htmlspecialchars($data[0]['descrpition']);
+                    $data1['descrpition'] = json_encode(htmlspecialchars($data[0]['descrpition']));
                 }
 
                 if (!isset($data[0]['top_image'])){
@@ -568,9 +568,9 @@ class Caiji
                 $data1['other_tags'] = json_encode($other_tags);
                 $data1['assist_material'] = json_encode($assist_material);
                 if ($length > 3){
-                    $data1['tips'] = $data2[$length-4]['tips'];
+                    $data1['tips'] = json_encode($data2[$length-4]['tips']);
                 }
-//                $data1['author'] = $data2[$length-3]['tips'];
+
                 $data1['space_id'] = explode('.',explode('-',$data3[1]['space_id'])[1])[0];
                 $data1['kitchen_ware'] = explode('：',$data2[$length-2]['tips'])[1];
                 $data1['big_category'] = explode('|',str_replace('&nbsp;&nbsp;','|', htmlentities(trim(explode('：',$data2[$length-1]['tips'])[1]))));
@@ -581,23 +581,34 @@ class Caiji
                 unset($data1['big_category'][$count-1]);
                 $big_category = $data1['big_category'];
                 unset($data1['big_category']);
-                var_dump($big_category);
+
                 $data1['create_time'] = date('Y-m-d H:i:s');
                 $data1['update_time'] = date('Y-m-d H:i:s');
-                print_r($data1);exit;
-                $res = db::name('food')->insert($data1);
-//                echo db::name('food')->getLastSql();
-//                exit;
+
+                $res = Db::name('food')->insert($data1);
+                $this->last_id = Db::name('food')->getLastInsID();
+
                 if (!$res){
-
-                    DB::rollback();
+                    Db::rollback();
                 }else{
-
                     foreach ($big_category as $value){
                         $where['food_category_name'] = $value;
-                        $food_category = db::name('food_category')->where($where)->find();
-                        echo db::name('food_category')->getLastSql();
-                        var_dump($food_category);
+                        $food_category = Db::name('food_category')->where($where)->find();
+//                        echo db::name('food_category')->getLastSql();
+                        $ralation = array();
+                        if ($food_category['food_category_id'] > 0){
+                            $ralation['food_category_id'] = $food_category['food_category_id'];
+                            $ralation['good_id'] = $this->last_id;
+                            $ralation['create_time'] = date('Y-m-d H:i:s');
+                            $ralation['update_time'] = date('Y-m-d H:i:s');
+                            $res = Db::name('food_category_relation')->insert($ralation);
+                            if ($res){
+                                Db::commit();
+                                unset($data1);
+                            }else{
+                                Db::rollback();
+                            }
+                        }
                     }
                 }
             }
