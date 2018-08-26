@@ -687,7 +687,10 @@ class Caiji
     }
 
     public function order_list(){
+        $page = input('page/d');
+        $pageSize = 4;
         $list = Db::name('food')->field('food_id,food_name,update_time')->select();
+        $count = Db::name('food')->field('food_id,food_name,update_time')->count();
         $day = '';
         foreach ($list as $key => $value){
             if ($key == 0){
