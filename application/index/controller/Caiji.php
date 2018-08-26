@@ -685,4 +685,30 @@ class Caiji
             return true;
         }
     }
+
+    public function order_list(){
+        $list = Db::name('food')->field('food_id,food_name,update_time')->select();
+        $day = '';
+        foreach ($list as $key => $value){
+            if ($key == 0){
+                $day = isset($list[0]['update_time']) ? date('Y-m-d',strtotime($list[0]['update_time'])) : '';
+                array_unshift($list[0],$day);
+            }
+            if ($day != date('Y-m-d',strtotime($value['update_time']))){
+//                echo date('Y-m-d',strtotime($value['update_time']));
+                $day = date('Y-m-d',strtotime($value['update_time']));
+                array_unshift($list[$key],$day);
+            }
+        }
+//        array_unshift($list,$day);
+//        var_dump($list);
+        echo count($list);exit;
+
+        foreach($list as $key => $value){
+            if (isset($value[0])){
+                echo $value[0];
+            }
+
+        }
+    }
 }
