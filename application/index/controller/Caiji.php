@@ -466,6 +466,78 @@ class Caiji
         }
     }
 
+    public function shiliao_category(){
+        $url = 'https://www.meishichina.com/YuanLiao/gongxiao/';
+        $data = [];
+        //养生保健
+        $data[0] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
+        //美容减肥
+        $data[1] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+        //男性
+        $data[2] = QueryList::get($url)->find('div.category_sub:nth-child(3) > ul > li > a')->attrs('title');
+        //女性
+        $data[3] = QueryList::get($url)->find('div.category_sub:nth-child(4) > ul > li > a')->attrs('title');
+        //孕前哺乳
+        $data[4] = QueryList::get($url)->find('div.category_sub:nth-child(5) > ul > li > a')->attrs('title');
+        //神经系统
+        $data[5] = QueryList::get($url)->find('div.category_sub:nth-child(6) > ul > li > a')->attrs('title');
+        //呼吸道
+        $data[6] = QueryList::get($url)->find('div.category_sub:nth-child(7) > ul > li > a')->attrs('title');
+        //心血管
+        $data[7] = QueryList::get($url)->find('div.category_sub:nth-child(8) > ul > li > a')->attrs('title');
+        //肝胆脾胰
+        $data[8] = QueryList::get($url)->find('div.category_sub:nth-child(9) > ul > li > a')->attrs('title');
+        //五官
+        $data[9] = QueryList::get($url)->find('div.category_sub:nth-child(10) > ul > li > a')->attrs('title');
+        //肌肉骨骼
+        $data[10] = QueryList::get($url)->find('div.category_sub:nth-child(11) > ul > li > a')->attrs('title');
+        //癌症
+        $data[11] = QueryList::get($url)->find('div.category_sub:nth-child(12) > ul > li > a')->attrs('title');
+        //其他
+        $data[12] = QueryList::get($url)->find('div.category_sub:nth-child(13) > ul > li > a')->attrs('title');
+
+        $url = file_get_contents($url);
+        $title = QueryList::rules(array(
+            'big_category' => array('body > div.wrap > div > div.category_box.mt20 > div > h3','text'),
+        ));
+        $data1 = $title->setHtml($url)->removeHead()->query()->getData();
+//        var_dump($data1);
+//        var_dump($data);
+
+        $temp = [];
+        foreach($data as $key => $value){
+            $r = self::_checkHealthCategory($data1[$key]['big_category']);
+            if ($r){
+                $tmp['parent_id'] = 0;
+                $tmp['health_category_name'] = $data1[$key]['big_category'];
+                $tmp['create_time'] = date('Y-m-d H:i:s');
+                $tmp['update_time'] = date('Y-m-d H:i:s');
+                $res = Db::name('health_category')->insert($tmp);
+                echo Db::name('health_category')->getLastSql();
+                if ($res){
+                    $this->parent_id = Db::name('health_category')->getLastInsID();
+                }else{
+
+                }
+            }
+            foreach($value as $k => $v){
+                $result = self::_checkHealthCategory($v);
+                $temp['parent_id'] = $this->parent_id;
+                $temp['health_category_name'] = $v;
+                $temp['create_time'] = date('Y-m-d H:i:s');
+                $temp['update_time'] = date('Y-m-d H:i:s');
+                if ($result){
+                    $res = Db::name('health_category')->insert($temp);
+                }else{
+                    $res = false;
+                }
+                if ($res){
+                    echo '.';
+                }
+            }
+        }
+    }
+
 
     public function recai(){
         $url = file_get_contents('https://home.meishichina.com/recipe/recai/');
@@ -679,6 +751,15 @@ class Caiji
 
     private static function _checkFoodCategory($category){
         $res = Db::name('food_category')->where('food_category_name="'.$category.'"')->find();
+        if ($res){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    private static function _checkHealthCategory($category){
+        $res = Db::name('health_category')->where('health_category_name="'.$category.'"')->find();
         if ($res){
             return false;
         }else{
