@@ -431,8 +431,11 @@ class Caiji
         $url = file_get_contents($url);
         $title = QueryList::rules(array(
             'big_category' => array('body > div.wrap > div > div.category_box.mt20 > div > h3','text'),
+//            0 => array('body > div.wrap > div > div > div:nth-child(1) > ul > li > a','text'),
         ));
+//        echo '<pre>';
         $data1 = $title->setHtml($url)->removeHead()->query()->getData();
+//        print_r($data1);
 
         $temp = [];
         foreach($data as $key => $value){
