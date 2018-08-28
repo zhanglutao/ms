@@ -49,40 +49,40 @@ class Caiji
         //其它禽类
         $data['other_qinlei'] = QueryList::get($url)->find('div.category_sub:nth-child(7) > ul > li > a')->attrs('title');
 
+        $url = file_get_contents($url);
+        $title = QueryList::rules(array(
+            'big_category' => array('body > div.wrap > div > div.category_box.mt20 > div > h3','text'),
+        ));
+        $data1 = $title->setHtml($url)->removeHead()->query()->getData();
         $temp = [];
         foreach($data as $key => $value){
             foreach($value as $k => $v){
+                $r = self::_checkShiCaiCategory($data1[$key]['big_category']);
+                if ($r){
+                    $tmp['parent_id'] = 0;
+                    $tmp['food_category_name'] = $data1[$key]['big_category'];
+                    $tmp['create_time'] = date('Y-m-d H:i:s');
+                    $tmp['update_time'] = date('Y-m-d H:i:s');
+                    $res = Db::name('food_category')->insert($tmp);
+                    if ($res){
+                        $this->parent_id = Db::name('food_category')->getLastInsID();
+                    }else{
 
-                if ($k == 0){
-                    $result = self::_checkShiCaiCategory($v);
-                    $temp['parent_id'] = 0;
-                    $temp['category_name'] = $v;
-                    $temp['create_time'] = date('Y-m-d H:i:s');
-                    $temp['update_time'] = date('Y-m-d H:i:s');
-                    if ($result){
-                        $res = Db::name('shicai_category')->insert($temp);
-                    }else{
-                        $res = false;
-                    }
-                    if ($res){
-                        $this->parent_id = db::name('shicai_category')->getLastInsID();
-                    }
-                }else{
-                    $result = self::_checkShiCaiCategory($v);
-                    $temp['parent_id'] = $this->parent_id;
-                    $temp['category_name'] = $v;
-                    $temp['create_time'] = date('Y-m-d H:i:s');
-                    $temp['update_time'] = date('Y-m-d H:i:s');
-                    if ($result){
-                        $res = Db::name('shicai_category')->insert($temp);
-                    }else{
-                        $res = false;
-                    }
-                    if ($res){
-                        echo '采集分类成功';
                     }
                 }
-
+                $result = self::_checkShiCaiCategory($v);
+                $temp['parent_id'] = $this->parent_id;
+                $temp['category_name'] = $v;
+                $temp['create_time'] = date('Y-m-d H:i:s');
+                $temp['update_time'] = date('Y-m-d H:i:s');
+                if ($result){
+                    $res = Db::name('shicai_category')->insert($temp);
+                }else{
+                    $res = false;
+                }
+                if ($res){
+                    echo '采集分类成功';
+                }
             }
         }
     }
@@ -104,40 +104,40 @@ class Caiji
         //其他水产类
         $data['other'] = QueryList::get($url)->find('div.category_sub:nth-child(6) > ul > li > a')->attrs('title');
 
+        $url = file_get_contents($url);
+        $title = QueryList::rules(array(
+            'big_category' => array('body > div.wrap > div > div.category_box.mt20 > div > h3','text'),
+        ));
+        $data1 = $title->setHtml($url)->removeHead()->query()->getData();
         $temp = [];
         foreach($data as $key => $value){
             foreach($value as $k => $v){
+                $r = self::_checkShiCaiCategory($data1[$key]['big_category']);
+                if ($r){
+                    $tmp['parent_id'] = 0;
+                    $tmp['food_category_name'] = $data1[$key]['big_category'];
+                    $tmp['create_time'] = date('Y-m-d H:i:s');
+                    $tmp['update_time'] = date('Y-m-d H:i:s');
+                    $res = Db::name('food_category')->insert($tmp);
+                    if ($res){
+                        $this->parent_id = Db::name('food_category')->getLastInsID();
+                    }else{
 
-                if ($k == 0){
-                    $result = self::_checkShiCaiCategory($v);
-                    $temp['parent_id'] = 0;
-                    $temp['category_name'] = $v;
-                    $temp['create_time'] = date('Y-m-d H:i:s');
-                    $temp['update_time'] = date('Y-m-d H:i:s');
-                    if ($result){
-                        $res = Db::name('shicai_category')->insert($temp);
-                    }else{
-                        $res = false;
-                    }
-                    if ($res){
-                        $this->parent_id = db::name('shicai_category')->getLastInsID();
-                    }
-                }else{
-                    $result = self::_checkShiCaiCategory($v);
-                    $temp['parent_id'] = $this->parent_id;
-                    $temp['category_name'] = $v;
-                    $temp['create_time'] = date('Y-m-d H:i:s');
-                    $temp['update_time'] = date('Y-m-d H:i:s');
-                    if ($result){
-                        $res = Db::name('shicai_category')->insert($temp);
-                    }else{
-                        $res = false;
-                    }
-                    if ($res){
-                        echo '采集分类成功';
                     }
                 }
-
+                $result = self::_checkShiCaiCategory($v);
+                $temp['parent_id'] = $this->parent_id;
+                $temp['category_name'] = $v;
+                $temp['create_time'] = date('Y-m-d H:i:s');
+                $temp['update_time'] = date('Y-m-d H:i:s');
+                if ($result){
+                    $res = Db::name('shicai_category')->insert($temp);
+                }else{
+                    $res = false;
+                }
+                if ($res){
+                    echo '采集分类成功';
+                }
             }
         }
     }
@@ -147,52 +147,52 @@ class Caiji
         $url = 'https://www.meishichina.com/YuanLiao/category/shucailei/';
         $data = [];
         //茎叶类
-        $data['jingye'] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
+        $data[0] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
         //瓜菜类
-        $data['guacai'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+        $data[1] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
         //果实类
-        $data['guoshi'] = QueryList::get($url)->find('div.category_sub:nth-child(3) > ul > li > a')->attrs('title');
+        $data[2] = QueryList::get($url)->find('div.category_sub:nth-child(3) > ul > li > a')->attrs('title');
         //根茎类
-        $data['genjing'] = QueryList::get($url)->find('div.category_sub:nth-child(4) > ul > li > a')->attrs('title');
+        $data[3] = QueryList::get($url)->find('div.category_sub:nth-child(4) > ul > li > a')->attrs('title');
         //菌类
-        $data['jun'] = QueryList::get($url)->find('div.category_sub:nth-child(5) > ul > li > a')->attrs('title');
+        $data[4] = QueryList::get($url)->find('div.category_sub:nth-child(5) > ul > li > a')->attrs('title');
         //其他
-        $data['other'] = QueryList::get($url)->find('div.category_sub:nth-child(6) > ul > li > a')->attrs('title');
+        $data[5] = QueryList::get($url)->find('div.category_sub:nth-child(6) > ul > li > a')->attrs('title');
 
+        $url = file_get_contents($url);
+        $title = QueryList::rules(array(
+            'big_category' => array('body > div.wrap > div > div.category_box.mt20 > div > h3','text'),
+        ));
+        $data1 = $title->setHtml($url)->removeHead()->query()->getData();
         $temp = [];
         foreach($data as $key => $value){
             foreach($value as $k => $v){
+                $r = self::_checkShiCaiCategory($data1[$key]['big_category']);
+                if ($r){
+                    $tmp['parent_id'] = 0;
+                    $tmp['food_category_name'] = $data1[$key]['big_category'];
+                    $tmp['create_time'] = date('Y-m-d H:i:s');
+                    $tmp['update_time'] = date('Y-m-d H:i:s');
+                    $res = Db::name('food_category')->insert($tmp);
+                    if ($res){
+                        $this->parent_id = Db::name('food_category')->getLastInsID();
+                    }else{
 
-                if ($k == 0){
-                    $result = self::_checkShiCaiCategory($v);
-                    $temp['parent_id'] = 0;
-                    $temp['category_name'] = $v;
-                    $temp['create_time'] = date('Y-m-d H:i:s');
-                    $temp['update_time'] = date('Y-m-d H:i:s');
-                    if ($result){
-                        $res = Db::name('shicai_category')->insert($temp);
-                    }else{
-                        $res = false;
-                    }
-                    if ($res){
-                        $this->parent_id = db::name('shicai_category')->getLastInsID();
-                    }
-                }else{
-                    $result = self::_checkShiCaiCategory($v);
-                    $temp['parent_id'] = $this->parent_id;
-                    $temp['category_name'] = $v;
-                    $temp['create_time'] = date('Y-m-d H:i:s');
-                    $temp['update_time'] = date('Y-m-d H:i:s');
-                    if ($result){
-                        $res = Db::name('shicai_category')->insert($temp);
-                    }else{
-                        $res = false;
-                    }
-                    if ($res){
-                        echo '采集分类成功';
                     }
                 }
-
+                $result = self::_checkShiCaiCategory($v);
+                $temp['parent_id'] = $this->parent_id;
+                $temp['category_name'] = $v;
+                $temp['create_time'] = date('Y-m-d H:i:s');
+                $temp['update_time'] = date('Y-m-d H:i:s');
+                if ($result){
+                    $res = Db::name('shicai_category')->insert($temp);
+                }else{
+                    $res = false;
+                }
+                if ($res){
+                    echo '采集分类成功';
+                }
             }
         }
     }
@@ -202,44 +202,44 @@ class Caiji
         $url = 'https://www.meishichina.com/YuanLiao/category/guopinlei/';
         $data = [];
         //鲜果类
-        $data['xianguo'] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
+        $data[0] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
         //干果类
-        $data['ganguo'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+        $data[1] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
 
+        $url = file_get_contents($url);
+        $title = QueryList::rules(array(
+            'big_category' => array('body > div.wrap > div > div.category_box.mt20 > div > h3','text'),
+        ));
+        $data1 = $title->setHtml($url)->removeHead()->query()->getData();
         $temp = [];
         foreach($data as $key => $value){
             foreach($value as $k => $v){
+                $r = self::_checkShiCaiCategory($data1[$key]['big_category']);
+                if ($r){
+                    $tmp['parent_id'] = 0;
+                    $tmp['food_category_name'] = $data1[$key]['big_category'];
+                    $tmp['create_time'] = date('Y-m-d H:i:s');
+                    $tmp['update_time'] = date('Y-m-d H:i:s');
+                    $res = Db::name('food_category')->insert($tmp);
+                    if ($res){
+                        $this->parent_id = Db::name('food_category')->getLastInsID();
+                    }else{
 
-                if ($k == 0){
-                    $result = self::_checkShiCaiCategory($v);
-                    $temp['parent_id'] = 0;
-                    $temp['category_name'] = $v;
-                    $temp['create_time'] = date('Y-m-d H:i:s');
-                    $temp['update_time'] = date('Y-m-d H:i:s');
-                    if ($result){
-                        $res = Db::name('shicai_category')->insert($temp);
-                    }else{
-                        $res = false;
-                    }
-                    if ($res){
-                        $this->parent_id = db::name('shicai_category')->getLastInsID();
-                    }
-                }else{
-                    $result = self::_checkShiCaiCategory($v);
-                    $temp['parent_id'] = $this->parent_id;
-                    $temp['category_name'] = $v;
-                    $temp['create_time'] = date('Y-m-d H:i:s');
-                    $temp['update_time'] = date('Y-m-d H:i:s');
-                    if ($result){
-                        $res = Db::name('shicai_category')->insert($temp);
-                    }else{
-                        $res = false;
-                    }
-                    if ($res){
-                        echo '.';
                     }
                 }
-
+                $result = self::_checkShiCaiCategory($v);
+                $temp['parent_id'] = $this->parent_id;
+                $temp['category_name'] = $v;
+                $temp['create_time'] = date('Y-m-d H:i:s');
+                $temp['update_time'] = date('Y-m-d H:i:s');
+                if ($result){
+                    $res = Db::name('shicai_category')->insert($temp);
+                }else{
+                    $res = false;
+                }
+                if ($res){
+                    echo '.';
+                }
             }
         }
     }
@@ -249,52 +249,52 @@ class Caiji
         $url = 'https://www.meishichina.com/YuanLiao/category/mmdr/';
         $data = [];
         //米类
-        $data['mi'] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
+        $data[0] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
         //面类
-        $data['mian'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+        $data[1] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
         //豆类
-        $data['dou'] = QueryList::get($url)->find('div.category_sub:nth-child(3) > ul > li > a')->attrs('title');
+        $data[2] = QueryList::get($url)->find('div.category_sub:nth-child(3) > ul > li > a')->attrs('title');
         //豆制品
-        $data['douzhipin'] = QueryList::get($url)->find('div.category_sub:nth-child(4) > ul > li > a')->attrs('title');
+        $data[3] = QueryList::get($url)->find('div.category_sub:nth-child(4) > ul > li > a')->attrs('title');
         //乳类
-        $data['ru'] = QueryList::get($url)->find('div.category_sub:nth-child(5) > ul > li > a')->attrs('title');
+        $data[4] = QueryList::get($url)->find('div.category_sub:nth-child(5) > ul > li > a')->attrs('title');
         //方便食品类
-        $data['fangbian'] = QueryList::get($url)->find('div.category_sub:nth-child(6) > ul > li > a')->attrs('title');
+        $data[5] = QueryList::get($url)->find('div.category_sub:nth-child(6) > ul > li > a')->attrs('title');
 
+        $url = file_get_contents($url);
+        $title = QueryList::rules(array(
+            'big_category' => array('body > div.wrap > div > div.category_box.mt20 > div > h3','text'),
+        ));
+        $data1 = $title->setHtml($url)->removeHead()->query()->getData();
         $temp = [];
         foreach($data as $key => $value){
             foreach($value as $k => $v){
+                $r = self::_checkShiCaiCategory($data1[$key]['big_category']);
+                if ($r){
+                    $tmp['parent_id'] = 0;
+                    $tmp['food_category_name'] = $data1[$key]['big_category'];
+                    $tmp['create_time'] = date('Y-m-d H:i:s');
+                    $tmp['update_time'] = date('Y-m-d H:i:s');
+                    $res = Db::name('food_category')->insert($tmp);
+                    if ($res){
+                        $this->parent_id = Db::name('food_category')->getLastInsID();
+                    }else{
 
-                if ($k == 0){
-                    $result = self::_checkShiCaiCategory($v);
-                    $temp['parent_id'] = 0;
-                    $temp['category_name'] = $v;
-                    $temp['create_time'] = date('Y-m-d H:i:s');
-                    $temp['update_time'] = date('Y-m-d H:i:s');
-                    if ($result){
-                        $res = Db::name('shicai_category')->insert($temp);
-                    }else{
-                        $res = false;
-                    }
-                    if ($res){
-                        $this->parent_id = db::name('shicai_category')->getLastInsID();
-                    }
-                }else{
-                    $result = self::_checkShiCaiCategory($v);
-                    $temp['parent_id'] = $this->parent_id;
-                    $temp['category_name'] = $v;
-                    $temp['create_time'] = date('Y-m-d H:i:s');
-                    $temp['update_time'] = date('Y-m-d H:i:s');
-                    if ($result){
-                        $res = Db::name('shicai_category')->insert($temp);
-                    }else{
-                        $res = false;
-                    }
-                    if ($res){
-                        echo '.';
                     }
                 }
-
+                $result = self::_checkShiCaiCategory($v);
+                $temp['parent_id'] = $this->parent_id;
+                $temp['category_name'] = $v;
+                $temp['create_time'] = date('Y-m-d H:i:s');
+                $temp['update_time'] = date('Y-m-d H:i:s');
+                if ($result){
+                    $res = Db::name('shicai_category')->insert($temp);
+                }else{
+                    $res = false;
+                }
+                if ($res){
+                    echo '.';
+                }
             }
         }
     }
@@ -303,44 +303,44 @@ class Caiji
         $url = 'https://www.meishichina.com/YuanLiao/category/tiaoweipinl/';
         $data = [];
         //调味品
-        $data['tiaoweipin'] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
+        $data[0] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
         //食用油
-        $data['shiyongyou'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+        $data[1] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
 
+        $url = file_get_contents($url);
+        $title = QueryList::rules(array(
+            'big_category' => array('body > div.wrap > div > div.category_box.mt20 > div > h3','text'),
+        ));
+        $data1 = $title->setHtml($url)->removeHead()->query()->getData();
         $temp = [];
         foreach($data as $key => $value){
             foreach($value as $k => $v){
+                $r = self::_checkShiCaiCategory($data1[$key]['big_category']);
+                if ($r){
+                    $tmp['parent_id'] = 0;
+                    $tmp['food_category_name'] = $data1[$key]['big_category'];
+                    $tmp['create_time'] = date('Y-m-d H:i:s');
+                    $tmp['update_time'] = date('Y-m-d H:i:s');
+                    $res = Db::name('food_category')->insert($tmp);
+                    if ($res){
+                        $this->parent_id = Db::name('food_category')->getLastInsID();
+                    }else{
 
-                if ($k == 0){
-                    $result = self::_checkShiCaiCategory($v);
-                    $temp['parent_id'] = 0;
-                    $temp['category_name'] = $v;
-                    $temp['create_time'] = date('Y-m-d H:i:s');
-                    $temp['update_time'] = date('Y-m-d H:i:s');
-                    if ($result){
-                        $res = Db::name('shicai_category')->insert($temp);
-                    }else{
-                        $res = false;
-                    }
-                    if ($res){
-                        $this->parent_id = db::name('shicai_category')->getLastInsID();
-                    }
-                }else{
-                    $result = self::_checkShiCaiCategory($v);
-                    $temp['parent_id'] = $this->parent_id;
-                    $temp['category_name'] = $v;
-                    $temp['create_time'] = date('Y-m-d H:i:s');
-                    $temp['update_time'] = date('Y-m-d H:i:s');
-                    if ($result){
-                        $res = Db::name('shicai_category')->insert($temp);
-                    }else{
-                        $res = false;
-                    }
-                    if ($res){
-                        echo '.';
                     }
                 }
-
+                $result = self::_checkShiCaiCategory($v);
+                $temp['parent_id'] = $this->parent_id;
+                $temp['category_name'] = $v;
+                $temp['create_time'] = date('Y-m-d H:i:s');
+                $temp['update_time'] = date('Y-m-d H:i:s');
+                if ($result){
+                    $res = Db::name('shicai_category')->insert($temp);
+                }else{
+                    $res = false;
+                }
+                if ($res){
+                    echo '.';
+                }
             }
         }
     }
@@ -349,42 +349,43 @@ class Caiji
         $url = 'https://www.meishichina.com/YuanLiao/category/yaoshiqita/';
         $data = [];
         //药食
-        $data['tiaoweipin'] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
+        $data[0] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
 
         $temp = [];
+        $url = file_get_contents($url);
+        $title = QueryList::rules(array(
+            'big_category' => array('body > div.wrap > div > div.category_box.mt20 > div > h3','text'),
+        ));
+        $data1 = $title->setHtml($url)->removeHead()->query()->getData();
+
         foreach($data as $key => $value){
             foreach($value as $k => $v){
+                $r = self::_checkShiCaiCategory($data1[$key]['big_category']);
+                if ($r){
+                    $tmp['parent_id'] = 0;
+                    $tmp['food_category_name'] = $data1[$key]['big_category'];
+                    $tmp['create_time'] = date('Y-m-d H:i:s');
+                    $tmp['update_time'] = date('Y-m-d H:i:s');
+                    $res = Db::name('food_category')->insert($tmp);
+                    if ($res){
+                        $this->parent_id = Db::name('food_category')->getLastInsID();
+                    }else{
 
-                if ($k == 0){
-                    $result = self::_checkShiCaiCategory($v);
-                    $temp['parent_id'] = 0;
-                    $temp['category_name'] = $v;
-                    $temp['create_time'] = date('Y-m-d H:i:s');
-                    $temp['update_time'] = date('Y-m-d H:i:s');
-                    if ($result){
-                        $res = Db::name('shicai_category')->insert($temp);
-                    }else{
-                        $res = false;
-                    }
-                    if ($res){
-                        $this->parent_id = db::name('shicai_category')->getLastInsID();
-                    }
-                }else{
-                    $result = self::_checkShiCaiCategory($v);
-                    $temp['parent_id'] = $this->parent_id;
-                    $temp['category_name'] = $v;
-                    $temp['create_time'] = date('Y-m-d H:i:s');
-                    $temp['update_time'] = date('Y-m-d H:i:s');
-                    if ($result){
-                        $res = Db::name('shicai_category')->insert($temp);
-                    }else{
-                        $res = false;
-                    }
-                    if ($res){
-                        echo '.';
                     }
                 }
-
+                $result = self::_checkShiCaiCategory($v);
+                $temp['parent_id'] = $this->parent_id;
+                $temp['category_name'] = $v;
+                $temp['create_time'] = date('Y-m-d H:i:s');
+                $temp['update_time'] = date('Y-m-d H:i:s');
+                if ($result){
+                    $res = Db::name('shicai_category')->insert($temp);
+                }else{
+                    $res = false;
+                }
+                if ($res){
+                    echo '.';
+                }
             }
         }
     }
@@ -430,9 +431,6 @@ class Caiji
             'big_category' => array('body > div.wrap > div > div.category_box.mt20 > div > h3','text'),
         ));
         $data1 = $title->setHtml($url)->removeHead()->query()->getData();
-
-        var_dump($data1);
-        var_dump($data);
 
         $temp = [];
         foreach($data as $key => $value){
