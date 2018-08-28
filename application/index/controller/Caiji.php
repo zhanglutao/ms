@@ -35,42 +35,44 @@ class Caiji
         $url = 'https://www.meishichina.com/YuanLiao/category/rql/';
         $data = [];
         //猪肉分类
-        $data['zhurou'] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
+        $data[0] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
         //牛肉分类
-        $data['niurou'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+        $data[1] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
         //鸡肉分类
-        $data['jirou'] = QueryList::get($url)->find('div.category_sub:nth-child(3) > ul > li > a')->attrs('title');
+        $data[2] = QueryList::get($url)->find('div.category_sub:nth-child(3) > ul > li > a')->attrs('title');
         //羊肉分类
-        $data['yangrou'] = QueryList::get($url)->find('div.category_sub:nth-child(4) > ul > li > a')->attrs('title');
+        $data[3] = QueryList::get($url)->find('div.category_sub:nth-child(4) > ul > li > a')->attrs('title');
         //蛋类
-        $data['yangrou'] = QueryList::get($url)->find('div.category_sub:nth-child(5) > ul > li > a')->attrs('title');
+        $data[4] = QueryList::get($url)->find('div.category_sub:nth-child(5) > ul > li > a')->attrs('title');
         //其它肉类
-        $data['other'] = QueryList::get($url)->find('div.category_sub:nth-child(6) > ul > li > a')->attrs('title');
+        $data[5] = QueryList::get($url)->find('div.category_sub:nth-child(6) > ul > li > a')->attrs('title');
         //其它禽类
-        $data['other_qinlei'] = QueryList::get($url)->find('div.category_sub:nth-child(7) > ul > li > a')->attrs('title');
+        $data[6] = QueryList::get($url)->find('div.category_sub:nth-child(7) > ul > li > a')->attrs('title');
 
         $url = file_get_contents($url);
         $title = QueryList::rules(array(
             'big_category' => array('body > div.wrap > div > div.category_box.mt20 > div > h3','text'),
         ));
         $data1 = $title->setHtml($url)->removeHead()->query()->getData();
+//        var_dump($data1);
+//        var_dump($data);exit;
         $temp = [];
         foreach($data as $key => $value){
             foreach($value as $k => $v){
-                $r = self::_checkShiCaiCategory($data1[$key]['big_category']);
+                $r = self::_checkShiCaiCategory($data1[$key]['big_category'],1);
                 if ($r){
                     $tmp['parent_id'] = 0;
-                    $tmp['food_category_name'] = $data1[$key]['big_category'];
+                    $tmp['category_name'] = $data1[$key]['big_category'];
                     $tmp['create_time'] = date('Y-m-d H:i:s');
                     $tmp['update_time'] = date('Y-m-d H:i:s');
-                    $res = Db::name('food_category')->insert($tmp);
+                    $res = Db::name('shicai_category')->insert($tmp);
                     if ($res){
-                        $this->parent_id = Db::name('food_category')->getLastInsID();
+                        $this->parent_id = Db::name('shicai_category')->getLastInsID();
                     }else{
 
                     }
                 }
-                $result = self::_checkShiCaiCategory($v);
+                $result = self::_checkShiCaiCategory($v,2);
                 $temp['parent_id'] = $this->parent_id;
                 $temp['category_name'] = $v;
                 $temp['create_time'] = date('Y-m-d H:i:s');
@@ -92,17 +94,17 @@ class Caiji
         $url = 'https://www.meishichina.com/YuanLiao/category/scl/';
         $data = [];
         //淡水鱼
-        $data['danshuiyu'] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
+        $data[0] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
         //海水鱼
-        $data['haishuiyu'] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
+        $data[1] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
         //虾类
-        $data['xia'] = QueryList::get($url)->find('div.category_sub:nth-child(3) > ul > li > a')->attrs('title');
+        $data[2] = QueryList::get($url)->find('div.category_sub:nth-child(3) > ul > li > a')->attrs('title');
         //蟹类
-        $data['xie'] = QueryList::get($url)->find('div.category_sub:nth-child(4) > ul > li > a')->attrs('title');
+        $data[3] = QueryList::get($url)->find('div.category_sub:nth-child(4) > ul > li > a')->attrs('title');
         //贝类
-        $data['bei'] = QueryList::get($url)->find('div.category_sub:nth-child(5) > ul > li > a')->attrs('title');
+        $data[4] = QueryList::get($url)->find('div.category_sub:nth-child(5) > ul > li > a')->attrs('title');
         //其他水产类
-        $data['other'] = QueryList::get($url)->find('div.category_sub:nth-child(6) > ul > li > a')->attrs('title');
+        $data[5] = QueryList::get($url)->find('div.category_sub:nth-child(6) > ul > li > a')->attrs('title');
 
         $url = file_get_contents($url);
         $title = QueryList::rules(array(
@@ -112,20 +114,20 @@ class Caiji
         $temp = [];
         foreach($data as $key => $value){
             foreach($value as $k => $v){
-                $r = self::_checkShiCaiCategory($data1[$key]['big_category']);
+                $r = self::_checkShiCaiCategory($data1[$key]['big_category'],1);
                 if ($r){
                     $tmp['parent_id'] = 0;
-                    $tmp['food_category_name'] = $data1[$key]['big_category'];
+                    $tmp['category_name'] = $data1[$key]['big_category'];
                     $tmp['create_time'] = date('Y-m-d H:i:s');
                     $tmp['update_time'] = date('Y-m-d H:i:s');
-                    $res = Db::name('food_category')->insert($tmp);
+                    $res = Db::name('shicai_category')->insert($tmp);
                     if ($res){
-                        $this->parent_id = Db::name('food_category')->getLastInsID();
+                        $this->parent_id = Db::name('shicai_category')->getLastInsID();
                     }else{
 
                     }
                 }
-                $result = self::_checkShiCaiCategory($v);
+                $result = self::_checkShiCaiCategory($v,2);
                 $temp['parent_id'] = $this->parent_id;
                 $temp['category_name'] = $v;
                 $temp['create_time'] = date('Y-m-d H:i:s');
@@ -167,20 +169,20 @@ class Caiji
         $temp = [];
         foreach($data as $key => $value){
             foreach($value as $k => $v){
-                $r = self::_checkShiCaiCategory($data1[$key]['big_category']);
+                $r = self::_checkShiCaiCategory($data1[$key]['big_category'],1);
                 if ($r){
                     $tmp['parent_id'] = 0;
-                    $tmp['food_category_name'] = $data1[$key]['big_category'];
+                    $tmp['category_name'] = $data1[$key]['big_category'];
                     $tmp['create_time'] = date('Y-m-d H:i:s');
                     $tmp['update_time'] = date('Y-m-d H:i:s');
-                    $res = Db::name('food_category')->insert($tmp);
+                    $res = Db::name('shicai_category')->insert($tmp);
                     if ($res){
-                        $this->parent_id = Db::name('food_category')->getLastInsID();
+                        $this->parent_id = Db::name('shicai_category')->getLastInsID();
                     }else{
 
                     }
                 }
-                $result = self::_checkShiCaiCategory($v);
+                $result = self::_checkShiCaiCategory($v,2);
                 $temp['parent_id'] = $this->parent_id;
                 $temp['category_name'] = $v;
                 $temp['create_time'] = date('Y-m-d H:i:s');
@@ -214,20 +216,20 @@ class Caiji
         $temp = [];
         foreach($data as $key => $value){
             foreach($value as $k => $v){
-                $r = self::_checkShiCaiCategory($data1[$key]['big_category']);
+                $r = self::_checkShiCaiCategory($data1[$key]['big_category'],1);
                 if ($r){
                     $tmp['parent_id'] = 0;
-                    $tmp['food_category_name'] = $data1[$key]['big_category'];
+                    $tmp['category_name'] = $data1[$key]['big_category'];
                     $tmp['create_time'] = date('Y-m-d H:i:s');
                     $tmp['update_time'] = date('Y-m-d H:i:s');
-                    $res = Db::name('food_category')->insert($tmp);
+                    $res = Db::name('shicai_category')->insert($tmp);
                     if ($res){
-                        $this->parent_id = Db::name('food_category')->getLastInsID();
+                        $this->parent_id = Db::name('shicai_category')->getLastInsID();
                     }else{
 
                     }
                 }
-                $result = self::_checkShiCaiCategory($v);
+                $result = self::_checkShiCaiCategory($v,2);
                 $temp['parent_id'] = $this->parent_id;
                 $temp['category_name'] = $v;
                 $temp['create_time'] = date('Y-m-d H:i:s');
@@ -269,20 +271,20 @@ class Caiji
         $temp = [];
         foreach($data as $key => $value){
             foreach($value as $k => $v){
-                $r = self::_checkShiCaiCategory($data1[$key]['big_category']);
+                $r = self::_checkShiCaiCategory($data1[$key]['big_category'],1);
                 if ($r){
                     $tmp['parent_id'] = 0;
-                    $tmp['food_category_name'] = $data1[$key]['big_category'];
+                    $tmp['category_name'] = $data1[$key]['big_category'];
                     $tmp['create_time'] = date('Y-m-d H:i:s');
                     $tmp['update_time'] = date('Y-m-d H:i:s');
-                    $res = Db::name('food_category')->insert($tmp);
+                    $res = Db::name('shicai_category')->insert($tmp);
                     if ($res){
-                        $this->parent_id = Db::name('food_category')->getLastInsID();
+                        $this->parent_id = Db::name('shicai_category')->getLastInsID();
                     }else{
 
                     }
                 }
-                $result = self::_checkShiCaiCategory($v);
+                $result = self::_checkShiCaiCategory($v,2);
                 $temp['parent_id'] = $this->parent_id;
                 $temp['category_name'] = $v;
                 $temp['create_time'] = date('Y-m-d H:i:s');
@@ -315,20 +317,20 @@ class Caiji
         $temp = [];
         foreach($data as $key => $value){
             foreach($value as $k => $v){
-                $r = self::_checkShiCaiCategory($data1[$key]['big_category']);
+                $r = self::_checkShiCaiCategory($data1[$key]['big_category'],1);
                 if ($r){
                     $tmp['parent_id'] = 0;
-                    $tmp['food_category_name'] = $data1[$key]['big_category'];
+                    $tmp['category_name'] = $data1[$key]['big_category'];
                     $tmp['create_time'] = date('Y-m-d H:i:s');
                     $tmp['update_time'] = date('Y-m-d H:i:s');
-                    $res = Db::name('food_category')->insert($tmp);
+                    $res = Db::name('shicai_category')->insert($tmp);
                     if ($res){
-                        $this->parent_id = Db::name('food_category')->getLastInsID();
+                        $this->parent_id = Db::name('shicai_category')->getLastInsID();
                     }else{
 
                     }
                 }
-                $result = self::_checkShiCaiCategory($v);
+                $result = self::_checkShiCaiCategory($v,2);
                 $temp['parent_id'] = $this->parent_id;
                 $temp['category_name'] = $v;
                 $temp['create_time'] = date('Y-m-d H:i:s');
@@ -360,20 +362,20 @@ class Caiji
 
         foreach($data as $key => $value){
             foreach($value as $k => $v){
-                $r = self::_checkShiCaiCategory($data1[$key]['big_category']);
+                $r = self::_checkShiCaiCategory($data1[$key]['big_category'],1);
                 if ($r){
                     $tmp['parent_id'] = 0;
-                    $tmp['food_category_name'] = $data1[$key]['big_category'];
+                    $tmp['category_name'] = $data1[$key]['big_category'];
                     $tmp['create_time'] = date('Y-m-d H:i:s');
                     $tmp['update_time'] = date('Y-m-d H:i:s');
-                    $res = Db::name('food_category')->insert($tmp);
+                    $res = Db::name('shicai_category')->insert($tmp);
                     if ($res){
-                        $this->parent_id = Db::name('food_category')->getLastInsID();
+                        $this->parent_id = Db::name('shicai_category')->getLastInsID();
                     }else{
 
                     }
                 }
-                $result = self::_checkShiCaiCategory($v);
+                $result = self::_checkShiCaiCategory($v,2);
                 $temp['parent_id'] = $this->parent_id;
                 $temp['category_name'] = $v;
                 $temp['create_time'] = date('Y-m-d H:i:s');
@@ -736,9 +738,13 @@ class Caiji
         }
     }
 
-    private static function _checkShiCaiCategory($category){
-        $res = Db::name('shicai_category')->where('category_name="'.$category.'"')->find();
-//        echo Db::name('shicai_category')->getLastSql();exit;
+    private static function _checkShiCaiCategory($category,$type = 1){
+        if ($type == 1){
+            $res = Db::name('shicai_category')->where('category_name="'.$category.'" and parent_id = 0')->find();
+        }else{
+            $res = Db::name('shicai_category')->where('category_name="'.$category.'" and parent_id != 0')->find();
+        }
+
         if ($res){
             return false;
         }else{
