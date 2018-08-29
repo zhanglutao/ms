@@ -684,7 +684,6 @@ class Caiji
 //                    echo Db::name('shicai_category')->getLastSql();exit;
                     $other_tags = json_decode($data1['other_tags']);
                     foreach ($other_tags as $key => $value){
-                        echo $key;
                         $r = Db::name('food_category')->where('food_category_name="'.$key.'"')->find();
                         if ($r) {
                             $food_category[] = $r['food_category_id'];
@@ -698,7 +697,7 @@ class Caiji
                             $where1['shicai_category_id'] = $value;
                             $where1['food_id'] = $this->last_id ;
                             $s = Db::name('shicai_category_relation')->where($where1)->find();
-                            echo Db::name('shicai_category_relation')->getLastSql();
+//                            echo Db::name('shicai_category_relation')->getLastSql();
                             if (!$s){
                                 $where1['create_time'] = $where1['update_time'] =date('Y-m-d H:i:s');
                                 $t = Db::name('shicai_category_relation')->insert($where1);
@@ -706,6 +705,40 @@ class Caiji
                                     Log::record('菜谱'.$where1['food_id'].'分类'.$where1['shicai_category_id'].'没有创建','error');
                                 }
                                 unset($where1);
+                            }
+                        }
+                    }
+
+                    if (!empty($shicai_category2)){
+                        foreach ($shicai_category2 as $value){
+                            $where2['shicai_category_id'] = $value;
+                            $where2['food_id'] = $this->last_id ;
+                            $s = Db::name('shicai_category_relation')->where($where2)->find();
+//                            echo Db::name('shicai_category_relation')->getLastSql();
+                            if (!$s){
+                                $where2['create_time'] = $where2['update_time'] =date('Y-m-d H:i:s');
+                                $t = Db::name('shicai_category_relation')->insert($where2);
+                                if (!$t){
+                                    Log::record('菜谱'.$where2['food_id'].'分类'.$where2['shicai_category_id'].'没有创建','error');
+                                }
+                                unset($where2);
+                            }
+                        }
+                    }
+
+                    if (!empty($food_category)){
+                        foreach ($food_category as $value){
+                            $where3['food_category_id'] = $value;
+                            $where3['food_id'] = $this->last_id ;
+                            $s = Db::name('food_category_relation')->where($where3)->find();
+//                            echo Db::name('shicai_category_relation')->getLastSql();
+                            if (!$s){
+                                $where3['create_time'] = $where3['update_time'] =date('Y-m-d H:i:s');
+                                $t = Db::name('food_category_relation')->insert($where3);
+                                if (!$t){
+                                    Log::record('菜谱'.$where3['food_id'].'分类'.$where3['food_category_id'].'没有创建','error');
+                                }
+                                unset($where3);
                             }
                         }
                     }
@@ -724,7 +757,7 @@ class Caiji
                         $ralation = array();
                         if ($food_category['food_category_id'] > 0){
                             $ralation['food_category_id'] = $food_category['food_category_id'];
-                            $ralation['good_id'] = $this->last_id;
+                            $ralation['food_id'] = $this->last_id;
                             $ralation['create_time'] = date('Y-m-d H:i:s');
                             $ralation['update_time'] = date('Y-m-d H:i:s');
                             $res = Db::name('food_category_relation')->insert($ralation);
