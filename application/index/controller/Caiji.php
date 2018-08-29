@@ -542,8 +542,9 @@ class Caiji
 
 
     public function recai(){
-        for($i = 10;$i > 0;$i-- ) {
-            echo 'https://home.meishichina.com/recipe/recai/page/'.$i.'/';
+//        for($i = 1;$i > 0;$i-- ) {
+//            echo 'https://home.meishichina.com/recipe/recai/page/'.$i.'/';
+            $i = input('page/d');
             $url = file_get_contents('https://home.meishichina.com/recipe/recai/page/'.$i.'/');
             $ql = QueryList::rules(array(
                 'food_name' => array('#J_list >ul > li >.detail > h2>a', 'text'),
@@ -562,9 +563,9 @@ class Caiji
                 }
                 $value['create_time'] = $value['update_time'] = date('Y-m-d H:i:s');
                 $value['images'] = explode('?', $value['images'])[0];
-                $res = Db::name('food_list')->insert($value);
+                $res1 = Db::name('food_list')->insert($value);
 
-                if (!$res) {
+                if (!$res1) {
                     DB::rollback();
                 } else {
                     $html = file_get_contents($value['food_url']);
@@ -794,7 +795,7 @@ class Caiji
                     }
                 }
             }
-        }
+//        }
     }
 
     private static function _checkShiCaiCategory($category,$type = 1){
