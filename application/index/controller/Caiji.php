@@ -542,230 +542,253 @@ class Caiji
 
 
     public function recai(){
-        $url = file_get_contents('https://home.meishichina.com/recipe/recai/');
-
-        $ql = QueryList::rules(array(
-            'food_name' => array('#J_list >ul > li >.detail > h2>a','text'),
-            'food_url' => array('#J_list >ul > li >.detail > h2>a','href'),
-            'tags' => array('#J_list >ul > li >.detail > p.subcontent','text'),
-            'images' => array('#J_list > ul > li > div.pic > a > img','data-src'),
+        for($i = 10;$i > 0;$i-- ) {
+            echo 'https://home.meishichina.com/recipe/recai/page/'.$i.'/';
+            $url = file_get_contents('https://home.meishichina.com/recipe/recai/page/'.$i.'/');
+            $ql = QueryList::rules(array(
+                'food_name' => array('#J_list >ul > li >.detail > h2>a', 'text'),
+                'food_url' => array('#J_list >ul > li >.detail > h2>a', 'href'),
+                'tags' => array('#J_list >ul > li >.detail > p.subcontent', 'text'),
+                'images' => array('#J_list > ul > li > div.pic > a > img', 'data-src'),
 //            'author_name' => array('#J_list > ul > li > div.detail > p.subline > a','text'),
-            'page' => array('.ui-page-inner .now_page','text'),
-        ));
-        $data = $ql->setHtml($url)->removeHead()->query()->getData();
+                'page' => array('.ui-page-inner .now_page', 'text'),
+            ));
+            $data = $ql->setHtml($url)->removeHead()->query()->getData();
 
-        Db::startTrans();
-        foreach($data as $key => $value){
-            if ($key == 0){
-                unset($value['page']);
-            }
-            $value['create_time'] = $value['update_time'] = date('Y-m-d H:i:s');
-            $value['images'] = explode('?',$value['images'])[0];
-            $res = Db::name('food_list')->insert($value);
+            Db::startTrans();
+            foreach ($data as $key => $value) {
+                if ($key == 0) {
+                    unset($value['page']);
+                }
+                $value['create_time'] = $value['update_time'] = date('Y-m-d H:i:s');
+                $value['images'] = explode('?', $value['images'])[0];
+                $res = Db::name('food_list')->insert($value);
 
-            if (!$res){
-                DB::rollback();
-            }else{
-                $html = file_get_contents($value['food_url']);
+                if (!$res) {
+                    DB::rollback();
+                } else {
+                    $html = file_get_contents($value['food_url']);
 //                $html = file_get_contents('https://home.meishichina.com/recipe-151200.html');
 //                $html = file_get_contents('https://home.meishichina.com/recipe-151106.html');
 //                $html = file_get_contents('https://home.meishichina.com/recipe-181606.html');
-                $data1['old_id'] = explode('.',explode('-',$value['food_url'])[1])[0];
-                $food2 = QueryList::rules(array(
-                    'space_id' => array('body > div.wrap > div > div.space_left > div.space_box_home > div > div > a','href')
-                ));
-                $data3 = $food2->setHtml($html)->removeHead()->query()->getData();
+                    $data1['old_id'] = explode('.', explode('-', $value['food_url'])[1])[0];
+                    $food2 = QueryList::rules(array(
+                        'space_id' => array('body > div.wrap > div > div.space_left > div.space_box_home > div > div > a', 'href')
+                    ));
+                    $data3 = $food2->setHtml($html)->removeHead()->query()->getData();
+                    $food2->destruct();
 
-                $food1 = QueryList::rules(array(
-                    'tips' => array('.recipeTip','text'),
-                ));
-                $data2 = $food1->setHtml($html)->removeHead()->query()->getData();
-                $length = count($data2);
-                $food1->destruct();
+                    $food1 = QueryList::rules(array(
+                        'tips' => array('.recipeTip', 'text'),
+                    ));
+                    $data2 = $food1->setHtml($html)->removeHead()->query()->getData();
+                    $length = count($data2);
+                    $food1->destruct();
 
-                $food = QueryList::rules(array(
-                    'food_name' => array('#recipe_title','text'),
-                    'descrpition' => array('#block_txt1','text'),
-                    'top_image' => array('#recipe_De_imgBox > a > img','src'),
-                    'main_material' => array('div.recipeCategory_sub_R.clear','html'),
-                    'other_tags' => array('body > div.wrap > div > div.space_left > div.space_box_home > div > fieldset > div > ul','html'),
-                    'assist_material' => array('div.recipeCategory_sub_R.mt30.clear','html'),
-                    'images' => array('.recipeStep_img > img','src'),
-                    'cooking_process' => array('.recipeStep_word','text'),
-                ));
+                    $food = QueryList::rules(array(
+                        'food_name' => array('#recipe_title', 'text'),
+                        'descrpition' => array('#block_txt1', 'text'),
+                        'top_image' => array('#recipe_De_imgBox > a > img', 'src'),
+                        'main_material' => array('div.recipeCategory_sub_R.clear', 'html'),
+                        'other_tags' => array('body > div.wrap > div > div.space_left > div.space_box_home > div > fieldset > div > ul', 'html'),
+                        'assist_material' => array('div.recipeCategory_sub_R.mt30.clear', 'html'),
+                        'images' => array('.recipeStep_img > img', 'src'),
+                        'cooking_process' => array('.recipeStep_word', 'text'),
+                    ));
 
-                $data = $food->setHtml($html)->removeHead()->query()->getData();
-
+                    $data = $food->setHtml($html)->removeHead()->query()->getData();
+                    $food->destruct();
 //                echo '<pre>';
 //                print_r($data);exit;
-                if (!isset($data[0]['food_name'])){
-                    $data1['food_name'] = '';
-                }else{
-                    $data1['food_name']= htmlspecialchars($data[0]['food_name']);
-                }
+                    if (!isset($data[0]['food_name'])) {
+                        $data1['food_name'] = '';
+                    } else {
+                        $data1['food_name'] = htmlspecialchars($data[0]['food_name']);
+                    }
 
-                if (!isset($data[0]['descrpition'])){
-                    $data1['descrpition'] = '';
-                }else{
-                    $data1['descrpition'] = json_encode(htmlspecialchars($data[0]['descrpition']));
-                }
+                    if (!isset($data[0]['descrpition'])) {
+                        $data1['descrpition'] = '';
+                    } else {
+                        $data1['descrpition'] = json_encode(htmlspecialchars($data[0]['descrpition']));
+                    }
 
-                if (!isset($data[0]['top_image'])){
-                    $data1['top_image'] = '';
-                }else{
-                    $data1['top_image'] = explode("?",$data[0]['top_image'])[0];
-                }
+                    if (!isset($data[0]['top_image'])) {
+                        $data1['top_image'] = '';
+                    } else {
+                        $data1['top_image'] = explode("?", $data[0]['top_image'])[0];
+                    }
 
-                $count = count($data);
-                for ($i = 0; $i < $count; $i++){
-                    $data1['images'][$i] = explode('?',$data[$i]['images'])[0];
-                    $data1['cooking_process'][$i] = $data[$i]['cooking_process'];
-                }
-                $data1['images'] = json_encode($data1['images']);
-                $data1['cooking_process'] = json_encode($data1['cooking_process']);
+                    $count = count($data);
+                    if ($count > 0){
+                        for ($i = 0; $i < $count; $i++) {
+                            if (isset($data[$i]['images'])){
+                                $data1['images'][$i] = explode('?', $data[$i]['images'])[0];
+                            }
+                            if (isset($data[$i]['cooking_process'])){
+                                $data1['cooking_process'][$i] = $data[$i]['cooking_process'];
+                            }
+                        }
+                    }else{
 
-                preg_match_all('/<b>(.+?)<\/b>/', $data[0]['main_material'], $tag1);
-                preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['main_material'], $tag2);
-                str_replace('<b>','',$tag1[1]);
-                str_replace('</b>','',$tag1[1]);
-                $main_material = array_combine($tag1[1],$tag2[1]);
+                    }
+                    if (isset($data1['images']) && $data1['images'] != ''){
+                        $data1['images'] = json_encode($data1['images']);
+                    }
+                    $data1['cooking_process'] = json_encode($data1['cooking_process']);
 
-                preg_match_all('/target="_blank">(.+?)<\/a>/', $data[0]['assist_material'], $tag3);
-                preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['assist_material'], $tag4);
-                str_replace('<b>','',$tag3[1]);
-                str_replace('</b>','',$tag3[1]);
-                $other_tags = array_combine($tag3[1],$tag4[1]);
+                    preg_match_all('/<b>(.+?)<\/b>/', $data[0]['main_material'], $tag1);
+                    preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['main_material'], $tag2);
+                    str_replace('<b>', '', $tag1[1]);
+                    str_replace('</b>', '', $tag1[1]);
+                    $main_material = array_combine($tag1[1], $tag2[1]);
 
-                preg_match_all('/<b>(.+?)<\/b>/', $data[1]['other_tags'], $tag33);
-                preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[1]['other_tags'], $tag44);
-                str_replace('<b>','',$tag33[1]);
-                str_replace('</b>','',$tag33[1]);
-                $assist_material= array_combine($tag33[1],$tag44[1]);
+                    preg_match_all('/target="_blank">(.+?)<\/a>/', $data[0]['assist_material'], $tag3);
+                    preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['assist_material'], $tag4);
+                    str_replace('<b>', '', $tag3[1]);
+                    str_replace('</b>', '', $tag3[1]);
+                    $other_tags = array_combine($tag3[1], $tag4[1]);
 
-                $data1['main_material'] = json_encode($main_material);
-                $data1['other_tags'] = json_encode($other_tags);
-                $data1['assist_material'] = json_encode($assist_material);
-                if ($length > 3){
-                    $data1['tips'] = json_encode($data2[$length-4]['tips']);
-                }
+                    preg_match_all('/<b>(.+?)<\/b>/', $data[1]['other_tags'], $tag33);
+                    preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[1]['other_tags'], $tag44);
+                    str_replace('<b>', '', $tag33[1]);
+                    str_replace('</b>', '', $tag33[1]);
+                    $assist_material = array_combine($tag33[1], $tag44[1]);
 
-                $data1['space_id'] = explode('.',explode('-',$data3[1]['space_id'])[1])[0];
-                $data1['kitchen_ware'] = explode('：',$data2[$length-2]['tips'])[1];
-                $data1['big_category'] = explode('|',str_replace('&nbsp;&nbsp;','|', htmlentities(trim(explode('：',$data2[$length-1]['tips'])[1]))));
-                foreach ($data1['big_category'] as $k => $v){
+                    $data1['main_material'] = json_encode($main_material);
+                    $data1['other_tags'] = json_encode($other_tags);
+                    $data1['assist_material'] = json_encode($assist_material);
+                    if ($length > 3) {
+                        $data1['tips'] = json_encode($data2[$length - 4]['tips']);
+                    }
+
+                    $data1['space_id'] = explode('.', explode('-', $data3[1]['space_id'])[1])[0];
+                    if ($length > 0){
+                        if (strpos($data2[$length - 2]['tips'],':') > 0){
+                            $data1['kitchen_ware'] = explode('：', $data2[$length - 2]['tips'])[1];
+                        }else{
+                            $data1['kitchen_ware'] = 'error';
+                        }
+                    }
+                    $data1['big_category'] = explode('|', str_replace('&nbsp;&nbsp;', '|', htmlentities(trim(explode('：', $data2[$length - 1]['tips'])[1]))));
+                    foreach ($data1['big_category'] as $k => $v) {
                         $data1['big_category'][$k] = trim($v);
-                }
-                $count = count($data1['big_category']);
-                unset($data1['big_category'][$count-1]);
-                $big_category = $data1['big_category'];
-                unset($data1['big_category']);
-
-                $data1['create_time'] = date('Y-m-d H:i:s');
-                $data1['update_time'] = date('Y-m-d H:i:s');
-
-                $old = Db::name('food')->where('old_id='.$data1['old_id'])->find();
-                if (!$old){
-                    $res = Db::name('food')->insert($data1);
-                    $this->last_id = Db::name('food')->getLastInsID();
-                    $main_material = json_decode($data1['main_material']);
-                    foreach ($main_material as $key => $value){
-                        $r = Db::name('shicai_category')->where('category_name="'.$key.'"')->find();
-                        if ($r) {
-                            $shicai_category1[] = $r['category_id'];
-                        }
                     }
-                    $assist_material = json_decode($data1['assist_material']);
-                    foreach ($assist_material as $key => $value){
-                        $r = Db::name('shicai_category')->where('category_name="'.$key.'"')->find();
-                        if ($r) {
-                            $shicai_category2[] = $r['category_id'];
+                    $count = count($data1['big_category']);
+                    unset($data1['big_category'][$count - 1]);
+                    $big_category = $data1['big_category'];
+                    unset($data1['big_category']);
+
+                    $data1['create_time'] = date('Y-m-d H:i:s');
+                    $data1['update_time'] = date('Y-m-d H:i:s');
+
+                    $old = Db::name('food')->where('old_id=' . $data1['old_id'])->find();
+                    if (!$old) {
+                        $res = Db::name('food')->insert($data1);
+                        $this->last_id = Db::name('food')->getLastInsID();
+                        $main_material = json_decode($data1['main_material']);
+                        foreach ($main_material as $key => $value) {
+                            $r = Db::name('shicai_category')->where('category_name="' . $key . '"')->find();
+                            if ($r) {
+                                $shicai_category1[] = $r['category_id'];
+                            }
                         }
-                    }
+                        $assist_material = json_decode($data1['assist_material']);
+                        foreach ($assist_material as $key => $value) {
+                            $r = Db::name('shicai_category')->where('category_name="' . $key . '"')->find();
+                            if ($r) {
+                                $shicai_category2[] = $r['category_id'];
+                            }
+                        }
 //                    echo Db::name('shicai_category')->getLastSql();exit;
-                    $other_tags = json_decode($data1['other_tags']);
-                    foreach ($other_tags as $key => $value){
-                        $r = Db::name('food_category')->where('food_category_name="'.$key.'"')->find();
-                        if ($r) {
-                            $food_category[] = $r['food_category_id'];
+                        $other_tags = json_decode($data1['other_tags']);
+                        unset($food_category);
+                        foreach ($other_tags as $key => $value) {
+                            $r = Db::name('food_category')->where('food_category_name="' . $key . '"')->find();
+                            if ($r) {
+                                $food_category[] = $r['food_category_id'];
+                            }
                         }
-                    }
 //                    var_dump($shicai_category1);
 //                    var_dump($shicai_category2);
-//                    var_dump($food_category);exit;
-                    if (!empty($shicai_category1)){
-                        foreach ($shicai_category1 as $value){
-                            $where1['shicai_category_id'] = $value;
-                            $where1['food_id'] = $this->last_id ;
-                            $s = Db::name('shicai_category_relation')->where($where1)->find();
+//                    var_dump($food_category);
+                        if (!empty($shicai_category1)) {
+                            foreach ($shicai_category1 as $value) {
+                                $where1['shicai_category_id'] = $value;
+                                $where1['food_id'] = $this->last_id;
+                                $s = Db::name('shicai_category_relation')->where($where1)->find();
 //                            echo Db::name('shicai_category_relation')->getLastSql();
-                            if (!$s){
-                                $where1['create_time'] = $where1['update_time'] =date('Y-m-d H:i:s');
-                                $t = Db::name('shicai_category_relation')->insert($where1);
-                                if (!$t){
-                                    Log::record('菜谱'.$where1['food_id'].'分类'.$where1['shicai_category_id'].'没有创建','error');
+                                if (!$s) {
+                                    $where1['create_time'] = $where1['update_time'] = date('Y-m-d H:i:s');
+                                    $t = Db::name('shicai_category_relation')->insert($where1);
+                                    if (!$t) {
+                                        Log::record('菜谱' . $where1['food_id'] . '分类' . $where1['shicai_category_id'] . '没有创建', 'error');
+                                    }
+                                    unset($where1);
                                 }
-                                unset($where1);
                             }
                         }
-                    }
 
-                    if (!empty($shicai_category2)){
-                        foreach ($shicai_category2 as $value){
-                            $where2['shicai_category_id'] = $value;
-                            $where2['food_id'] = $this->last_id ;
-                            $s = Db::name('shicai_category_relation')->where($where2)->find();
+                        if (!empty($shicai_category2)) {
+                            foreach ($shicai_category2 as $value) {
+                                $where2['shicai_category_id'] = $value;
+                                $where2['food_id'] = $this->last_id;
+                                $s = Db::name('shicai_category_relation')->where($where2)->find();
 //                            echo Db::name('shicai_category_relation')->getLastSql();
-                            if (!$s){
-                                $where2['create_time'] = $where2['update_time'] =date('Y-m-d H:i:s');
-                                $t = Db::name('shicai_category_relation')->insert($where2);
-                                if (!$t){
-                                    Log::record('菜谱'.$where2['food_id'].'分类'.$where2['shicai_category_id'].'没有创建','error');
+                                if (!$s) {
+                                    $where2['create_time'] = $where2['update_time'] = date('Y-m-d H:i:s');
+                                    $t = Db::name('shicai_category_relation')->insert($where2);
+                                    if (!$t) {
+                                        Log::record('菜谱' . $where2['food_id'] . '分类' . $where2['shicai_category_id'] . '没有创建', 'error');
+                                    }
+                                    unset($where2);
                                 }
-                                unset($where2);
                             }
                         }
-                    }
 
-                    if (!empty($food_category)){
-                        foreach ($food_category as $value){
-                            $where3['food_category_id'] = $value;
-                            $where3['food_id'] = $this->last_id ;
-                            $s = Db::name('food_category_relation')->where($where3)->find();
+                        if (!empty($food_category)) {
+                            foreach ($food_category as $value) {
+                                $where3['food_category_id'] = $value;
+                                $where3['food_id'] = $this->last_id;
+                                $s = Db::name('food_category_relation')->where($where3)->find();
 //                            echo Db::name('shicai_category_relation')->getLastSql();
-                            if (!$s){
-                                $where3['create_time'] = $where3['update_time'] =date('Y-m-d H:i:s');
-                                $t = Db::name('food_category_relation')->insert($where3);
-                                if (!$t){
-                                    Log::record('菜谱'.$where3['food_id'].'分类'.$where3['food_category_id'].'没有创建','error');
+                                if (!$s) {
+                                    $where3['create_time'] = $where3['update_time'] = date('Y-m-d H:i:s');
+//                                    var_dump($where3);
+                                    $t = Db::name('food_category_relation')->insert($where3);
+//                                    echo Db::name('food_category_relation')->getLastSql();
+                                    if (!$t) {
+                                        Log::record('菜谱' . $where3['food_id'] . '分类' . $where3['food_category_id'] . '没有创建', 'error');
+                                    }
+                                    unset($where3);
                                 }
-                                unset($where3);
                             }
                         }
+
+                    } else {
+                        continue;
                     }
 
-                }else{
-                    continue;
-                }
-
-                if (!$res){
-                    Db::rollback();
-                }else{
-                    foreach ($big_category as $value){
-                        $where['food_category_name'] = $value;
-                        $food_category = Db::name('food_category')->where($where)->find();
+                    if (!$res) {
+                        Db::rollback();
+                    } else {
+                        foreach ($big_category as $value) {
+                            $where['food_category_name'] = $value;
+                            $food_category = Db::name('food_category')->where($where)->find();
 //                        echo db::name('food_category')->getLastSql();
-                        $ralation = array();
-                        if ($food_category['food_category_id'] > 0){
-                            $ralation['food_category_id'] = $food_category['food_category_id'];
-                            $ralation['food_id'] = $this->last_id;
-                            $ralation['create_time'] = date('Y-m-d H:i:s');
-                            $ralation['update_time'] = date('Y-m-d H:i:s');
-                            $res = Db::name('food_category_relation')->insert($ralation);
-                            if ($res){
-                                Db::commit();
-                                unset($data1);
-                            }else{
-                                Db::rollback();
+                            $ralation = array();
+                            if ($food_category['food_category_id'] > 0) {
+                                $ralation['food_category_id'] = $food_category['food_category_id'];
+                                $ralation['food_id'] = $this->last_id;
+                                $ralation['create_time'] = date('Y-m-d H:i:s');
+                                $ralation['update_time'] = date('Y-m-d H:i:s');
+                                $res = Db::name('food_category_relation')->insert($ralation);
+                                if ($res) {
+                                    Db::commit();
+                                    unset($data1);
+//                                    sleep(rand(1,5));
+                                } else {
+                                    Db::rollback();
+                                }
                             }
                         }
                     }
