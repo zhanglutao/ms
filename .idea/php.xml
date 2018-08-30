@@ -34,6 +34,7 @@
       <path value="$PROJECT_DIR$/vendor/jaeger/phpquery-single" />
       <path value="$PROJECT_DIR$/vendor/jaeger/g-http" />
       <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/qcloudsms/qcloudsms_php" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="5.4.0" />

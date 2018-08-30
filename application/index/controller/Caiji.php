@@ -543,7 +543,7 @@ class Caiji
 
     public function recai(){
         $k = input('page/d',990);
-        for($j = $k;$j > 990;$j-- ) {
+        for($j = $k;$j > 980;$j-- ) {
             try{
                 $url = file_get_contents('https://home.meishichina.com/recipe/recai/page/' . $j . '/');
                 $ql = QueryList::rules(array(
