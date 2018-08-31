@@ -546,7 +546,9 @@ class Caiji
         $min = input('min/d',990);
         for($j = $max;$j > $min;$j-- ) {
             try{
-                $url = file_get_contents('https://home.meishichina.com/recipe/recai/page/' . $j . '/');
+//                $url = file_get_contents('https://home.meishichina.com/recipe/recai/page/' . $j . '/');
+                $html = 'https://home.meishichina.com/recipe/recai/page/' . $j . '/';
+                $url = $this->curl_get($html);
                 $ql = QueryList::rules(array(
                     'food_name' => array('#J_list >ul > li >.detail > h2>a', 'text'),
                     'food_url' => array('#J_list >ul > li >.detail > h2>a', 'href'),
@@ -856,6 +858,27 @@ class Caiji
 
     public function start(){
         $this->recai();
+    }
+
+    public function curl_get($html){
+
+        $url = $html;
+
+        $ch = curl_init();
+
+        //设置选项，包括URL
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);//绕过ssl验证
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+
+        //执行并获取HTML文档内容
+        $output = curl_exec($ch);
+
+        //释放curl句柄
+        curl_close($ch);
+        return $output;
     }
 
     public function order_list(){
