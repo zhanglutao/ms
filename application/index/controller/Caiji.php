@@ -50,7 +50,7 @@ class Caiji
         //其它禽类
         $data[6] = QueryList::get($url)->find('div.category_sub:nth-child(7) > ul > li > a')->attrs('title');
 
-        $url = file_get_contents($url);
+        $url = $this->curl_get($url);
         $title = QueryList::rules(array(
             'big_category' => array('body > div.wrap > div > div.category_box.mt20 > div > h3','text'),
         ));
@@ -107,7 +107,7 @@ class Caiji
         //其他水产类
         $data[5] = QueryList::get($url)->find('div.category_sub:nth-child(6) > ul > li > a')->attrs('title');
 
-        $url = file_get_contents($url);
+        $url = $this->curl_get($url);
         $title = QueryList::rules(array(
             'big_category' => array('body > div.wrap > div > div.category_box.mt20 > div > h3','text'),
         ));
@@ -162,7 +162,7 @@ class Caiji
         //其他
         $data[5] = QueryList::get($url)->find('div.category_sub:nth-child(6) > ul > li > a')->attrs('title');
 
-        $url = file_get_contents($url);
+        $url = $this->curl_get($url);
         $title = QueryList::rules(array(
             'big_category' => array('body > div.wrap > div > div.category_box.mt20 > div > h3','text'),
         ));
@@ -209,7 +209,7 @@ class Caiji
         //干果类
         $data[1] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
 
-        $url = file_get_contents($url);
+        $url = $this->curl_get($url);
         $title = QueryList::rules(array(
             'big_category' => array('body > div.wrap > div > div.category_box.mt20 > div > h3','text'),
         ));
@@ -264,7 +264,7 @@ class Caiji
         //方便食品类
         $data[5] = QueryList::get($url)->find('div.category_sub:nth-child(6) > ul > li > a')->attrs('title');
 
-        $url = file_get_contents($url);
+        $url = $this->curl_get($url);
         $title = QueryList::rules(array(
             'big_category' => array('body > div.wrap > div > div.category_box.mt20 > div > h3','text'),
         ));
@@ -310,7 +310,7 @@ class Caiji
         //食用油
         $data[1] = QueryList::get($url)->find('div.category_sub:nth-child(2) > ul > li > a')->attrs('title');
 
-        $url = file_get_contents($url);
+        $url = $this->curl_get($url);
         $title = QueryList::rules(array(
             'big_category' => array('body > div.wrap > div > div.category_box.mt20 > div > h3','text'),
         ));
@@ -355,7 +355,7 @@ class Caiji
         $data[0] = QueryList::get($url)->find('div.category_sub:nth-child(1) > ul > li > a')->attrs('title');
 
         $temp = [];
-        $url = file_get_contents($url);
+        $url = $this->curl_get($url);
         $title = QueryList::rules(array(
             'big_category' => array('body > div.wrap > div > div.category_box.mt20 > div > h3','text'),
         ));
@@ -429,7 +429,7 @@ class Caiji
         //按主要工艺
         $data[15] = QueryList::get($url)->find('div.category_sub:nth-child(16) > ul > li > a')->attrs('text');
 
-        $url = file_get_contents($url);
+        $url = $this->curl_get($url);
         $title = QueryList::rules(array(
             'big_category' => array('body > div.wrap > div > div.category_box.mt20 > div > h3','text'),
 //            0 => array('body > div.wrap > div > div > div:nth-child(1) > ul > li > a','text'),
@@ -501,7 +501,7 @@ class Caiji
         //其他
         $data[12] = QueryList::get($url)->find('div.category_sub:nth-child(13) > ul > li > a')->attrs('title');
 
-        $url = file_get_contents($url);
+        $url = $this->curl_get($url);
         $title = QueryList::rules(array(
             'big_category' => array('body > div.wrap > div > div.category_box.mt20 > div > h3','text'),
         ));
@@ -580,7 +580,7 @@ class Caiji
                             Db::rollback();
                             continue;
                         }
-                        $html = file_get_contents($value['food_url']);
+                        $html = $this->curl_get($value['food_url']);
                         if (!$html) {
                             echo $value['food_url'];
                         }
