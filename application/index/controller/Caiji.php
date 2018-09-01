@@ -658,7 +658,7 @@ class Caiji
                             preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['main_material'], $tag2);
                             str_replace('<b>', '', $tag1[1]);
                             str_replace('</b>', '', $tag1[1]);
-                            if (count($tag1[1]) == count($tag1[2])){
+                            if (count($tag1[1]) == count($tag2[1])){
                                 $main_material = array_combine($tag1[1], $tag2[1]);
                             }else{
                                 $main_material = 'error';
