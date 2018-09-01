@@ -725,25 +725,31 @@ class Caiji
 //                            echo Db::name('food')->getLastSql();
                             $this->last_id = Db::name('food')->getLastInsID();
                             $main_material = json_decode($data1['main_material']);
-                            foreach ($main_material as $key => $value) {
-                                $r = Db::name('shicai_category')->where('category_name="' . $key . '"')->find();
-                                if ($r) {
-                                    $shicai_category1[] = $r['category_id'];
+                            if (is_array($main_material) && !empty($main_material)){
+                                foreach ($main_material as $key => $value) {
+                                    $r = Db::name('shicai_category')->where('category_name="' . $key . '"')->find();
+                                    if ($r) {
+                                        $shicai_category1[] = $r['category_id'];
+                                    }
                                 }
                             }
-                            $assist_material = json_decode($data1['assist_material']);
-                            foreach ($assist_material as $key => $value) {
-                                $r = Db::name('shicai_category')->where('category_name="' . $key . '"')->find();
-                                if ($r) {
-                                    $shicai_category2[] = $r['category_id'];
+                            if (is_array($assist_material) && !empty($assist_material)) {
+                                $assist_material = json_decode($data1['assist_material']);
+                                foreach ($assist_material as $key => $value) {
+                                    $r = Db::name('shicai_category')->where('category_name="' . $key . '"')->find();
+                                    if ($r) {
+                                        $shicai_category2[] = $r['category_id'];
+                                    }
                                 }
                             }
-                            $other_tags = json_decode($data1['other_tags']);
-                            unset($food_category);
-                            foreach ($other_tags as $key => $value) {
-                                $r = Db::name('food_category')->where('food_category_name="' . $key . '"')->find();
-                                if ($r) {
-                                    $food_category[] = $r['food_category_id'];
+                            if (is_array($other_tags) && !empty($other_tags)) {
+                                $other_tags = json_decode($data1['other_tags']);
+                                unset($food_category);
+                                foreach ($other_tags as $key => $value) {
+                                    $r = Db::name('food_category')->where('food_category_name="' . $key . '"')->find();
+                                    if ($r) {
+                                        $food_category[] = $r['food_category_id'];
+                                    }
                                 }
                             }
 
