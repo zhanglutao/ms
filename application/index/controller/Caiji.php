@@ -658,21 +658,34 @@ class Caiji
                             preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['main_material'], $tag2);
                             str_replace('<b>', '', $tag1[1]);
                             str_replace('</b>', '', $tag1[1]);
-                            $main_material = array_combine($tag1[1], $tag2[1]);
+                            if (count($tag1[1]) == count($tag1[2])){
+                                $main_material = array_combine($tag1[1], $tag2[1]);
+                            }else{
+                                $main_material = 'error';
+                            }
+
                         }
                         if (isset($data[0]['assist_material'])) {
                             preg_match_all('/target="_blank">(.+?)<\/a>/', $data[0]['assist_material'], $tag3);
                             preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['assist_material'], $tag4);
                             str_replace('<b>', '', $tag3[1]);
                             str_replace('</b>', '', $tag3[1]);
-                            $other_tags = array_combine($tag3[1], $tag4[1]);
+                            if (count($tag3[1]) == count($tag4[1])) {
+                                $other_tags = array_combine($tag3[1], $tag4[1]);
+                            }else{
+                                $other_tags = 'error';
+                            }
                         }
                         if (isset($data[0]['other_tags'])) {
                             preg_match_all('/<b>(.+?)<\/b>/', $data[0]['other_tags'], $tag33);
                             preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['other_tags'], $tag44);
                             str_replace('<b>', '', $tag33[1]);
                             str_replace('</b>', '', $tag33[1]);
-                            $assist_material = array_combine($tag33[1], $tag44[1]);
+                            if (count($tag33[1]) == count($tag44[1])) {
+                                $assist_material = array_combine($tag33[1], $tag44[1]);
+                            }else{
+                                $assist_material = 'error';
+                            }
                         }
 
                         $data1['main_material'] = json_encode($main_material);
