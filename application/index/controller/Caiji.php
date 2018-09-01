@@ -778,6 +778,8 @@ class Caiji
                                             Log::record('菜谱' . $where3['food_id'] . '分类' . $where3['food_category_id'] . '没有创建', 'error');
                                         }
                                         unset($where3);
+                                    }else{
+                                        continue;
                                     }
                                 }
                             }
@@ -797,6 +799,9 @@ class Caiji
                                 if ($food_category['food_category_id'] > 0) {
                                     $ralation['food_category_id'] = $food_category['food_category_id'];
                                     $ralation['food_id'] = $this->last_id;
+                                    if (Db::name('food_category_relation')->where($ralation)->find()){
+                                        continue;
+                                    }
                                     $ralation['create_time'] = date('Y-m-d H:i:s');
                                     $ralation['update_time'] = date('Y-m-d H:i:s');
                                     $res = Db::name('food_category_relation')->insert($ralation);
