@@ -31,7 +31,7 @@ class Category extends Base{
         }else{
 
         }
-        var_dump($list);
+//        var_dump($list);
 
         $this->assign('foodlist',$list);
         return $this->fetch();
