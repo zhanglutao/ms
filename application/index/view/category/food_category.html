@@ -116,15 +116,15 @@
 {volist name="foodlist" id="vo"}
  <li data-id="{$vo.food_id}">
 					<div class="pic">
-						<a target="_blank" href="https://home.meishichina.com/recipe-416188.html" title="{$vo.food_name} ">
+						<a target="_blank" href="{:url('Food/content',['food_id'=>$vo.food_id])}" title="{$vo.food_name} ">
 														<img width="180" height="180" src="{if $vo.images neq ''}{$vo.images}?x-oss-process=style/c320{else}dsfadfadf{/if}" class="imgLoad" style="display: block;">
 						</a>
 					</div>
 					<div class="detail">
 					<h2>
-						<a target="_blank" href="https://home.meishichina.com/recipe-416188.html">{$vo.food_name} </a>
+						<a target="_blank" href="{$vo.food_id}">{$vo.food_name} </a>
 					</h2>
-					<p class="subline"><a target="_blank" href="https://home.meishichina.com/space-6100832.html">{$vo.author_name}</a>  </p>
+					<p class="subline"><a target="_blank" href="">{$vo.author_name}</a>  </p>
 
 						<p class="subcontent">{$vo.tags}</p>
 						
