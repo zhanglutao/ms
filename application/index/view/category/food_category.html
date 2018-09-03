@@ -116,7 +116,7 @@
 {volist name="foodlist" id="vo"}
  <li data-id="{$vo.food_id}">
 					<div class="pic">
-						<a target="_blank" href="{:url('Food/content',['food_id'=>$vo.food_id])}" title="{$vo.food_name} ">
+						<a target="_blank" href="{:url('Food/food',['food_id'=>$vo.food_id])}" title="{$vo.food_name} ">
 														<img width="180" height="180" src="{if $vo.images neq ''}{$vo.images}?x-oss-process=style/c320{else}dsfadfadf{/if}" class="imgLoad" style="display: block;">
 						</a>
 					</div>
@@ -139,6 +139,7 @@
 </div>
 
 <div class="ui-page mt10">
+	<!--
 	<div class="ui-page-inner">
 		<a class="now_page">1</a>
 <a href="https://home.meishichina.com/recipe/recai/page/2/">2</a>
@@ -149,14 +150,19 @@
 <a href="https://home.meishichina.com/recipe/recai/page/2/">下一页</a>
 
 	</div>
+	-->
+	<div class="ui-page-inner">
+		<ul class="pager">
+			<li><a href="?page=1">&laquo;1212</a></li>
+			<li class="disabled"><span>&raquo;1212</span></li>
+		</ul>
+	</div>
 </div>
 
 <div class="mt20 clear">
 	<!-- 美食天下内容页左幅300x250 -->
 	<div id="div-gpt-ad-1415071902366-0" style="width:300px; height:250px;float:left;" data-google-query-id="COK4gZ_QnN0CFUVdvQodFlUJ4w">
-<script type="text/javascript">
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-0'); });
-</script>
+
 
 
 
@@ -167,10 +173,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-0');
 <div class="space_right">
 
 <!-- 美食天下菜谱频道右侧一(首屏)300x250 -->
-<div id="div-gpt-ad-1415071902366-2" style="width:300px; height:250px;" data-google-query-id="CMeygZ_QnN0CFYhxYAodfuABcw">
-<script type="text/javascript">
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-2'); });
-</script>
+
 <!--
 <div class="ui_title mt20">
 	<div class="ui_title_wrap cleat">
@@ -187,17 +190,11 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-2');
 </div>
 
 <!-- 美食天下菜谱频道右侧二300x250 -->
-<div id="div-gpt-ad-1415071902366-3" style="width:300px; height:250px;margin-top:20px;" class="smnbk" data-google-query-id="CP_KgZ_QnN0CFUKUvQodXSsGJw">
-<script type="text/javascript">
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-3'); });
-</script>
+
 
 
 <!-- 美食天下菜谱频道右侧(悬浮)300x250 -->
-<div id="div-gpt-ad-1415071902366-4" style="width:300px; height:250px;margin-top:20px;" class="keyshow" data-google-query-id="CMy6gZ_QnN0CFZd1YAod1zUEqg">
-<script type="text/javascript">
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415071902366-4'); });
-</script>
+
 
 </div><!-- 右侧end -->
 				

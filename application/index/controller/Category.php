@@ -33,6 +33,7 @@ class Category extends Base{
         }
 //        var_dump($list);
 
+        $this->assign('page',$page);
         $this->assign('foodlist',$list);
         return $this->fetch();
 
