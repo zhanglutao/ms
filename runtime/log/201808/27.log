@@ -1,0 +1,1108 @@
+---------------------------------------------------------------
+[ 2018-08-27T23:00:09+08:00 ] 127.0.0.1 GET /index/caiji/shiliao_category
+[ info ] www.meishiheavn.loc/index/caiji/shiliao_category [运行时间：2.807161s][吞吐率：0.36req/s] [内存消耗：4,676.41kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.009000s ]
+[ info ] [ LANG ] E:\wamp\www\ms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'caiji',
+    2 => 'shiliao_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.meishiheavn.loc',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uid=2; token=823d45c1-7550-4a42-8b84-e9e43435dd86; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1534084210,1534174584',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\wamp\www\ms\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.005000s ]
+[ info ] [ RUN ] app\index\controller\Caiji->shiliao_category[ E:\wamp\www\ms\application\index\controller\Caiji.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-08-27T23:00:09+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.meishiheavn.loc/favicon.ico [运行时间：0.095005s][吞吐率：10.53req/s] [内存消耗：2,521.77kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.009000s ]
+[ info ] [ LANG ] E:\wamp\www\ms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.meishiheavn.loc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.meishiheavn.loc/index/caiji/shiliao_category',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uid=2; token=823d45c1-7550-4a42-8b84-e9e43435dd86; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1534084210,1534174584',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-08-27T23:12:50+08:00 ] 127.0.0.1 GET /index/caiji/shiliao_category
+[ info ] www.meishiheavn.loc/index/caiji/shiliao_category [运行时间：1.760101s][吞吐率：0.57req/s] [内存消耗：4,676.68kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.008001s ]
+[ info ] [ LANG ] E:\wamp\www\ms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'caiji',
+    2 => 'shiliao_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.meishiheavn.loc',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uid=2; token=823d45c1-7550-4a42-8b84-e9e43435dd86; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1534084210,1534174584',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\wamp\www\ms\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.006001s ]
+[ info ] [ RUN ] app\index\controller\Caiji->shiliao_category[ E:\wamp\www\ms\application\index\controller\Caiji.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-08-27T23:20:37+08:00 ] 127.0.0.1 GET /index/caiji/shiliao_category
+[ info ] www.meishiheavn.loc/index/caiji/shiliao_category [运行时间：1.665095s][吞吐率：0.60req/s] [内存消耗：4,676.68kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.010000s ]
+[ info ] [ LANG ] E:\wamp\www\ms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'caiji',
+    2 => 'shiliao_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.meishiheavn.loc',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uid=2; token=823d45c1-7550-4a42-8b84-e9e43435dd86; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1534084210,1534174584',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\wamp\www\ms\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.006000s ]
+[ info ] [ RUN ] app\index\controller\Caiji->shiliao_category[ E:\wamp\www\ms\application\index\controller\Caiji.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-08-27T23:23:01+08:00 ] 127.0.0.1 GET /index/caiji/shiliao_category
+[ info ] www.meishiheavn.loc/index/caiji/shiliao_category [运行时间：1.654094s][吞吐率：0.60req/s] [内存消耗：4,676.70kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.010001s ]
+[ info ] [ LANG ] E:\wamp\www\ms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'caiji',
+    2 => 'shiliao_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.meishiheavn.loc',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uid=2; token=823d45c1-7550-4a42-8b84-e9e43435dd86; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1534084210,1534174584',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\wamp\www\ms\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.006000s ]
+[ info ] [ RUN ] app\index\controller\Caiji->shiliao_category[ E:\wamp\www\ms\application\index\controller\Caiji.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-08-27T23:23:33+08:00 ] 127.0.0.1 GET /index/caiji/shiliao_category
+[ info ] www.meishiheavn.loc/index/caiji/shiliao_category [运行时间：1.626093s][吞吐率：0.61req/s] [内存消耗：4,677.38kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.010001s ]
+[ info ] [ LANG ] E:\wamp\www\ms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'caiji',
+    2 => 'shiliao_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.meishiheavn.loc',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uid=2; token=823d45c1-7550-4a42-8b84-e9e43435dd86; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1534084210,1534174584',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\wamp\www\ms\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.005001s ]
+[ info ] [ RUN ] app\index\controller\Caiji->shiliao_category[ E:\wamp\www\ms\application\index\controller\Caiji.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-08-27T23:30:58+08:00 ] 127.0.0.1 GET /index/caiji/shiliao_category
+[ info ] www.meishiheavn.loc/index/caiji/shiliao_category [运行时间：2.558147s][吞吐率：0.39req/s] [内存消耗：6,834.55kb] [文件加载：122]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.010000s ]
+[ info ] [ LANG ] E:\wamp\www\ms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'caiji',
+    2 => 'shiliao_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.meishiheavn.loc',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'uid=2; token=823d45c1-7550-4a42-8b84-e9e43435dd86; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1534084210,1534174584',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\wamp\www\ms\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.007000s ]
+[ info ] [ RUN ] app\index\controller\Caiji->shiliao_category[ E:\wamp\www\ms\application\index\controller\Caiji.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.051003s ] mysql:host=127.0.0.1;dbname=msheavn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ms_health_category` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="补钙" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (0 , '补钙' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="补气" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '补气' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="贫血" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '贫血' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="健脑益智" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '健脑益智' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="降火" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '降火' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="免疫力" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '免疫力' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="便秘" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '便秘' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="清肠" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '清肠' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="腹泻" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '腹泻' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="感冒发烧" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '感冒发烧' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="自汗盗汗" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '自汗盗汗' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="补血" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '补血' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="补铁" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '补铁' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="补锌" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '补锌' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="补硒" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '补硒' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="补碘" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '补碘' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="润肺" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '润肺' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="养肝/护肝" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '养肝/护肝' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="养肾/补肾" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '养肾/补肾' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="补心/养心" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '补心/养心' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="气血双补" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '气血双补' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="养血" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '养血' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="健脾" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '健脾' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="养胃" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '养胃' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="明目" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '明目' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="润肠通便" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '润肠通便' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="健忘" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '健忘' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="祛湿" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '祛湿' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="增进食欲" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '增进食欲' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="消食" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '消食' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="防辐射" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '防辐射' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="对抗雾霾" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '对抗雾霾' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="减压" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '减压' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="消化不良" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '消化不良' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="术后" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '术后' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="补虚养身" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '补虚养身' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="壮腰健肾" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '壮腰健肾' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="止血调理" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '止血调理' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="疏肝理气" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '疏肝理气' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="利尿" ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '利尿' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="夜尿多" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '夜尿多' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="营养不良" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '营养不良' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肢寒畏冷" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '肢寒畏冷' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="驱寒暖身" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '驱寒暖身' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="御寒" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '御寒' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="增肥" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '增肥' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="增重增肌" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '增重增肌' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="活血化瘀" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '活血化瘀' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="晕车" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '晕车' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="滋阴" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '滋阴' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="益寿" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '益寿' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="益智补脑" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '益智补脑' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="消暑解渴" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '消暑解渴' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="清热解毒" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '清热解毒' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="增强记忆力" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '增强记忆力' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="开胃" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (1 , '开胃' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="润肤" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (0 , '润肤' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="保湿" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '保湿' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="延缓衰老" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '延缓衰老' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="抗衰老" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '抗衰老' , '2018-08-27 23:30:57' , '2018-08-27 23:30:57') [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="紧致肌肤" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '紧致肌肤' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="皮肤粗糙" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '皮肤粗糙' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="养颜" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '养颜' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="排毒" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '排毒' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="美白" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '美白' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="抗皱" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '抗皱' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="祛斑" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '祛斑' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="祛痘" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '祛痘' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="皮肤干燥" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '皮肤干燥' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="皮肤瘙痒" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '皮肤瘙痒' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="皮肤松弛" ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '皮肤松弛' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="雀斑" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '雀斑' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="乌发" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '乌发' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="养发" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '养发' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="瘦身" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '瘦身' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="瘦脸" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '瘦脸' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="瘦腿" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '瘦腿' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="丰胸" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '丰胸' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="减肥" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (57 , '减肥' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="精子活力低下" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (0 , '精子活力低下' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="不育" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (80 , '不育' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="阳痿早泄" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (80 , '阳痿早泄' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="壮阳" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (80 , '壮阳' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="早泄" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (80 , '早泄' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="遗精" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (80 , '遗精' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="前列腺炎" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (80 , '前列腺炎' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="死精子多" ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (80 , '死精子多' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="子宫脱垂" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (0 , '子宫脱垂' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="盆腔炎" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (88 , '盆腔炎' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="白带异常" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (88 , '白带异常' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="子宫出血" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (88 , '子宫出血' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="乳腺增生" ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (88 , '乳腺增生' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="月经过少" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (88 , '月经过少' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="月经量少" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (88 , '月经量少' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="月经过多" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (88 , '月经过多' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="月经量多" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (88 , '月经量多' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="更年期" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (88 , '更年期' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="痛经" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (88 , '痛经' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="调经" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (88 , '调经' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="来月经/例假" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (88 , '来月经/例假' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="月经期间" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (88 , '月经期间' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="月经不调" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (88 , '月经不调' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="闭经" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (88 , '闭经' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="月经提前" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (88 , '月经提前' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="月经推迟" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (88 , '月经推迟' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="怀孕初期" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (0 , '怀孕初期' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="安胎" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '安胎' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="保胎" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '保胎' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="产妇" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '产妇' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="坐月子" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '坐月子' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="妊娠呕吐" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '妊娠呕吐' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="妊娠水肿" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '妊娠水肿' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="产后调理" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '产后调理' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="哺乳期" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '哺乳期' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="孕前" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '孕前' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="备孕" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '备孕' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="不孕不育" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '不孕不育' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="怀孕" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '怀孕' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="孕妇" ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '孕妇' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="孕吐" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '孕吐' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="通乳" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '通乳' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="下奶" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '下奶' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="回奶" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '回奶' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="产后恶露" ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '产后恶露' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="产后便秘" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '产后便秘' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="催乳" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '催乳' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="乳腺炎" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (106 , '乳腺炎' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="神经衰弱" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (0 , '神经衰弱' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="失眠" ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (128 , '失眠' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="睡眠不好" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (128 , '睡眠不好' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="偏头痛" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (128 , '偏头痛' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="急性支气管炎" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (0 , '急性支气管炎' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="慢性支气管炎" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (132 , '慢性支气管炎' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="支气管哮喘" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (132 , '支气管哮喘' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="润肺止咳" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (132 , '润肺止咳' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="感冒" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (132 , '感冒' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="鼻炎" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (132 , '鼻炎' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肺气肿" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (132 , '肺气肿' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肺结核" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (132 , '肺结核' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="气管炎" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (132 , '气管炎' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="支气管炎" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (132 , '支气管炎' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="咳嗽" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (132 , '咳嗽' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="祛痰" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (132 , '祛痰' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="哮喘" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (132 , '哮喘' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肺炎" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (132 , '肺炎' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="鼻塞" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (132 , '鼻塞' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="咽炎" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (132 , '咽炎' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="喉咙痛" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (132 , '喉咙痛' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="心悸" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (0 , '心悸' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="心脏病" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (149 , '心脏病' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="冠心病" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (149 , '冠心病' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="高血压" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (149 , '高血压' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="血糖高" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (149 , '血糖高' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="低血糖" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (149 , '低血糖' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="血脂高" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (149 , '血脂高' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="动脉硬化" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (149 , '动脉硬化' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肾结石" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (0 , '肾结石' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="胆结石" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (157 , '胆结石' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肝炎" ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (157 , '肝炎' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="胆囊炎" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (157 , '胆囊炎' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="胆石症" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (157 , '胆石症' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肝硬化" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (157 , '肝硬化' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="脂肪肝" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (157 , '脂肪肝' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="糖尿病" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (157 , '糖尿病' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="口腔溃疡" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (0 , '口腔溃疡' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="牙痛" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (165 , '牙痛' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="干眼症" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (165 , '干眼症' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="耳鸣" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (165 , '耳鸣' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="近视" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (165 , '近视' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="白内障" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (165 , '白内障' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="风湿" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (0 , '风湿' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="骨质疏松" ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (171 , '骨质疏松' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="颈椎病" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (171 , '颈椎病' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="骨折" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (171 , '骨折' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="痛风" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (171 , '痛风' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="腰痛" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (171 , '腰痛' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="关节炎" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (171 , '关节炎' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="食管癌" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (0 , '食管癌' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="化疗" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (178 , '化疗' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="膀胱癌" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (178 , '膀胱癌' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="皮肤癌" ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (178 , '皮肤癌' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肺癌" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (178 , '肺癌' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肝癌" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (178 , '肝癌' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="防癌" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (178 , '防癌' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="抗癌" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (178 , '抗癌' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="乳腺癌" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (178 , '乳腺癌' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="胃癌" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (178 , '胃癌' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="宫颈癌" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (178 , '宫颈癌' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="甲亢" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (0 , '甲亢' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="水肿" ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '水肿' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="内分泌失调" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '内分泌失调' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="消化性溃疡" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '消化性溃疡' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肠炎" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '肠炎' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肾炎" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '肾炎' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="甲状腺" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '甲状腺' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="痔疮" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '痔疮' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="胃炎" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '胃炎' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="胃痛" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '胃痛' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="脚气" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '脚气' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="痢疾" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '痢疾' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="尿频" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '尿频' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="中暑" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '中暑' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="癫痫" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '癫痫' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="小儿遗尿" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '小儿遗尿' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="湿热" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '湿热' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="呕吐" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '呕吐' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="中风" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '中风' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="解酒" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '解酒' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="过敏" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '过敏' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="湿疹" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '湿疹' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="麻疹" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '麻疹' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="上火" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '上火' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="尿路结石" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '尿路结石' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="皮炎" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '皮炎' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="夜盲症" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `ms_health_category` (`parent_id` , `health_category_name` , `create_time` , `update_time`) VALUES (189 , '夜盲症' , '2018-08-27 23:30:58' , '2018-08-27 23:30:58') [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-08-27T23:43:06+08:00 ] 127.0.0.1 GET /index/caiji/shiliao_category
+[ info ] www.meishiheavn.loc/index/caiji/shiliao_category [运行时间：2.142122s][吞吐率：0.47req/s] [内存消耗：6,224.77kb] [文件加载：122]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.010000s ]
+[ info ] [ LANG ] E:\wamp\www\ms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'caiji',
+    2 => 'shiliao_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.meishiheavn.loc',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; uid=2; token=823d45c1-7550-4a42-8b84-e9e43435dd86; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1534084210,1534174584',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\wamp\www\ms\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.005000s ]
+[ info ] [ RUN ] app\index\controller\Caiji->shiliao_category[ E:\wamp\www\ms\application\index\controller\Caiji.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;dbname=msheavn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ms_health_category` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="补钙" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="补气" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="贫血" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="健脑益智" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="降火" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="免疫力" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="便秘" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="清肠" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="腹泻" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="感冒发烧" ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="自汗盗汗" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="补血" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="补铁" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="补锌" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="补硒" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="补碘" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="润肺" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="养肝/护肝" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="养肾/补肾" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="补心/养心" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="气血双补" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="养血" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="健脾" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="养胃" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="明目" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="润肠通便" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="健忘" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="祛湿" ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="增进食欲" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="消食" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="防辐射" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="对抗雾霾" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="减压" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="消化不良" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="术后" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="补虚养身" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="壮腰健肾" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="止血调理" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="疏肝理气" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="利尿" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="夜尿多" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="营养不良" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肢寒畏冷" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="驱寒暖身" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="御寒" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="增肥" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="增重增肌" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="活血化瘀" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="晕车" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="滋阴" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="益寿" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="益智补脑" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="消暑解渴" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="清热解毒" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="增强记忆力" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="开胃" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="润肤" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="保湿" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="延缓衰老" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="抗衰老" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="紧致肌肤" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="皮肤粗糙" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="养颜" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="排毒" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="美白" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="抗皱" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="祛斑" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="祛痘" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="皮肤干燥" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="皮肤瘙痒" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="皮肤松弛" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="雀斑" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="乌发" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="养发" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="瘦身" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="瘦脸" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="瘦腿" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="丰胸" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="减肥" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="精子活力低下" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="不育" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="阳痿早泄" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="壮阳" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="早泄" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="遗精" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="前列腺炎" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="死精子多" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="子宫脱垂" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="盆腔炎" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="白带异常" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="子宫出血" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="乳腺增生" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="月经过少" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="月经量少" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="月经过多" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="月经量多" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="更年期" ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="痛经" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="调经" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="来月经/例假" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="月经期间" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="月经不调" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="闭经" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="月经提前" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="月经推迟" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="怀孕初期" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="安胎" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="保胎" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="产妇" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="坐月子" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="妊娠呕吐" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="妊娠水肿" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="产后调理" ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="哺乳期" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="孕前" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="备孕" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="不孕不育" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="怀孕" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="孕妇" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="孕吐" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="通乳" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="下奶" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="回奶" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="产后恶露" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="产后便秘" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="催乳" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="乳腺炎" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="神经衰弱" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="失眠" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="睡眠不好" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="偏头痛" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="急性支气管炎" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="慢性支气管炎" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="支气管哮喘" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="润肺止咳" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="感冒" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="鼻炎" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肺气肿" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肺结核" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="气管炎" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="支气管炎" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="咳嗽" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="祛痰" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="哮喘" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肺炎" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="鼻塞" ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="咽炎" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="喉咙痛" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="心悸" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="心脏病" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="冠心病" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="高血压" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="血糖高" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="低血糖" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="血脂高" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="动脉硬化" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肾结石" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="胆结石" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肝炎" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="胆囊炎" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="胆石症" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肝硬化" ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="脂肪肝" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="糖尿病" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="口腔溃疡" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="牙痛" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="干眼症" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="耳鸣" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="近视" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="白内障" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="风湿" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="骨质疏松" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="颈椎病" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="骨折" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="痛风" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="腰痛" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="关节炎" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="食管癌" ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="化疗" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="膀胱癌" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="皮肤癌" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肺癌" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肝癌" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="防癌" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="抗癌" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="乳腺癌" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="胃癌" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="宫颈癌" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="甲亢" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="水肿" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="内分泌失调" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="消化性溃疡" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肠炎" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="肾炎" ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="甲状腺" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="痔疮" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="胃炎" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="胃痛" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="脚气" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="痢疾" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="尿频" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="中暑" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="癫痫" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="小儿遗尿" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="湿热" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="呕吐" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="中风" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="解酒" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="过敏" ) LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="湿疹" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="麻疹" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="上火" ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="尿路结石" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="皮炎" ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_health_category` WHERE  (  health_category_name="夜盲症" ) LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-08-27T23:45:12+08:00 ] 127.0.0.1 GET /index/caiji/shiliao_category
+[ info ] www.meishiheavn.loc/index/caiji/shiliao_category [运行时间：1.894108s][吞吐率：0.53req/s] [内存消耗：4,679.34kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.014001s ]
+[ info ] [ LANG ] E:\wamp\www\ms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'caiji',
+    2 => 'shiliao_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.meishiheavn.loc',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; uid=2; token=823d45c1-7550-4a42-8b84-e9e43435dd86; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1534084210,1534174584',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\wamp\www\ms\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.005001s ]
+[ info ] [ RUN ] app\index\controller\Caiji->shiliao_category[ E:\wamp\www\ms\application\index\controller\Caiji.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-08-27T23:48:42+08:00 ] 127.0.0.1 GET /index/caiji/shiliao_category
+[ info ] www.meishiheavn.loc/index/caiji/shiliao_category [运行时间：1.677096s][吞吐率：0.60req/s] [内存消耗：4,679.38kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.010001s ]
+[ info ] [ LANG ] E:\wamp\www\ms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'caiji',
+    2 => 'shiliao_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.meishiheavn.loc',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; uid=2; token=823d45c1-7550-4a42-8b84-e9e43435dd86; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1534084210,1534174584',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\wamp\www\ms\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.005001s ]
+[ info ] [ RUN ] app\index\controller\Caiji->shiliao_category[ E:\wamp\www\ms\application\index\controller\Caiji.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-08-27T23:49:37+08:00 ] 127.0.0.1 GET /index/caiji/shiliao_category
+[ info ] www.meishiheavn.loc/index/caiji/shiliao_category [运行时间：1.652094s][吞吐率：0.61req/s] [内存消耗：4,679.10kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.009001s ]
+[ info ] [ LANG ] E:\wamp\www\ms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'caiji',
+    2 => 'shiliao_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.meishiheavn.loc',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; uid=2; token=823d45c1-7550-4a42-8b84-e9e43435dd86; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1534084210,1534174584',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\wamp\www\ms\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.005000s ]
+[ info ] [ RUN ] app\index\controller\Caiji->shiliao_category[ E:\wamp\www\ms\application\index\controller\Caiji.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-08-27T23:50:12+08:00 ] 127.0.0.1 GET /index/caiji/shiliao_category
+[ info ] www.meishiheavn.loc/index/caiji/shiliao_category [运行时间：1.680096s][吞吐率：0.60req/s] [内存消耗：4,683.96kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.011000s ]
+[ info ] [ LANG ] E:\wamp\www\ms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'caiji',
+    2 => 'shiliao_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.meishiheavn.loc',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; uid=2; token=823d45c1-7550-4a42-8b84-e9e43435dd86; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1534084210,1534174584',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\wamp\www\ms\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.006000s ]
+[ info ] [ RUN ] app\index\controller\Caiji->shiliao_category[ E:\wamp\www\ms\application\index\controller\Caiji.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-08-27T23:50:59+08:00 ] 127.0.0.1 GET /index/caiji/shiliao_category
+[ info ] www.meishiheavn.loc/index/caiji/shiliao_category [运行时间：2.478141s][吞吐率：0.40req/s] [内存消耗：4,679.55kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.009001s ]
+[ info ] [ LANG ] E:\wamp\www\ms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'caiji',
+    2 => 'shiliao_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.meishiheavn.loc',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; uid=2; token=823d45c1-7550-4a42-8b84-e9e43435dd86; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1534084210,1534174584',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\wamp\www\ms\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.005000s ]
+[ info ] [ RUN ] app\index\controller\Caiji->shiliao_category[ E:\wamp\www\ms\application\index\controller\Caiji.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-08-27T23:51:18+08:00 ] 127.0.0.1 GET /index/caiji/shiliao_category
+[ info ] www.meishiheavn.loc/index/caiji/shiliao_category [运行时间：1.575090s][吞吐率：0.63req/s] [内存消耗：4,679.55kb] [文件加载：111]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.009000s ]
+[ info ] [ LANG ] E:\wamp\www\ms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'caiji',
+    2 => 'shiliao_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.meishiheavn.loc',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; uid=2; token=823d45c1-7550-4a42-8b84-e9e43435dd86; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1534084210,1534174584',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\wamp\www\ms\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.005000s ]
+[ info ] [ RUN ] app\index\controller\Caiji->shiliao_category[ E:\wamp\www\ms\application\index\controller\Caiji.php ]
+[ info ] [ LOG ] INIT File
