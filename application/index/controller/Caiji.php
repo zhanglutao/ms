@@ -649,7 +649,7 @@ class Caiji
 
                         }
                         if (isset($data1['images']) && $data1['images'] != '') {
-                            $data1['images'] = json_encode($data1['images'],JSON_UNESCAPED_UNICODE);
+                            $data1['images'] = json_encode($data1['images']);
                         }
                         $data1['cooking_process'] = json_encode($data1['cooking_process']);
 
