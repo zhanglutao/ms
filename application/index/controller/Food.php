@@ -45,7 +45,7 @@ class Food extends Base{
         var_dump($food);
 
         $this->assign('page',$page);
-        $this->assign('foodlist',$food);
+        $this->assign('food',$food);
         return $this->fetch();
 
     }
