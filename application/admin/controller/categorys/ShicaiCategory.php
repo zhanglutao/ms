@@ -19,8 +19,8 @@ use fast\Tree;
  */
 class ShicaiCategory extends Backend
 {
-    public function index(){
-
-        return $this->fetch();
+    public function index()
+    {
+        return $this->view->fetch();
     }
 }
