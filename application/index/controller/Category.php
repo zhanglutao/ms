@@ -25,15 +25,15 @@ class Category extends Base{
                 ->alias('a')
                 ->join('food_category_relation b','a.food_id = b.food_id and a.status = 1')
                 ->where('b.food_category_id ='.$categoryId)
-                ->page($page,$pageSize)
-                ->select();
+//                ->page($page,$pageSize)
+                ->paginate(10);
+//                ->select();
 //            var_dump($list);
         }else{
 
         }
-//        var_dump($list);
-
-        $this->assign('page',$page);
+//        echo '<pre>';
+//        print_r($list);exit;
         $this->assign('foodlist',$list);
         return $this->fetch();
 

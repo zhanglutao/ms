@@ -218,11 +218,11 @@ return [
         'setcookie' => true,
     ],
     //分页配置
-    'paginate'               => [
-        'type'      => 'bootstrap',
-        'var_page'  => 'page',
-        'list_rows' => 15,
-    ],
+//    'paginate'               => [
+//        'type'      => 'bootstrap',
+//        'var_page'  => 'page',
+//        'list_rows' => 15,
+//    ],
     //验证码配置
     'captcha'                => [
         // 验证码字符集合
@@ -275,5 +275,11 @@ return [
         'version'             => '1.0.0.20180806_beta',
         //API接口地址
         'api_url'             => 'https://api.fastadmin.net',
+    ],
+
+    'paginate'               => [
+        'type'      => 'page\Page',//分页类
+        'var_page'  => 'page',
+        'list_rows' => 10,
     ],
 ];
