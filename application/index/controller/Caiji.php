@@ -799,7 +799,7 @@ class Caiji
 
                             if (isset($main_material)){
                                 if (!empty($main_material) && !empty($main_material)){
-                                    $main_material = json_decode($data1['main_material']);
+                                    unset($shicai_category1);
                                     foreach ($main_material as $key => $value) {
                                         unset($shicai_category1);
                                         $r = Db::name('shicai_category')->where('category_name="' . $key . '"')->find();
