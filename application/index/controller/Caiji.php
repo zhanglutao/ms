@@ -575,7 +575,9 @@ class Caiji
                     if (!$res1) {
                         Db::rollback();
                     } else {
-//                        $value['food_url'] = 'https://home.meishichina.com/recipe-159194.html';
+                        $value['food_url'] = 'https://home.meishichina.com/recipe-159194.html';
+//                        $value['food_url'] = 'https://home.meishichina.com/recipe-416629.html';
+//                        $value['food_url'] = 'https://home.meishichina.com/recipe-160102.html';
                         if (Db::name('food')->where('old_id=' . $oldid)->find()) {
                             Db::rollback();
                             continue;
@@ -605,15 +607,15 @@ class Caiji
                             'top_image' => array('#recipe_De_imgBox > a > img', 'src'),
                             'main_material' => array('div.recipeCategory_sub_R.clear', 'html'),
 //                            'other_tags' => array('body > div.wrap > div > div.space_left > div.space_box_home > div > fieldset > div > ul', 'html'),
-                            'other_tags' => array('body > div.wrap > div > div.space_left > div.space_box_home > div > fieldset > div', 'html'),
                             'assist_material' => array('div.recipeCategory_sub_R.mt30.clear', 'html'),
+                            'other_tags' => array('recipeCategory_sub_R.mt30.clear', 'html'),
                             'images' => array('.recipeStep_img > img', 'src'),
                             'cooking_process' => array('.recipeStep_word', 'text'),
                         ));
 
                         $data = $food->setHtml($html)->removeHead()->query()->getData();
-//                        echo '<pre>';
-//                        print_r($data);
+                        echo '<pre>';
+                        print_r($data);
 //                        exit;
                         $food->destruct();
 
@@ -660,37 +662,106 @@ class Caiji
                             str_replace('</b>', '', $tag1[1]);
                             if (count($tag1[1]) == count($tag2[1])){
                                 $main_material = array_combine($tag1[1], $tag2[1]);
+                                $data1['main_material'] = $main_material;
                             }else{
                                 $main_material = 'error';
+                                $data1['main_material'] = $main_material;
                             }
-
+                            if ($main_material = 'error'){
+                                preg_match_all('/target="_blank">(.+?)<\/a>/', $data[0]['main_material'], $tag1);
+                                preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['main_material'], $tag2);
+                                str_replace('<b>', '', $tag1[1]);
+                                str_replace('</b>', '', $tag1[1]);
+                                if (count($tag1[1]) == count($tag2[1])){
+                                    $main_material = array_combine($tag1[1], $tag2[1]);
+                                    $data1['main_material'] = $main_material;
+                                }else{
+                                    $main_material = 'error';
+                                    $data1['main_material'] = $main_material;
+                                }
+                            }
                         }
-                        if (isset($data[0]['assist_material'])) {
-                            preg_match_all('/target="_blank">(.+?)<\/a>/', $data[0]['assist_material'], $tag3);
-                            preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['assist_material'], $tag4);
+                        if (isset($data[1]['main_material'])) {
+                            preg_match_all('/<b>(.+?)<\/b>/', $data[1]['main_material'], $tag3);
+                            preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[1]['main_material'], $tag4);
                             str_replace('<b>', '', $tag3[1]);
                             str_replace('</b>', '', $tag3[1]);
                             if (count($tag3[1]) == count($tag4[1])) {
-                                $other_tags = array_combine($tag3[1], $tag4[1]);
+                                $assist_material = array_combine($tag3[1], $tag4[1]);
+                                $data1['assist_material'] = $assist_material;
                             }else{
-                                $other_tags = 'error';
+                                $assist_material = 'error';
+                                $data1['assist_material'] = $assist_material;
                             }
+                            if ($assist_material = 'error'){
+                                preg_match_all('/target="_blank">(.+?)<\/a>/', $data[1]['main_material'], $tag3);
+                                preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[1]['main_material'], $tag4);
+                                str_replace('<b>', '', $tag3[1]);
+                                str_replace('</b>', '', $tag3[1]);
+                                if (count($tag3[1]) == count($tag4[1])) {
+                                    $assist_material = array_combine($tag3[1], $tag4[1]);
+                                    $data1['assist_material'] = $assist_material;
+                                }else{
+                                    $assist_material = 'error';
+                                    $data1['assist_material'] = $assist_material;
+                                }
+                            }
+
                         }
-                        if (isset($data[0]['other_tags'])) {
-                            preg_match_all('/<b>(.+?)<\/b>/', $data[0]['other_tags'], $tag33);
-                            preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['other_tags'], $tag44);
+                        if (isset($data[2]['main_material'])) {
+                            preg_match_all('/target="_blank">(.+?)<\/a>/', $data[2]['main_material'], $tag33);
+                            preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[2]['main_material'], $tag44);
                             str_replace('<b>', '', $tag33[1]);
                             str_replace('</b>', '', $tag33[1]);
                             if (count($tag33[1]) == count($tag44[1])) {
-                                $assist_material = array_combine($tag33[1], $tag44[1]);
+                                $mix_material = array_combine($tag33[1], $tag44[1]);
+                                $data1['mix_material'] = $mix_material;
                             }else{
-                                $assist_material = 'error';
+                                $mix_material = 'error';
+                                $data1['mix_material'] = $mix_material;
+                            }
+                            if ($mix_material == 'error'){
+                                preg_match_all('/<b>(.+?)<\/b>/', $data[2]['main_material'], $tag33);
+                                preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[2]['main_material'], $tag44);
+                                str_replace('<b>', '', $tag33[1]);
+                                str_replace('</b>', '', $tag33[1]);
+                                if (count($tag33[1]) == count($tag44[1])) {
+                                    $mix_material = array_combine($tag33[1], $tag44[1]);
+                                    $data1['mix_material'] = $mix_material;
+                                }else{
+                                    $mix_material = 'error';
+                                    $data1['mix_material'] = $mix_material;
+                                }
+                            }
+                        }
+//                        var_dump($data[3]['main_material']);exit;
+                        if (isset($data[3]['main_material'])) {
+                            preg_match_all('/target="_blank">(.+?)<\/a>/', $data[3]['main_material'], $tag333);
+                            preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[3]['main_material'], $tag443);
+                            str_replace('<b>', '', $tag333[1]);
+                            str_replace('</b>', '', $tag333[1]);
+                            if (count($tag333[1]) == count($tag443[1])) {
+                                $other_tags = array_combine($tag333[1], $tag443[1]);
+                                $data1['other_tags'] = $other_tags;
+                            }else{
+                                $other_tags = 'error';
+                            }
+                            if ($other_tags == 'error') {
+                                preg_match_all('/target="_blank">(.+?)<\/a>/', $data[3]['main_material'], $tag333);
+                                preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[3]['main_material'], $tag443);
+                                str_replace('<b>', '', $tag333[1]);
+                                str_replace('</b>', '', $tag333[1]);
+                                if (count($tag333[1]) == count($tag443[1])) {
+                                    $other_tags = array_combine($tag333[1], $tag443[1]);
+                                    $data1['other_tags'] = $other_tags;
+                                } else {
+                                    $other_tags = 'error';
+                                    $data1['other_tags'] = $other_tags;
+                                }
                             }
                         }
 
-                        $data1['main_material'] = json_encode($main_material);
-                        $data1['other_tags'] = json_encode($other_tags);
-                        $data1['assist_material'] = json_encode($assist_material);
+//                        var_dump($data1);exit;
                         if ($length > 3) {
                             $data1['tips'] = json_encode($data2[$length - 4]['tips']);
                         }
@@ -841,7 +912,6 @@ class Caiji
                 }
             }catch (Exception $e){
                 echo 'Message: ' .$e->getMessage();
-                echo 1111111111111;
             }
 //            exit;
         }
