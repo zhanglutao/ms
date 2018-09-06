@@ -575,7 +575,7 @@ class Caiji
                     if (!$res1) {
                         Db::rollback();
                     } else {
-                        $value['food_url'] = 'https://home.meishichina.com/recipe-159194.html';
+//                        $value['food_url'] = 'https://home.meishichina.com/recipe-159194.html';
 //                        $value['food_url'] = 'https://home.meishichina.com/recipe-416629.html';
 //                        $value['food_url'] = 'https://home.meishichina.com/recipe-160102.html';
                         if (Db::name('food')->where('old_id=' . $oldid)->find()) {
@@ -614,8 +614,8 @@ class Caiji
                         ));
 
                         $data = $food->setHtml($html)->removeHead()->query()->getData();
-                        echo '<pre>';
-                        print_r($data);
+//                        echo '<pre>';
+//                        print_r($data);
 //                        exit;
                         $food->destruct();
 
@@ -662,25 +662,27 @@ class Caiji
                             str_replace('</b>', '', $tag1[1]);
                             if (count($tag1[1]) == count($tag2[1])){
                                 $main_material = array_combine($tag1[1], $tag2[1]);
-                                $data1['main_material'] = $main_material;
+                                $data1['main_material'] = json_encode($main_material);
                             }else{
                                 $main_material = 'error';
-                                $data1['main_material'] = $main_material;
+                                $data1['main_material'] = json_encode($main_material);
                             }
-                            if ($main_material = 'error'){
+
+                            if ($main_material == 'error'){
                                 preg_match_all('/target="_blank">(.+?)<\/a>/', $data[0]['main_material'], $tag1);
                                 preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['main_material'], $tag2);
                                 str_replace('<b>', '', $tag1[1]);
                                 str_replace('</b>', '', $tag1[1]);
                                 if (count($tag1[1]) == count($tag2[1])){
                                     $main_material = array_combine($tag1[1], $tag2[1]);
-                                    $data1['main_material'] = $main_material;
+                                    $data1['main_material'] = json_encode($main_material);
                                 }else{
                                     $main_material = 'error';
-                                    $data1['main_material'] = $main_material;
+                                    $data1['main_material'] = json_encode($main_material);
                                 }
                             }
                         }
+
                         if (isset($data[1]['main_material'])) {
                             preg_match_all('/<b>(.+?)<\/b>/', $data[1]['main_material'], $tag3);
                             preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[1]['main_material'], $tag4);
@@ -688,22 +690,22 @@ class Caiji
                             str_replace('</b>', '', $tag3[1]);
                             if (count($tag3[1]) == count($tag4[1])) {
                                 $assist_material = array_combine($tag3[1], $tag4[1]);
-                                $data1['assist_material'] = $assist_material;
+                                $data1['assist_material'] = json_encode($assist_material);
                             }else{
                                 $assist_material = 'error';
-                                $data1['assist_material'] = $assist_material;
+                                $data1['assist_material'] = json_encode($assist_material);
                             }
-                            if ($assist_material = 'error'){
+                            if ($assist_material == 'error'){
                                 preg_match_all('/target="_blank">(.+?)<\/a>/', $data[1]['main_material'], $tag3);
                                 preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[1]['main_material'], $tag4);
                                 str_replace('<b>', '', $tag3[1]);
                                 str_replace('</b>', '', $tag3[1]);
                                 if (count($tag3[1]) == count($tag4[1])) {
                                     $assist_material = array_combine($tag3[1], $tag4[1]);
-                                    $data1['assist_material'] = $assist_material;
+                                    $data1['assist_material'] = json_encode($assist_material);
                                 }else{
                                     $assist_material = 'error';
-                                    $data1['assist_material'] = $assist_material;
+                                    $data1['assist_material'] = json_encode($assist_material);
                                 }
                             }
 
@@ -715,10 +717,10 @@ class Caiji
                             str_replace('</b>', '', $tag33[1]);
                             if (count($tag33[1]) == count($tag44[1])) {
                                 $mix_material = array_combine($tag33[1], $tag44[1]);
-                                $data1['mix_material'] = $mix_material;
+                                $data1['mix_material'] = json_encode($mix_material);
                             }else{
                                 $mix_material = 'error';
-                                $data1['mix_material'] = $mix_material;
+                                $data1['mix_material'] = json_encode($mix_material);
                             }
                             if ($mix_material == 'error'){
                                 preg_match_all('/<b>(.+?)<\/b>/', $data[2]['main_material'], $tag33);
@@ -727,10 +729,10 @@ class Caiji
                                 str_replace('</b>', '', $tag33[1]);
                                 if (count($tag33[1]) == count($tag44[1])) {
                                     $mix_material = array_combine($tag33[1], $tag44[1]);
-                                    $data1['mix_material'] = $mix_material;
+                                    $data1['mix_material'] = json_encode($mix_material);
                                 }else{
                                     $mix_material = 'error';
-                                    $data1['mix_material'] = $mix_material;
+                                    $data1['mix_material'] = json_encode($mix_material);
                                 }
                             }
                         }
@@ -742,9 +744,10 @@ class Caiji
                             str_replace('</b>', '', $tag333[1]);
                             if (count($tag333[1]) == count($tag443[1])) {
                                 $other_tags = array_combine($tag333[1], $tag443[1]);
-                                $data1['other_tags'] = $other_tags;
+                                $data1['other_tags'] = json_encode($other_tags);
                             }else{
                                 $other_tags = 'error';
+                                $data1['other_tags'] = json_encode($other_tags);
                             }
                             if ($other_tags == 'error') {
                                 preg_match_all('/target="_blank">(.+?)<\/a>/', $data[3]['main_material'], $tag333);
@@ -753,10 +756,10 @@ class Caiji
                                 str_replace('</b>', '', $tag333[1]);
                                 if (count($tag333[1]) == count($tag443[1])) {
                                     $other_tags = array_combine($tag333[1], $tag443[1]);
-                                    $data1['other_tags'] = $other_tags;
+                                    $data1['other_tags'] = json_encode($other_tags);
                                 } else {
                                     $other_tags = 'error';
-                                    $data1['other_tags'] = $other_tags;
+                                    $data1['other_tags'] = json_encode($other_tags);
                                 }
                             }
                         }
@@ -791,39 +794,81 @@ class Caiji
 //                        echo '<pre>';
 //                        print_r($data1);exit;
                         if (!$old) {
-
                             $res = Db::name('food')->insert($data1);
-//                            echo Db::name('food')->getLastSql();
                             $this->last_id = Db::name('food')->getLastInsID();
-                            $main_material = json_decode($data1['main_material']);
-                            if (is_array($main_material) && !empty($main_material)){
-                                foreach ($main_material as $key => $value) {
-                                    $r = Db::name('shicai_category')->where('category_name="' . $key . '"')->find();
-                                    if ($r) {
-                                        $shicai_category1[] = $r['category_id'];
+
+                            if (isset($main_material)){
+                                if (!empty($main_material) && !empty($main_material)){
+                                    $main_material = json_decode($data1['main_material']);
+                                    foreach ($main_material as $key => $value) {
+                                        unset($shicai_category1);
+                                        $r = Db::name('shicai_category')->where('category_name="' . $key . '"')->find();
+                                        if ($r) {
+                                            $shicai_category1[] = $r['category_id'];
+                                        }
+                                        $r = Db::name('food_category')->where('food_category_name="' . $key . '"')->find();
+                                        if ($r) {
+                                            $shicai_category1[] = $r['food_category_id'];
+                                        }
                                     }
                                 }
+                            }else{
+                                $shicai_category1 = false;
                             }
-                            if (is_array($assist_material) && !empty($assist_material)) {
-                                $assist_material = json_decode($data1['assist_material']);
-                                foreach ($assist_material as $key => $value) {
-                                    $r = Db::name('shicai_category')->where('category_name="' . $key . '"')->find();
-                                    if ($r) {
-                                        $shicai_category2[] = $r['category_id'];
+                            if (isset($assist_material)){
+                                if (is_array($assist_material) && !empty($assist_material)) {
+                                    unset($shicai_category2);
+                                    foreach ($assist_material as $key => $value) {
+                                        $r = Db::name('shicai_category')->where('category_name="' . $key . '"')->find();
+                                        if ($r) {
+                                            $shicai_category2[] = $r['category_id'];
+                                        }
+                                        $r = Db::name('food_category')->where('food_category_name="' . $key . '"')->find();
+                                        if ($r) {
+                                            $shicai_category2[] = $r['food_category_id'];
+                                        }
                                     }
                                 }
+                            }else{
+                                $shicai_category2 = false;
                             }
-                            if (is_array($other_tags) && !empty($other_tags)) {
-                                $other_tags = json_decode($data1['other_tags']);
-                                unset($food_category);
-                                foreach ($other_tags as $key => $value) {
-                                    $r = Db::name('food_category')->where('food_category_name="' . $key . '"')->find();
-                                    if ($r) {
-                                        $food_category[] = $r['food_category_id'];
+                            if (isset($mix_material)){
+                                if (is_array($mix_material) && !empty($mix_material)) {
+                                    unset($shicai_category3);
+                                    foreach ($mix_material as $key => $value) {
+                                        $r = Db::name('shicai_category')->where('category_name="' . $key . '"')->find();
+                                        if ($r) {
+                                            $shicai_category3[] = $r['category_id'];
+                                        }
+                                        $r = Db::name('food_category')->where('food_category_name="' . $key . '"')->find();
+                                        if ($r) {
+                                            $shicai_category3[] = $r['food_category_id'];
+                                        }
                                     }
                                 }
+                            }else{
+                                $shicai_category3 = false;
+                            }
+                            if (isset($other_tags)){
+                                if (is_array($other_tags) && !empty($other_tags)) {
+                                    unset($food_category);
+                                    foreach ($other_tags as $key => $value) {
+                                        $r = Db::name('food_category')->where('food_category_name="' . $key . '"')->find();
+                                        if ($r) {
+                                            $food_category[] = $r['food_category_id'];
+                                        }else{
+                                            $food_category = false;
+                                        }
+                                    }
+                                }
+                            }else{
+                                $food_category = false;
                             }
 
+//                            var_dump($shicai_category1);
+//                            var_dump($shicai_category2);
+//                            var_dump($shicai_category3);
+//                            var_dump($food_category);exit;
                             if (!empty($shicai_category1)) {
                                 foreach ($shicai_category1 as $value) {
                                     $where1['shicai_category_id'] = $value;
@@ -856,6 +901,22 @@ class Caiji
                                 }
                             }
 
+                            if (!empty($shicai_category3)) {
+                                foreach ($shicai_category3 as $value) {
+                                    $where4['shicai_category_id'] = $value;
+                                    $where4['food_id'] = $this->last_id;
+                                    $s = Db::name('shicai_category_relation')->where($where4)->find();
+                                    if (!$s) {
+                                        $where4['create_time'] = $where4['update_time'] = date('Y-m-d H:i:s');
+                                        $t = Db::name('shicai_category_relation')->insert($where4);
+                                        if (!$t) {
+                                            Log::record('菜谱' . $where4['food_id'] . '分类' . $where4['shicai_category_id'] . '没有创建', 'error');
+                                        }
+                                        unset($where4);
+                                    }
+                                }
+                            }
+//                            var_dump($food_category);exit;
                             if (!empty($food_category)) {
                                 foreach ($food_category as $value) {
                                     $where3['food_category_id'] = $value;
@@ -913,7 +974,7 @@ class Caiji
             }catch (Exception $e){
                 echo 'Message: ' .$e->getMessage();
             }
-//            exit;
+            exit;
         }
 
     }
