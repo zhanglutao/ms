@@ -44,9 +44,8 @@ class Page extends Paginator
 
     //统计信息
     protected function info(){
-//        return "<p class='pageRemark'>共<b>" . $this->lastPage .
-//            "</b>页<b>" . $this->total . "</b>条数据</p>";
-        return null;
+        return "<p class='pageRemark'>共<b>" . $this->lastPage .
+            "</b>页<b>" . $this->total . "</b>条数据</p>";
     }
 
     /**
@@ -62,7 +61,7 @@ class Page extends Paginator
             'last'   => null
         ];
 
-        $side   = 1;
+        $side   = 3;
         $window = $side * 2;
 
         if ($this->lastPage < $window + 6) {
