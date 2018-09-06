@@ -974,7 +974,7 @@ class Caiji
             }catch (Exception $e){
                 echo 'Message: ' .$e->getMessage();
             }
-            exit;
+//            exit;
         }
 
     }
