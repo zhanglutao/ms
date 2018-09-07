@@ -578,7 +578,7 @@ class Caiji
 //                        $value['food_url'] = 'https://home.meishichina.com/recipe-159194.html';
 //                        $value['food_url'] = 'https://home.meishichina.com/recipe-416629.html';
 //                        $value['food_url'] = 'https://home.meishichina.com/recipe-160102.html';
-                        $value['food_url'] = 'https://home.meishichina.com/recipe-171603.html';
+//                        $value['food_url'] = 'https://home.meishichina.com/recipe-171603.html';
 
                         if (Db::name('food')->where('old_id=' . $oldid)->find()) {
                             Db::rollback();
@@ -656,7 +656,6 @@ class Caiji
                             $data1['images'] = json_encode($data1['images']);
                         }
                         $data1['cooking_process'] = json_encode($data1['cooking_process']);
-//                        var_dump($data[0]['main_material']);exit;
                         if (isset($data[0]['main_material'])) {
                             preg_match_all('/<b>(.+?)<\/b>/', $data[0]['main_material'], $tag1);
                             preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['main_material'], $tag2);
@@ -678,7 +677,11 @@ class Caiji
                                     }
                                     $main_material = array_combine($tmp, $tag2[1]);
                                 }
-                                $data1['main_material'] = json_encode($main_material);
+                                if (!empty($main_material)){
+                                    $data1['main_material'] = json_encode($main_material);
+                                }else{
+                                    $data1['main_material'] = 'error';
+                                }
                             }
 
                             if ($main_material == 'error'){
@@ -727,7 +730,12 @@ class Caiji
                                     }
                                     $assist_material = array_combine($tmp, $tag4[1]);
                                 }
-                                $data1['assist_material'] = json_encode($assist_material);
+
+                                if (!empty($main_material)){
+                                    $data1['assist_material'] = json_encode($assist_material);
+                                }else{
+                                    $data1['assist_material'] = 'error';
+                                }
                             }
                             if ($assist_material == 'error'){
                                 preg_match_all('/target="_blank">(.+?)<\/a>/', $data[1]['main_material'], $tag3);
@@ -774,7 +782,12 @@ class Caiji
                                     }
                                     $mix_material = array_combine($tmp, $tag44[1]);
                                 }
-                                $data1['mix_material'] = json_encode($mix_material);
+                                if (!empty($mix_material)){
+                                    $data1['mix_material'] = json_encode($mix_material);
+                                }else{
+                                    $data1['mix_material'] = 'error';
+                                }
+
                             }
                             if ($mix_material == 'error'){
                                 preg_match_all('/<b>(.+?)<\/b>/', $data[2]['main_material'], $tag33);
@@ -821,7 +834,12 @@ class Caiji
                                     }
                                     $other_tags = array_combine($tmp, $tag443[1]);
                                 }
-                                $data1['other_tags'] = json_encode($other_tags);
+
+                                if (!empty($other_tags)){
+                                    $data1['other_tags'] = json_encode($other_tags);
+                                }else{
+                                    $data1['other_tags'] = 'error';
+                                }
                             }
                             if ($other_tags == 'error') {
                                 preg_match_all('/target="_blank">(.+?)<\/a>/', $data[3]['main_material'], $tag333);
