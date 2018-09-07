@@ -705,7 +705,11 @@ class Caiji
                                         }
                                         $main_material = array_combine($tmp, $tag2[1]);
                                     }
-                                    $data1['main_material'] = json_encode($main_material);
+                                    if (!empty($main_material)){
+                                        $data1['main_material'] = json_encode($main_material);
+                                    }else{
+                                        $data1['main_material'] = 'error';
+                                    }
                                 }
                             }
                         }
@@ -736,7 +740,7 @@ class Caiji
                                     $assist_material = array_combine($tmp, $tag4[1]);
                                 }
 
-                                if (!empty($main_material)){
+                                if (!empty($assist_material)){
                                     $data1['assist_material'] = json_encode($assist_material);
                                 }else{
                                     $data1['assist_material'] = 'error';
@@ -757,14 +761,24 @@ class Caiji
                                         }
                                         if (!empty($tag3[1]) && !empty($tmp)){
                                             $assist_material = array_combine($tag3[1], $tmp);
+                                        }else{
+                                            $assist_material = false;
                                         }
                                     }else{
                                         foreach ($tag4[1] as $key => $value){
                                             $tmp[$key] = $tag3[1][$key];
                                         }
-                                        $assist_material = array_combine($tmp, $tag4[1]);
+                                        if (!empty($tag4[1]) && !empty($tmp)){
+                                            $assist_material = array_combine($tmp, $tag4[1]);
+                                        }else{
+                                            $assist_material = false;
+                                        }
                                     }
-                                    $data1['assist_material'] = json_encode($assist_material);
+                                    if (!empty($assist_material)){
+                                        $data1['assist_material'] = json_encode($assist_material);
+                                    }else{
+                                        $data1['assist_material'] = 'error';
+                                    }
                                 }
                             }
 
@@ -782,12 +796,21 @@ class Caiji
                                     foreach ($tag33[1] as $key => $value){
                                         $tmp[$key] = $tag44[1][$key];
                                     }
-                                    $mix_material = array_combine($tag33[1], $tmp);
+                                    if (!empty($tmp) && !empty($tag33[1])){
+                                        $mix_material = array_combine($tag33[1], $tmp);
+                                    }else{
+                                        $mix_material = false;
+                                    }
                                 }else{
                                     foreach ($tag44[1] as $key => $value){
                                         $tmp[$key] = $tag33[1][$key];
                                     }
                                     $mix_material = array_combine($tmp, $tag44[1]);
+                                    if (!empty($tmp) && !empty($tag44[1])){
+                                        $mix_material = array_combine($tmp, $tag44[1]);
+                                    }else{
+                                        $mix_material = false;
+                                    }
                                 }
                                 if (!empty($mix_material)){
                                     $data1['mix_material'] = json_encode($mix_material);
@@ -816,11 +839,15 @@ class Caiji
                                         }
                                         $mix_material = array_combine($tmp, $tag44[1]);
                                     }
-                                    $data1['mix_material'] = json_encode($mix_material);
+                                    if (!empty($mix_material)) {
+                                        $data1['mix_material'] = json_encode($mix_material);
+                                    }else{
+                                        $data1['mix_material'] = 'error';
+                                    }
                                 }
                             }
                         }
-//                        var_dump($data[3]['main_material']);exit;
+
                         if (isset($data[3]['main_material'])) {
                             preg_match_all('/target="_blank">(.+?)<\/a>/', $data[3]['main_material'], $tag333);
                             preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[3]['main_material'], $tag443);
@@ -868,7 +895,11 @@ class Caiji
                                         }
                                         $other_tags = array_combine($tmp, $tag443[1]);
                                     }
-                                    $data1['other_tags'] = json_encode($other_tags);
+                                    if (!empty($other_tags)){
+                                        $data1['other_tags'] = json_encode($other_tags);
+                                    }else{
+                                        $data1['other_tags'] = 'error';
+                                    }
                                 }
                             }
                         }
