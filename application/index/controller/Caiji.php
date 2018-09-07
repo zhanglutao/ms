@@ -723,7 +723,12 @@ class Caiji
                                     foreach ($tag3[1] as $key => $value){
                                         $tmp[$key] = $tag4[1][$key];
                                     }
-                                    $assist_material = array_combine($tag3[1], $tmp);
+                                    if (!empty($tag3[1]) && !empty($tmp)){
+                                        $assist_material = array_combine($tag3[1], $tmp);
+                                    }else{
+                                        $assist_material = 'error';
+                                    }
+
                                 }else{
                                     foreach ($tag4[1] as $key => $value){
                                         $tmp[$key] = $tag3[1][$key];
@@ -750,7 +755,9 @@ class Caiji
                                         foreach ($tag3[1] as $key => $value){
                                             $tmp[$key] = $tag4[1][$key];
                                         }
-                                        $assist_material = array_combine($tag3[1], $tmp);
+                                        if (!empty($tag3[1]) && !empty($tmp)){
+                                            $assist_material = array_combine($tag3[1], $tmp);
+                                        }
                                     }else{
                                         foreach ($tag4[1] as $key => $value){
                                             $tmp[$key] = $tag3[1][$key];
