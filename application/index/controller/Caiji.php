@@ -698,12 +698,20 @@ class Caiji
                                         foreach ($tag1[1] as $key => $value){
                                             $tmp[$key] = $tag2[1][$key];
                                         }
-                                        $main_material = array_combine($tag1[1], $tmp);
+                                        if (!empty($tag1[1]) && !empty($tmp)){
+                                            $main_material = array_combine($tag1[1], $tmp);
+                                        }else{
+                                            $main_material = false;
+                                        }
                                     }else{
                                         foreach ($tag2[1] as $key => $value){
                                             $tmp[$key] = $tag1[1][$key];
                                         }
-                                        $main_material = array_combine($tmp, $tag2[1]);
+                                        if (!empty($tag2[1]) && !empty($tmp)){
+                                            $main_material = array_combine($tmp, $tag2[1]);
+                                        }else{
+                                            $main_material = false;
+                                        }
                                     }
                                     if (!empty($main_material)){
                                         $data1['main_material'] = json_encode($main_material);
@@ -730,14 +738,19 @@ class Caiji
                                     if (!empty($tag3[1]) && !empty($tmp)){
                                         $assist_material = array_combine($tag3[1], $tmp);
                                     }else{
-                                        $assist_material = 'error';
+                                        $assist_material = false;
                                     }
 
                                 }else{
                                     foreach ($tag4[1] as $key => $value){
                                         $tmp[$key] = $tag3[1][$key];
                                     }
-                                    $assist_material = array_combine($tmp, $tag4[1]);
+                                    if (!empty($tag4[1]) && !empty($tmp)){
+                                        $assist_material = array_combine($tmp, $tag4[1]);
+                                    }else{
+                                        $assist_material = false;
+                                    }
+
                                 }
 
                                 if (!empty($assist_material)){
@@ -832,12 +845,20 @@ class Caiji
                                         foreach ($tag33[1] as $key => $value){
                                             $tmp[$key] = $tag44[1][$key];
                                         }
-                                        $mix_material = array_combine($tag33[1], $tmp);
+                                        if (!empty($tmp) && !empty($tag33[1])){
+                                            $mix_material = array_combine($tag33[1], $tmp);
+                                        }else{
+                                            $mix_material = false;
+                                        }
                                     }else{
                                         foreach ($tag44[1] as $key => $value){
                                             $tmp[$key] = $tag33[1][$key];
                                         }
-                                        $mix_material = array_combine($tmp, $tag44[1]);
+                                        if (!empty($tmp) && !empty($tag44[1])){
+                                            $mix_material = array_combine($tmp, $tag44[1]);
+                                        }else{
+                                            $mix_material = false;
+                                        }
                                     }
                                     if (!empty($mix_material)) {
                                         $data1['mix_material'] = json_encode($mix_material);
@@ -861,12 +882,22 @@ class Caiji
                                     foreach ($tag333[1] as $key => $value){
                                         $tmp[$key] = $tag443[1][$key];
                                     }
-                                    $other_tags = array_combine($tag333[1], $tmp);
+                                    if (!empty($tmp) && !empty($tag333[1])){
+                                        $other_tags = array_combine($tag333[1], $tmp);
+                                    }else{
+                                        $other_tags = false;
+                                    }
+
                                 }else{
                                     foreach ($tag443[1] as $key => $value){
                                         $tmp[$key] = $tag333[1][$key];
                                     }
-                                    $other_tags = array_combine($tmp, $tag443[1]);
+                                    if (!empty($tmp) && !empty($tag443[1])){
+                                        $other_tags = array_combine($tmp, $tag443[1]);
+                                    }else{
+                                        $other_tags = false;
+                                    }
+
                                 }
 
                                 if (!empty($other_tags)){
@@ -888,12 +919,20 @@ class Caiji
                                         foreach ($tag333[1] as $key => $value){
                                             $tmp[$key] = $tag443[1][$key];
                                         }
-                                        $other_tags = array_combine($tag333[1], $tmp);
+                                        if (!empty($tmp) && !empty($tag333[1])){
+                                            $other_tags = array_combine($tag333[1], $tmp);
+                                        }else{
+                                            $other_tags = false;
+                                        }
                                     }else{
                                         foreach ($tag443[1] as $key => $value){
                                             $tmp[$key] = $tag333[1][$key];
                                         }
-                                        $other_tags = array_combine($tmp, $tag443[1]);
+                                        if (!empty($tmp) && !empty($tag443[1])){
+                                            $other_tags = array_combine($tmp, $tag443[1]);
+                                        }else{
+                                            $other_tags = false;
+                                        }
                                     }
                                     if (!empty($other_tags)){
                                         $data1['other_tags'] = json_encode($other_tags);
