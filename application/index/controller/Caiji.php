@@ -670,10 +670,12 @@ class Caiji
                                     foreach ($tag1[1] as $key => $value){
                                         $tmp[$key] = $tag2[1][$key];
                                     }
+//                                    var_dump($tag1[1]);
+//                                    var_dump($tmp);exit;
                                     if (!empty($tag1[1]) && !empty($tmp)){
                                         $main_material = array_combine($tag1[1], $tmp);
                                     }else{
-                                        $assist_material = false;
+                                        $main_material = false;
                                     }
                                 }else{
                                     foreach ($tag2[1] as $key => $value){
@@ -682,7 +684,7 @@ class Caiji
                                     if (!empty($tag2[1]) && !empty($tmp)){
                                         $main_material = array_combine($tmp, $tag2[1]);
                                     }else{
-                                        $assist_material = false;
+                                        $main_material = false;
                                     }
                                 }
                                 if (!empty($main_material)){
