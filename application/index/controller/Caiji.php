@@ -578,6 +578,8 @@ class Caiji
 //                        $value['food_url'] = 'https://home.meishichina.com/recipe-159194.html';
 //                        $value['food_url'] = 'https://home.meishichina.com/recipe-416629.html';
 //                        $value['food_url'] = 'https://home.meishichina.com/recipe-160102.html';
+                        $value['food_url'] = 'https://home.meishichina.com/recipe-171603.html';
+
                         if (Db::name('food')->where('old_id=' . $oldid)->find()) {
                             Db::rollback();
                             continue;
@@ -654,7 +656,7 @@ class Caiji
                             $data1['images'] = json_encode($data1['images']);
                         }
                         $data1['cooking_process'] = json_encode($data1['cooking_process']);
-
+//                        var_dump($data[0]['main_material']);exit;
                         if (isset($data[0]['main_material'])) {
                             preg_match_all('/<b>(.+?)<\/b>/', $data[0]['main_material'], $tag1);
                             preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[0]['main_material'], $tag2);
@@ -664,7 +666,18 @@ class Caiji
                                 $main_material = array_combine($tag1[1], $tag2[1]);
                                 $data1['main_material'] = json_encode($main_material);
                             }else{
-                                $main_material = 'error';
+//                                $tmp = array();
+                                if (count($tag1[1]) < count($tag2[1])){
+                                    foreach ($tag1[1] as $key => $value){
+                                        $tmp[$key] = $tag2[1][$key];
+                                    }
+                                    $main_material = array_combine($tag1[1], $tmp);
+                                }else{
+                                    foreach ($tag2[1] as $key => $value){
+                                        $tmp[$key] = $tag1[1][$key];
+                                    }
+                                    $main_material = array_combine($tmp, $tag2[1]);
+                                }
                                 $data1['main_material'] = json_encode($main_material);
                             }
 
@@ -677,7 +690,18 @@ class Caiji
                                     $main_material = array_combine($tag1[1], $tag2[1]);
                                     $data1['main_material'] = json_encode($main_material);
                                 }else{
-                                    $main_material = 'error';
+                                    $tmp = array();
+                                    if (count($tag1[1]) < count($tag2[1])){
+                                        foreach ($tag1[1] as $key => $value){
+                                            $tmp[$key] = $tag2[1][$key];
+                                        }
+                                        $main_material = array_combine($tag1[1], $tmp);
+                                    }else{
+                                        foreach ($tag2[1] as $key => $value){
+                                            $tmp[$key] = $tag1[1][$key];
+                                        }
+                                        $main_material = array_combine($tmp, $tag2[1]);
+                                    }
                                     $data1['main_material'] = json_encode($main_material);
                                 }
                             }
@@ -692,7 +716,17 @@ class Caiji
                                 $assist_material = array_combine($tag3[1], $tag4[1]);
                                 $data1['assist_material'] = json_encode($assist_material);
                             }else{
-                                $assist_material = 'error';
+                                if (count($tag3[1]) < count($tag4[1])){
+                                    foreach ($tag3[1] as $key => $value){
+                                        $tmp[$key] = $tag4[1][$key];
+                                    }
+                                    $assist_material = array_combine($tag3[1], $tmp);
+                                }else{
+                                    foreach ($tag4[1] as $key => $value){
+                                        $tmp[$key] = $tag3[1][$key];
+                                    }
+                                    $assist_material = array_combine($tmp, $tag4[1]);
+                                }
                                 $data1['assist_material'] = json_encode($assist_material);
                             }
                             if ($assist_material == 'error'){
@@ -704,7 +738,17 @@ class Caiji
                                     $assist_material = array_combine($tag3[1], $tag4[1]);
                                     $data1['assist_material'] = json_encode($assist_material);
                                 }else{
-                                    $assist_material = 'error';
+                                    if (count($tag3[1]) < count($tag4[1])){
+                                        foreach ($tag3[1] as $key => $value){
+                                            $tmp[$key] = $tag4[1][$key];
+                                        }
+                                        $assist_material = array_combine($tag3[1], $tmp);
+                                    }else{
+                                        foreach ($tag4[1] as $key => $value){
+                                            $tmp[$key] = $tag3[1][$key];
+                                        }
+                                        $assist_material = array_combine($tmp, $tag4[1]);
+                                    }
                                     $data1['assist_material'] = json_encode($assist_material);
                                 }
                             }
@@ -719,7 +763,17 @@ class Caiji
                                 $mix_material = array_combine($tag33[1], $tag44[1]);
                                 $data1['mix_material'] = json_encode($mix_material);
                             }else{
-                                $mix_material = 'error';
+                                if (count($tag33[1]) < count($tag44[1])){
+                                    foreach ($tag33[1] as $key => $value){
+                                        $tmp[$key] = $tag44[1][$key];
+                                    }
+                                    $mix_material = array_combine($tag33[1], $tmp);
+                                }else{
+                                    foreach ($tag44[1] as $key => $value){
+                                        $tmp[$key] = $tag33[1][$key];
+                                    }
+                                    $mix_material = array_combine($tmp, $tag44[1]);
+                                }
                                 $data1['mix_material'] = json_encode($mix_material);
                             }
                             if ($mix_material == 'error'){
@@ -731,7 +785,17 @@ class Caiji
                                     $mix_material = array_combine($tag33[1], $tag44[1]);
                                     $data1['mix_material'] = json_encode($mix_material);
                                 }else{
-                                    $mix_material = 'error';
+                                    if (count($tag33[1]) < count($tag44[1])){
+                                        foreach ($tag33[1] as $key => $value){
+                                            $tmp[$key] = $tag44[1][$key];
+                                        }
+                                        $mix_material = array_combine($tag33[1], $tmp);
+                                    }else{
+                                        foreach ($tag44[1] as $key => $value){
+                                            $tmp[$key] = $tag33[1][$key];
+                                        }
+                                        $mix_material = array_combine($tmp, $tag44[1]);
+                                    }
                                     $data1['mix_material'] = json_encode($mix_material);
                                 }
                             }
@@ -746,7 +810,17 @@ class Caiji
                                 $other_tags = array_combine($tag333[1], $tag443[1]);
                                 $data1['other_tags'] = json_encode($other_tags);
                             }else{
-                                $other_tags = 'error';
+                                if (count($tag333[1]) < count($tag443[1])){
+                                    foreach ($tag333[1] as $key => $value){
+                                        $tmp[$key] = $tag443[1][$key];
+                                    }
+                                    $other_tags = array_combine($tag333[1], $tmp);
+                                }else{
+                                    foreach ($tag443[1] as $key => $value){
+                                        $tmp[$key] = $tag333[1][$key];
+                                    }
+                                    $other_tags = array_combine($tmp, $tag443[1]);
+                                }
                                 $data1['other_tags'] = json_encode($other_tags);
                             }
                             if ($other_tags == 'error') {
@@ -758,7 +832,17 @@ class Caiji
                                     $other_tags = array_combine($tag333[1], $tag443[1]);
                                     $data1['other_tags'] = json_encode($other_tags);
                                 } else {
-                                    $other_tags = 'error';
+                                    if (count($tag333[1]) < count($tag443[1])){
+                                        foreach ($tag333[1] as $key => $value){
+                                            $tmp[$key] = $tag443[1][$key];
+                                        }
+                                        $other_tags = array_combine($tag333[1], $tmp);
+                                    }else{
+                                        foreach ($tag443[1] as $key => $value){
+                                            $tmp[$key] = $tag333[1][$key];
+                                        }
+                                        $other_tags = array_combine($tmp, $tag443[1]);
+                                    }
                                     $data1['other_tags'] = json_encode($other_tags);
                                 }
                             }
