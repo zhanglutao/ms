@@ -579,6 +579,7 @@ class Caiji
 //                        $value['food_url'] = 'https://home.meishichina.com/recipe-416629.html';
 //                        $value['food_url'] = 'https://home.meishichina.com/recipe-160102.html';
 //                        $value['food_url'] = 'https://home.meishichina.com/recipe-171603.html';
+//                        $value['food_url'] = 'https://home.meishichina.com/recipe-168634.html';
 
                         if (Db::name('food')->where('old_id=' . $oldid)->find()) {
                             Db::rollback();
@@ -665,13 +666,11 @@ class Caiji
                                 $main_material = array_combine($tag1[1], $tag2[1]);
                                 $data1['main_material'] = json_encode($main_material);
                             }else{
-//                                $tmp = array();
+                                $tmp = array();
                                 if (count($tag1[1]) < count($tag2[1])){
                                     foreach ($tag1[1] as $key => $value){
                                         $tmp[$key] = $tag2[1][$key];
                                     }
-//                                    var_dump($tag1[1]);
-//                                    var_dump($tmp);exit;
                                     if (!empty($tag1[1]) && !empty($tmp)){
                                         $main_material = array_combine($tag1[1], $tmp);
                                     }else{
@@ -741,6 +740,7 @@ class Caiji
                                 $assist_material = array_combine($tag3[1], $tag4[1]);
                                 $data1['assist_material'] = json_encode($assist_material);
                             }else{
+                                $tmp = array();
                                 if (count($tag3[1]) < count($tag4[1])){
                                     foreach ($tag3[1] as $key => $value){
                                         $tmp[$key] = $tag4[1][$key];
@@ -778,6 +778,7 @@ class Caiji
                                     $assist_material = array_combine($tag3[1], $tag4[1]);
                                     $data1['assist_material'] = json_encode($assist_material);
                                 }else{
+                                    $tmp = array();
                                     if (count($tag3[1]) < count($tag4[1])){
                                         foreach ($tag3[1] as $key => $value){
                                             $tmp[$key] = $tag4[1][$key];
@@ -815,6 +816,7 @@ class Caiji
                                 $mix_material = array_combine($tag33[1], $tag44[1]);
                                 $data1['mix_material'] = json_encode($mix_material);
                             }else{
+                                $tmp = array();
                                 if (count($tag33[1]) < count($tag44[1])){
                                     foreach ($tag33[1] as $key => $value){
                                         $tmp[$key] = $tag44[1][$key];
@@ -828,7 +830,6 @@ class Caiji
                                     foreach ($tag44[1] as $key => $value){
                                         $tmp[$key] = $tag33[1][$key];
                                     }
-                                    $mix_material = array_combine($tmp, $tag44[1]);
                                     if (!empty($tmp) && !empty($tag44[1])){
                                         $mix_material = array_combine($tmp, $tag44[1]);
                                     }else{
@@ -851,6 +852,7 @@ class Caiji
                                     $mix_material = array_combine($tag33[1], $tag44[1]);
                                     $data1['mix_material'] = json_encode($mix_material);
                                 }else{
+                                    $tmp = array();
                                     if (count($tag33[1]) < count($tag44[1])){
                                         foreach ($tag33[1] as $key => $value){
                                             $tmp[$key] = $tag44[1][$key];
@@ -888,6 +890,7 @@ class Caiji
                                 $other_tags = array_combine($tag333[1], $tag443[1]);
                                 $data1['other_tags'] = json_encode($other_tags);
                             }else{
+                                $tmp = array();
                                 if (count($tag333[1]) < count($tag443[1])){
                                     foreach ($tag333[1] as $key => $value){
                                         $tmp[$key] = $tag443[1][$key];
@@ -925,6 +928,7 @@ class Caiji
                                     $other_tags = array_combine($tag333[1], $tag443[1]);
                                     $data1['other_tags'] = json_encode($other_tags);
                                 } else {
+                                    $tmp = array();
                                     if (count($tag333[1]) < count($tag443[1])){
                                         foreach ($tag333[1] as $key => $value){
                                             $tmp[$key] = $tag443[1][$key];
