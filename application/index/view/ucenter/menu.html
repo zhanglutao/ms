@@ -1,0 +1,76 @@
+<style>
+    .basicinfo {
+        margin: 15px 0;
+    }
+
+    .basicinfo .row > .col-xs-4 {
+        padding-right: 0;
+    }
+
+    .basicinfo .row > div {
+        margin: 5px 0;
+    }
+    #content-container > div > div.col-md-9 > div > div > h2 > a{
+        margin: 0px 0px 0px 5px;
+    }
+
+</style>
+<div id="content-container" class="container">
+    <div class="row">
+        <div class="col-md-3">
+            {include file="common/sidenav" /}
+        </div>
+        <div class="col-md-9">
+            <div class="panel panel-default ">
+                <div class="panel-body">
+                    <h2 class="page-header">
+                        {:__('Menu')}
+                        <a href="{:url('ucenter/menu_send_back')}" class="btn btn-success pull-right"><i class="fa fa-minus-circle"></i>
+                            {:__('Send back')}
+                        </a>
+
+                        <a href="{:url('ucenter/menu_drafts')}" class="btn btn-success pull-right"><i class="fa fa-play-circle-o"></i>
+                            {:__('Drafts')}
+                        </a>
+
+                        <a href="{:url('ucenter/menu_add')}" class="btn btn-success pull-right"><i class="fa fa-product-hunt"></i>
+                            {:__('Pending')}
+                        </a>
+
+                        <a href="{:url('ucenter/menu_add')}" class="btn btn-success pull-right"><i class="fa fa-pencil"></i>
+                            {:__('Menu Add')}
+                        </a>
+                    </h2>
+                    {volist name='$menu' id='vo'}
+                    <div class="row user-baseinfo">
+                        <div class="col-md-3 col-sm-3 col-xs-2 text-center user-center">
+                            <a href="{:url('Food/food',['food_id'=>$vo.food_id])}" title="{:__('Click to edit')}">
+                                <span class="img"><img src="{if $vo.images neq ''}{$vo.images}?x-oss-process=style/c180{else}{/if}" alt=""></span>
+                            </a>
+                        </div>
+                        <div class="col-md-9 col-sm-9 col-xs-10">
+                            <!-- Content -->
+                            <div class="ui-content">
+                                <!-- Heading -->
+                                <h2><a href="{:url('Food/food',['food_id'=>$vo.food_id])}">{$vo.food_name}</a></h2>
+                                <!-- Paragraph -->
+                                <p></p><p></p>
+                                <p>
+                                    <a href="{:url('space/index',['author_id' => $vo.author_id])}">
+                                        {$vo.author_name}
+                                    </a>
+                                </p>
+                                <!-- Success -->
+                                <p>
+                                    {$vo.tags}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {/volist}
+                    {$menu->render()}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
