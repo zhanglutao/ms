@@ -2,6 +2,11 @@
     <ul class="list-group">
         <li class="list-group-heading">{:__('User center')}</li>
         <li class="list-group-item {:$config['actionname']=='index'?'active':''}"> <a href="{:url('user/index')}"><i class="fa fa-user-circle fa-fw"></i> {:__('User center')}</a> </li>
+        <li class="list-group-item {:$config['actionname']=='menu'?'active':''}"> <a href="{:url('user/menu')}"><i class="fa fa-user-circle fa-fw"></i> {:__('Menu')}</a> </li>
+        <li class="list-group-item {:$config['actionname']=='topic'?'active':''}"> <a href="{:url('user/topic')}"><i class="fa fa-user-circle fa-fw"></i> {:__('Topic')}</a> </li>
+        <li class="list-group-item {:$config['actionname']=='menus'?'active':''}"> <a href="{:url('user/menus')}"><i class="fa fa-user-circle fa-fw"></i> {:__('Menus')}</a> </li>
+        <li class="list-group-item {:$config['actionname']=='blog'?'active':''}"> <a href="{:url('user/blog')}"><i class="fa fa-user-circle fa-fw"></i> {:__('Blog')}</a> </li>
+
         <li class="list-group-item {:$config['actionname']=='profile'?'active':''}"> <a href="{:url('user/profile')}"><i class="fa fa-user-o fa-fw"></i> {:__('Profile')}</a> </li>
         <li class="list-group-item {:$config['actionname']=='changepwd'?'active':''}"> <a href="{:url('user/changepwd')}"><i class="fa fa-key fa-fw"></i> {:__('Change password')}</a> </li>
         <li class="list-group-item {:$config['actionname']=='logout'?'active':''}"> <a href="{:url('user/logout')}"><i class="fa fa-sign-out fa-fw"></i> {:__('Sign out')}</a> </li>

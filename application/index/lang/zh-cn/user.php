@@ -64,4 +64,15 @@ return [
     'Invalid parameters'                    => '参数不正确',
     'Change password failure'               => '修改密码失败',
     'Change password successful'            => '修改密码成功',
+
+
+    'Menu'                                  => '我的菜谱',
+    'Topic'                                 => '我的话题',
+    'Menus'                                 => '我的菜单',
+    'Blog'                                  => '我的日志',
+
+    'My dynamics'                           => '我的动态',
+    'Dynamics of concern'                   => '关注的动态',
+    'All dynamics'                          => '所有动态',
+    'Dynamics'                              => '个人动态',
 ];
