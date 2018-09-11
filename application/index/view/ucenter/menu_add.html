@@ -28,6 +28,7 @@
         top:0;left:0;width:100px;height:100px;opacity: 0;
     }
 </style>
+<script src="{$static}/js/ms/jquery-1.7.js"></script>
 <div id="content-container" class="container">
     <div class="row">
         <div class="col-md-3">
@@ -50,7 +51,7 @@
                         <div class="form-group">
                             <label class="control-label col-xs-12 col-sm-2">{:__('Nickname')}:</label>
                             <div class="col-xs-12 col-sm-4">
-                                <input type="file" class="form-control" id="file" name="file" value="{$user.nickname}" data-rule="required" placeholder="">
+                                <input type="file" class="form-control" id="file1" name="file1" value="{$user.nickname}" data-rule="required" placeholder="">
                                 <input type="button" value="上传" />
                                 <img id="img1" alt="上传成功啦" src="" />
                             </div>
@@ -196,6 +197,7 @@
 <script src="{$static}/js/ms/ajaxfileupload.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {
+        // alert(1111);return false;
         $(":button").click(function () {
             ajaxFileUpload();
         })
@@ -204,12 +206,13 @@
         $.ajaxFileUpload
         (
             {
-                url: '/upload.aspx', //用于文件上传的服务器端请求地址
+                url: 'index.php/index/ucenter/upload_image.html', //用于文件上传的服务器端请求地址
                 secureuri: false, //是否需要安全协议，一般设置为false
                 fileElementId: 'file1', //文件上传域的ID
                 dataType: 'json', //返回值类型 一般设置为json
                 success: function (data, status)  //服务器成功响应处理函数
                 {
+                    alert(data);
                     $("#img1").attr("src", data.imgurl);
                     if (typeof (data.error) != 'undefined') {
                         if (data.error != '') {

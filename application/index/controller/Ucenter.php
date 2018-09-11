@@ -4,6 +4,7 @@ namespace app\index\controller;
 
 use app\index\controller\Base;
 use think\Db;
+use think\Url;
 
 
 /**
@@ -31,7 +32,12 @@ class Ucenter extends Base
     public function menu_add(){
         $menu = Db::name('food_list')->paginate(10);
         $this->assign('menu',$menu);
+        $this->assign('upload_image',Url::build('index/Ucenter/upload_image'));
         return $this->view->fetch();
+    }
+
+    public function upload_image(){
+        $this->success('请求成功');
     }
 
     /**
