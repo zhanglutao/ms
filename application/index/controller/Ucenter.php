@@ -33,4 +33,32 @@ class Ucenter extends Base
         $this->assign('menu',$menu);
         return $this->view->fetch();
     }
+
+    /**
+     * 修改会员个人信息
+     *
+     * @param string $avatar 头像地址
+     * @param string $username 用户名
+     * @param string $nickname 昵称
+     * @param string $bio 个人简介
+     */
+    public function menu_save()
+    {
+        $user = $this->auth->getUser();
+        $username = $this->request->request('username');
+        $nickname = $this->request->request('nickname');
+        $bio = $this->request->request('bio');
+        $avatar = $this->request->request('avatar');
+        $exists = \app\common\model\User::where('username', $username)->where('id', '<>', $this->auth->id)->find();
+        if ($exists)
+        {
+            $this->error(__('Username already exists'));
+        }
+        $user->username = $username;
+        $user->nickname = $nickname;
+        $user->bio = $bio;
+        $user->avatar = $avatar;
+        $user->save();
+        $this->success();
+    }
 }

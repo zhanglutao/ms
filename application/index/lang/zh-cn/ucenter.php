@@ -75,6 +75,10 @@ return [
     'Drafts'                                => '草稿箱',
     'Send back'                             => '退稿箱',
 
+
+    'Menu edit'                             => '编辑菜谱',
+    'Menu name'                             => '菜谱名称',
+
     'My dynamics'                           => '我的动态',
     'Dynamics of concern'                   => '关注的动态',
     'All dynamics'                          => '所有动态',
