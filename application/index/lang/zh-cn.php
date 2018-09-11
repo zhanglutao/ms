@@ -126,4 +126,12 @@ return [
     'You have no permission'                                 => '你没有权限访问',
     'An unexpected error occurred'                           => '发生了一个意外错误,程序猿正在紧急处理中',
     'This page will be re-directed in %s seconds'            => '页面将在 %s 秒后自动跳转',
+
+    'Menu header'                                            => '菜单',
+    'Shi cai'                                                => '食材',
+    'Store'                                                  => '珍选',
+    'Health'                                                 => '健康',
+    'Menus header'                                           => '专题',
+    'Forum'                                                  => '话题',
+    'Blog header'                                            => '日志',
 ];

@@ -13,10 +13,11 @@
  */
 
 namespace app\index\controller;
+use app\common\controller\Frontend;
 
 use think\Controller;
 use think\Db;
-class Base extends Controller{
+class Base extends Frontend{
     public $static_domain = 'http://static.meishiheavn.com';
 
     public function _initialize()

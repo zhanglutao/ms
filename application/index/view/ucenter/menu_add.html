@@ -1,0 +1,369 @@
+<style>
+    .basicinfo {
+        margin: 15px 0;
+    }
+
+    .basicinfo .row > .col-xs-4 {
+        padding-right: 0;
+    }
+
+    .basicinfo .row > div {
+        margin: 5px 0;
+    }
+    #content-container > div > div.col-md-9 > div > div > h2 > a{
+        margin: 0px 0px 0px 5px;
+    }
+
+</style>
+<link rel="stylesheet" type="text/css" href="{$static}/css/ms/all1.css">
+<link rel="stylesheet" type="text/css" href="{$static}/css/ms/user.css">
+<div id="content-container" class="container">
+    <div class="row">
+        <div class="col-md-3">
+            {include file="common/sidenav" /}
+        </div>
+        <div class="col-md-9">
+            <div class="mod_right">
+
+                <div id="mod_location">
+                    <div class="mod_location clear">
+
+                        <div class="left">
+                            <a href="https://member.meishichina.com/center/my_recipe_me/" title="回到我的菜谱" class="return"> </a>
+                            编辑菜谱
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+
+                <div class="mr_edit mr_edit_center clear">
+                    <ul>
+
+                        <li class="low_tip">您的浏览器版本太低，无法使用新版菜谱编辑器，请升级。 <a href="https://member.meishichina.com/center.php?ac=center&amp;op=editrecipe_old&amp;id=417525" target="_blank">点击进入老版编辑页</a></li>
+
+                        <li>
+                            <label class="must">菜谱名称</label><br>
+                            <input name="subject" class="inputL" type="text" value="烤羊肉串">
+                        </li>
+
+                        <li>
+                            <label class="must">成品图片（最多9张）</label><br>
+
+                            <div class="J_upload">上传成品图
+                                <input multiple="" class="J_img" id="J_m_cover" type="file" accept="image/png,image/gif,image/jpeg" name="file">
+                            </div>
+                            <span class="img_status" id="multi_cover_status"> </span>
+
+                            <div id="cover" class="clear">
+                            </div>
+                        </li>
+
+                        <li>
+                            <textarea class="J_input" name="message" maxlength="500" placeholder="请输入菜谱描述，最多输入500字"></textarea>
+                        </li>
+
+                        <li class="options clear">
+                            <label class="must">基本参数</label><br>
+
+                            <div class="options_box clear">
+                                <div>
+                                    <input type="hidden" name="level" value="0">
+                                    <a href="javascript:void(0);"><i></i></a>
+                                    <span title=""></span>
+                                    难度
+                                </div>
+
+                                <div>
+                                    <input type="hidden" name="cuisine" value="0">
+                                    <a href="javascript:void(0);"><i></i></a>
+                                    <span title=""></span>
+                                    口味
+                                </div>
+
+                                <div>
+                                    <input type="hidden" name="technics" value="2">
+                                    <a href="javascript:void(0);"><i></i></a>
+                                    <span title="炒">炒</span>
+                                    工艺
+                                </div>
+
+                                <div>
+                                    <input type="hidden" name="during" value="0">
+                                    <a href="javascript:void(0);"><i></i></a>
+                                    <span title=""></span>
+                                    耗时
+                                </div>
+
+                                <div>
+                                    <input type="hidden" name="cookers" value="">
+                                    <a href="javascript:void(0);"><i></i></a>
+                                    <span title=""></span>
+                                    厨具
+                                </div>
+                            </div>
+
+                            <div class="options_item clear">
+                                <div style="display: none;">
+                                    <span data-value="1">简单</span>
+                                    <span data-value="2">普通</span>
+                                    <span data-value="3">高级</span>
+                                    <span data-value="4">神级</span>
+                                </div>
+
+                                <div style="display: none;">
+                                    <span data-value="1">微辣</span>
+                                    <span data-value="2">中辣</span>
+                                    <span data-value="3">超辣</span>
+                                    <span data-value="4">麻辣</span>
+                                    <span data-value="5">酸辣</span>
+                                    <span data-value="6">酸甜</span>
+                                    <span data-value="7">酸咸</span>
+                                    <span data-value="8">咸鲜</span>
+                                    <span data-value="9">咸甜</span>
+                                    <span data-value="10">甜味</span>
+                                    <span data-value="11">苦味</span>
+                                    <span data-value="12">原味</span>
+                                    <span data-value="13">清淡</span>
+                                    <span data-value="14">五香</span>
+                                    <span data-value="15">鱼香</span>
+                                    <span data-value="16">葱香</span>
+                                    <span data-value="17">蒜香</span>
+                                    <span data-value="18">奶香</span>
+                                    <span data-value="19">酱香</span>
+                                    <span data-value="20">糟香</span>
+                                    <span data-value="21">咖喱</span>
+                                    <span data-value="22">孜然</span>
+                                    <span data-value="23">果味</span>
+                                    <span data-value="24">香草</span>
+                                    <span data-value="25">怪味</span>
+                                    <span data-value="26">咸香</span>
+                                    <span data-value="27">甜香</span>
+                                    <span data-value="28">麻香</span>
+                                    <span data-value="50">其他</span>
+                                </div>
+
+                                <div style="display: none;">
+                                    <span data-value="1" class="">烧</span>
+                                    <span data-value="2" class="on">炒</span>
+                                    <span data-value="3">爆</span>
+                                    <span data-value="4">焖</span>
+                                    <span data-value="5">炖</span>
+                                    <span data-value="6">蒸</span>
+                                    <span data-value="7">煮</span>
+                                    <span data-value="8">拌</span>
+                                    <span data-value="9">烤</span>
+                                    <span data-value="10">炸</span>
+                                    <span data-value="11">烩</span>
+                                    <span data-value="12">溜</span>
+                                    <span data-value="13">氽</span>
+                                    <span data-value="14">腌</span>
+                                    <span data-value="15">卤</span>
+                                    <span data-value="16">炝</span>
+                                    <span data-value="17">煎</span>
+                                    <span data-value="18">酥</span>
+                                    <span data-value="19">扒</span>
+                                    <span data-value="20">熏</span>
+                                    <span data-value="21">煨</span>
+                                    <span data-value="22">酱</span>
+                                    <span data-value="23">烘焙</span>
+                                    <span data-value="24">火锅</span>
+                                    <span data-value="25">砂锅</span>
+                                    <span data-value="26">拔丝</span>
+                                    <span data-value="27">生鲜</span>
+                                    <span data-value="28">调味</span>
+                                    <span data-value="29">技巧</span>
+                                    <span data-value="30">煲</span>
+                                    <span data-value="31">烙</span>
+                                    <span data-value="32">榨</span>
+                                    <span data-value="33">冷冻</span>
+                                    <span data-value="50">其他</span>
+                                </div>
+
+                                <div style="display: none;">
+                                    <span data-value="1">十分钟</span>
+                                    <span data-value="2">廿分钟</span>
+                                    <span data-value="3">半小时</span>
+                                    <span data-value="4">三刻钟</span>
+                                    <span data-value="5">一小时</span>
+                                    <span data-value="6">数小时</span>
+                                    <span data-value="7">一天</span>
+                                    <span data-value="8">数天</span>
+                                </div>
+
+                                <div style="display: none;">
+                                    <span data-value="1">炒锅</span>
+                                    <span data-value="2">煮锅</span>
+                                    <span data-value="3">平底锅</span>
+                                    <span data-value="4">蒸锅</span>
+                                    <span data-value="5">不粘锅</span>
+                                    <span data-value="6">电烤箱</span>
+                                    <span data-value="7">食物调理机</span>
+                                    <span data-value="8">砂锅</span>
+                                    <span data-value="9">汤锅</span>
+                                    <span data-value="10">高压锅</span>
+                                    <span data-value="11">电压力锅</span>
+                                    <span data-value="12">电饭煲</span>
+                                    <span data-value="13">焖烧锅</span>
+                                    <span data-value="14">微波炉</span>
+                                    <span data-value="15">搅拌机</span>
+                                    <span data-value="16">豆浆机</span>
+                                    <span data-value="17">电磁炉</span>
+                                    <span data-value="18">烤炉</span>
+                                    <span data-value="19">炖盅</span>
+                                    <span data-value="20">瓦煲</span>
+                                    <span data-value="21">电子瓦煲</span>
+                                    <span data-value="22">面包机</span>
+                                    <span data-value="23">吐司炉</span>
+                                    <span data-value="24">酸奶机</span>
+                                    <span data-value="25">咖啡机</span>
+                                    <span data-value="26">打蛋器</span>
+                                    <span data-value="27">调酒器</span>
+                                    <span data-value="28">果冻模</span>
+                                    <span data-value="29">奶泡机</span>
+                                    <span data-value="30">模具锅</span>
+                                    <span data-value="31">电饼铛</span>
+                                    <span data-value="32">空气炸锅</span>
+                                    <span data-value="33">榨汁机</span>
+                                    <span data-value="34">厨师机</span>
+                                    <span data-value="35">破壁机</span>
+                                    <span data-value="36">养生壶</span>
+                                    <span data-value="37">烧烤架/炉</span>
+                                    <span data-value="50">其他</span>
+                                </div>
+
+
+                            </div>
+                        </li>
+
+                        <li class="ingredient clear">
+                            <label class="must">食材明细</label>
+                            <span class="tip">（新功能：支持添加多组食材，并可以修改食材组名。）</span>
+
+                            <blockquote>
+                                <p><span>主料</span><a href="javascript:void(0);" title="修改食材组名" class="edit"></a></p>
+                                <div class="J_addDiv">
+                                    <input type="text" class="liao" placeholder="食材名" autocomplete="off">
+                                    <input type="text" class="yongliang" placeholder="用量" autocomplete="off">
+                                </div>
+                            </blockquote>
+                            <blockquote>
+                                <p><span>辅料</span><a href="javascript:void(0);" title="修改食材组名" class="edit"></a></p>
+                                <div class="J_addDiv">
+                                    <input type="text" class="liao" placeholder="食材名" autocomplete="off">
+                                    <input type="text" class="yongliang" placeholder="用量" autocomplete="off">
+                                </div>
+                            </blockquote>
+
+                            <div class="J_upload" id="add_ingredient">添加食材组</div>
+
+
+                        </li>
+                        <li class="step">
+                            <label class="must">做法步骤</label><br>
+                            <div class="J_upload">批量上传
+                                <input multiple="" class="J_img" id="J_s_cover" type="file" accept="image/png,image/gif,image/jpeg" name="file">
+                            </div>
+                            <span class="img_status" id="multi_step_status"></span>
+
+                            <div id="dragsort" data-listidx="0">
+                                <blockquote class="cp_block J_blockQ clear" style="cursor: move;">
+                                    <div class="left addicon J_fileImag">
+                                        <input type="hidden" value="" name="step_img" class="J_imghidden">
+                                        <input type="file" name="file" class="file" accept="image/png,image/gif,image/jpeg" value="">
+                                        <p class="p1">点击上传步骤图</p>
+                                        <p class="p3">（可不填）</p>
+                                    </div>
+                                    <div class="right">
+                                        <textarea class="textArea J_input" name="note" placeholder="请输入做法说明菜谱描述，最多输入200字" maxlength="200"></textarea>
+                                        <span class="J_step_num">1、</span> <a href="javascript:void(0);" class="add J_addTextarea"></a> <a href="javascript:void(0);" class="up J_upTextarea"></a> <a href="javascript:void(0);" class="down J_downTextarea"></a> <a href="javascript:void(0);" class="delete J_delTextarea"></a> </div>
+                                </blockquote>
+                                <blockquote class="cp_block J_blockQ clear" style="cursor: move;">
+                                    <div class="left addicon J_fileImag">
+                                        <input type="hidden" value="" name="step_img" class="J_imghidden">
+                                        <input type="file" name="file" class="file" accept="image/png,image/gif,image/jpeg" value="">
+                                        <p class="p1">点击上传步骤图</p>
+                                        <p class="p3">（可不填）</p>
+                                    </div>
+                                    <div class="right">
+                                        <textarea class="textArea J_input" name="note" placeholder="请输入做法说明菜谱描述，最多输入200字" maxlength="200"></textarea>
+                                        <span class="J_step_num">2、</span> <a href="javascript:void(0);" class="add J_addTextarea"></a> <a href="javascript:void(0);" class="up J_upTextarea"></a> <a href="javascript:void(0);" class="down J_downTextarea"></a> <a href="javascript:void(0);" class="delete J_delTextarea"></a> </div>
+                                </blockquote>
+                                <blockquote class="cp_block J_blockQ clear" style="cursor: move;">
+                                    <div class="left addicon J_fileImag">
+                                        <input type="hidden" value="" name="step_img" class="J_imghidden">
+                                        <input type="file" name="file" class="file" accept="image/png,image/gif,image/jpeg" value="">
+                                        <p class="p1">点击上传步骤图</p>
+                                        <p class="p3">（可不填）</p>
+                                    </div>
+                                    <div class="right">
+                                        <textarea class="textArea J_input" name="note" placeholder="请输入做法说明菜谱描述，最多输入200字" maxlength="200"></textarea>
+                                        <span class="J_step_num">3、</span> <a href="javascript:void(0);" class="add J_addTextarea"></a> <a href="javascript:void(0);" class="up J_upTextarea"></a> <a href="javascript:void(0);" class="down J_downTextarea"></a> <a href="javascript:void(0);" class="delete J_delTextarea"></a> </div>
+                                </blockquote>
+                            </div>
+
+                        </li>
+
+                        <li>
+                            <label>小窍门</label><br>
+                            <textarea name="tips" id="tips" maxlength="500" placeholder="最多输入500字"></textarea>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="mr_edit mr_edit_fixed clear">
+                    <ul>
+
+
+                        <li class="checkbox">
+                            <input type="hidden" name="copyright" value="1" id="things_copyright">
+                            <label class="must">原创</label>
+                            <div class="things_type1 clear things_copyright">
+                                <span data-value="5">独家发布于美食天下</span>
+                                <span data-value="3">首发于美食天下</span>
+                                <span data-value="1" class="on">原创作品</span>
+                                <span data-value="0">非原创作品</span>
+                            </div>
+                        </li>
+
+
+
+                        <li class="checkbox eventids">
+
+
+
+                            <div>
+                                <p>活动：<a href="https://home.meishichina.com/event-415.html" target="_blank">浓情中秋·团圆家宴  </a></p>
+                                <label><input type="radio" name="eventid" value="415">&nbsp;<span>参加本活动</span></label>
+                                <label><input type="radio" name="eventid" value="" checked="checked">&nbsp;<span>不参加活动</span></label>
+                            </div>
+
+
+                        </li>
+                    </ul>
+
+                    <input type="hidden" id="recipeinfo_id" value="417525">
+                    <input type="hidden" id="user_id" value="8820560">
+                    <input type="hidden" id="oss_key" value="attachment/recipe/2018/09/11/20180911">
+
+                    <input class="btn1" id="postbtn" type="button" value="发布菜谱" data-id="0">
+                    <input class="btn2" id="savebtn" type="button" value="存为草稿">
+                    <div id="save_tip">已于 22:05 自动保存</div>
+                </div>
+
+                <form id="form">
+                    <input type="hidden" name="policy" value="eyJleHBpcmF0aW9uIjoiMjAxOC0wOS0xMVQyMjowNDoxM1oiLCJjb25kaXRpb25zIjpbWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCwxMDQ4NTc2MDAwXSxbInN0YXJ0cy13aXRoIiwiJGtleSIsImF0dGFjaG1lbnRcL3JlY2lwZVwvMjAxOFwvMDlcLzExIl1dfQ==">
+                    <input type="hidden" name="signature" value="a2TZXTvuB0TF8d2RrFNRDcVRi7U=">
+                    <input type="hidden" name="OSSAccessKeyId" value="M4bWNA1UuKfM7hQR">
+                    <input type="hidden" name="callback" value="eyJjYWxsYmFja1VybCI6Imh0dHBzOlwvXC9tZW1iZXIubWVpc2hpY2hpbmEuY29tXC9hamF4XC9hamF4LnBocD9hYz1hbGl5dW5vc3Mmb3A9Y2FsbGJhY2tvc3MiLCJjYWxsYmFja0JvZHkiOiJ1cmw9JHtvYmplY3R9JnNpemU9JHtzaXplfSZtaW1lVHlwZT0ke21pbWVUeXBlfSZoZWlnaHQ9JHtpbWFnZUluZm8uaGVpZ2h0fSZ3aWR0aD0ke2ltYWdlSW5mby53aWR0aH0iLCJjYWxsYmFja0JvZHlUeXBlIjoiYXBwbGljYXRpb25cL3gtd3d3LWZvcm0tdXJsZW5jb2RlZCJ9">
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
