@@ -27,8 +27,18 @@
         position:absolute;
         top:0;left:0;width:100px;height:100px;opacity: 0;
     }
+    .inputfile {
+        opacity: 0;
+    }
+    .inputfile {
+        position:absolute;clip:rect(0 0 0 0);
+    }
+    .inputfile {
+        z-index: -11111;  width: 0px;  height: 1px;
+    }
 </style>
 <script src="{$static}/js/ms/jquery-1.7.js"></script>
+<script src="{$static}/js/ms/jquery.ajaxfileupload.js" type="text/javascript"></script>
 <div id="content-container" class="container">
     <div class="row">
         <div class="col-md-3">
@@ -51,9 +61,8 @@
                         <div class="form-group">
                             <label class="control-label col-xs-12 col-sm-2">{:__('Nickname')}:</label>
                             <div class="col-xs-12 col-sm-4">
-                                <input type="file" class="form-control" id="file1" name="file1" value="{$user.nickname}" data-rule="required" placeholder="">
-                                <input type="button" value="上传" />
-                                <img id="img1" alt="上传成功啦" src="" />
+                                <input type="file" class="form-control" id="file" name="file" value="{$user.nickname}" onchange="changepic(this)" data-rule="required" placeholder="">
+                                <img src="" id="show" width="200">
                             </div>
                         </div>
                         <div class="form-group">
@@ -194,29 +203,23 @@
         margin-right:0;
     }
 </style>
-<script src="{$static}/js/ms/jquery.ajaxfileupload.js" type="text/javascript"></script>
-<script type="text/javascript">
-    $(function () {
-        // alert(1111);return false;
-        $(":button").click(function () {
-            ajaxFileUpload();
-        })
-    })
-    function ajaxFileUpload() {
-        $.ajaxFileUpload({
-            fileElementId: file1,    //需要上传的文件域的ID，即<input type="file">的ID。
-            url: 'index.php/index/ucenter/upload_image.html', //后台方法的路径
-            type: 'post',   //当要提交自定义参数时，这个参数要设置成post
-            dataType: 'json',   //服务器返回的数据类型。可以为xml,script,json,html。如果不填写，jQuery会自动判断。
-            secureuri: false,   //是否启用安全提交，默认为false。
-            async : true,   //是否是异步
-            success: function(data) {   //提交成功后自动执行的处理函数，参数data就是服务器返回的数据。
-                if (callback) callback.call(this, data);
-            },
-            error: function(data, status, e) {  //提交失败自动执行的处理函数。
-                console.error(e);
-            }
-        });
-        return false;
+<script>
+    function changepic(obj) {
+        //console.log(obj.files[0]);//这里可以获取上传文件的name
+        var newsrc=getObjectURL(obj.files[0]);
+        document.getElementById('show').src=newsrc;
+    }
+    //建立一個可存取到該file的url
+    function getObjectURL(file) {
+        var url = null ;
+        // 下面函数执行的效果是一样的，只是需要针对不同的浏览器执行不同的 js 函数而已
+        if (window.createObjectURL!=undefined) { // basic
+            url = window.createObjectURL(file) ;
+        } else if (window.URL!=undefined) { // mozilla(firefox)
+            url = window.URL.createObjectURL(file) ;
+        } else if (window.webkitURL!=undefined) { // webkit or chrome
+            url = window.webkitURL.createObjectURL(file) ;
+        }
+        return url ;
     }
 </script>
