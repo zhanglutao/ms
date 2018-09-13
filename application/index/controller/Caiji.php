@@ -581,6 +581,7 @@ class Caiji
 //                        $value['food_url'] = 'https://home.meishichina.com/recipe-171603.html';
 //                        $value['food_url'] = 'https://home.meishichina.com/recipe-168634.html';
 //                        $value['food_url'] = 'https://home.meishichina.com/recipe-167154.html';
+//                        $value['food_url'] = 'https://home.meishichina.com/recipe-168751.html';
 
                         if (Db::name('food')->where('old_id=' . $oldid)->find()) {
                             Db::rollback();
@@ -809,16 +810,23 @@ class Caiji
 
                         }
                         if (isset($data[2]['main_material'])) {
-//                            preg_match_all('/target="_blank">(.+?)<\/a>/', $data[2]['main_material'], $tag33);
-                            preg_match_all('/title="(.+?)"/', $data[2]['main_material'], $tag33);
-                            preg_match_all('/<b>(.+?)<\/b>/', $data[2]['main_material'], $tag33);
+                            preg_match_all('/target="_blank">(.+?)<\/a>/', $data[2]['main_material'], $tag33);
+                            if (!is_array($tag33)){
+                                preg_match_all('/<b>(.+?)<\/b>/', $data[2]['main_material'], $tag33);
+                            }
+                            if (!is_array($tag33)){
+                                preg_match_all('/title="(.+?)"/', $data[2]['main_material'], $tag33);
+                            }
+
                             preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[2]['main_material'], $tag44);
                             str_replace('<b>', '', $tag33[1]);
                             str_replace('</b>', '', $tag33[1]);
                             if (count($tag33[1]) == count($tag44[1])) {
+//                                echo 111111111;
                                 $mix_material = array_combine($tag33[1], $tag44[1]);
                                 $data1['mix_material'] = json_encode($mix_material);
                             }else{
+//                                echo 222222222;
                                 $tmp = array();
                                 if (count($tag33[1]) < count($tag44[1])){
                                     foreach ($tag33[1] as $key => $value){
@@ -852,9 +860,11 @@ class Caiji
                                 str_replace('<b>', '', $tag33[1]);
                                 str_replace('</b>', '', $tag33[1]);
                                 if (count($tag33[1]) == count($tag44[1])) {
+//                                    echo 33333333;
                                     $mix_material = array_combine($tag33[1], $tag44[1]);
                                     $data1['mix_material'] = json_encode($mix_material);
                                 }else{
+//                                    echo 444444444;
                                     $tmp = array();
                                     if (count($tag33[1]) < count($tag44[1])){
                                         foreach ($tag33[1] as $key => $value){
@@ -883,7 +893,7 @@ class Caiji
                                 }
                             }
                         }
-
+//                        var_dump($data1['mix_material']);exit;
                         if (isset($data[3]['main_material'])) {
                             preg_match_all('/target="_blank">(.+?)<\/a>/', $data[3]['main_material'], $tag333);
                             preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[3]['main_material'], $tag443);
