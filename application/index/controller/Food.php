@@ -34,6 +34,7 @@ class Food extends Base{
             $food['images'] = explode(',',$food['images']);
             $food['main_material'] = json_decode($food['main_material']);
             $food['assist_material'] = json_decode($food['assist_material']);
+            $food['mix_material'] = json_decode($food['mix_material']);
             $food['other_tags'] = json_decode($food['other_tags']);
             $food['cooking_process'] = json_decode($food['cooking_process']);
             $food['tips'] = json_decode($food['tips']);

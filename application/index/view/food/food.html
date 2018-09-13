@@ -333,7 +333,7 @@
         <div class="space_left">
             <div class="userTop clear">
                 <h1 class="recipe_De_title"><a href="https://home.meishichina.com/recipe-416451.html" id="recipe_title"
-                                               title="一锅香">一锅香</a>
+                                               title="{$food.food_name}">{$food.food_name}</a>
                 </h1>
                 <a title="Elin厨房" href="https://home.meishichina.com/space-786503.html" target="_blank" class="uright">
                     <img src="./food_files/03_avatar_big.jpg">
@@ -344,10 +344,14 @@
                 <div class="recipDetail">
                     <input type="hidden" id="recipe_id" value="416451">
                     <input type="hidden" id="recipe_uid" value="786503">
-                    <input type="hidden" id="recipe_title" value="一锅香">
+                    <input type="hidden" id="recipe_title" value="{$food.food_name}">
                     <div class="recipe_De_imgBox" id="recipe_De_imgBox">
-                        <a class="J_photo" title="一锅香的做法"><span></span><img
-                                src="./food_files/201809041536040857695786503.jpg" alt="一锅香的做法"> </a>
+                        {if $food.top_image neq ''}
+                        <a class="J_photo" title="{$food.food_name}的做法">
+                            <span></span>
+                            <img src="{$food.top_image}?x-oss-process=style/p800" alt="{$food.food_name}的做法">
+                        </a>
+                        {/if}
                         <p class="J_photo" style="opacity: 0.7; display: none;">
                             <span class="De_bg">&nbsp;</span>
                             <span class="De_photo">1张图片</span>
@@ -356,56 +360,72 @@
                     <div class="mo mt20">
                         <h3>食材明细</h3>
                     </div>
+                    {php}
+                    if (isset($food['main_material']) && !empty($food['main_material'])){
+                    echo '
                     <fieldset class="particulars">
                         <legend>主料</legend>
                         <div class="recipeCategory_sub_R clear">
-                            <ul>
-                                <li>
-<span class="category_s1">
-<a target="_blank" href="https://www.meishichina.com/YuanLiao/WuHuaRou/" title="五花肉的做法"><b>五花肉</b></a>
-</span>
-                                    <span class="category_s2">200g</span>
-                                </li>
-                                <li>
-<span class="category_s1">
-<a target="_blank" href="https://www.meishichina.com/YuanLiao/DouFu/" title="水豆腐的做法"><b>水豆腐</b></a>
-</span>
-                                    <span class="category_s2">1块</span>
-                                </li>
-                                <li>
-<span class="category_s1">
-<b>小木耳</b>
-</span>
-                                    <span class="category_s2">100g</span>
-                                </li>
-                                <li>
-<span class="category_s1">
-<a target="_blank" href="https://www.meishichina.com/YuanLiao/JiDan/" title="鸡蛋的做法"><b>鸡蛋</b></a>
-</span>
-                                    <span class="category_s2">3个</span>
-                                </li>
+                            <ul>';
+                                foreach($food['main_material'] as $key => $value)
+                                {
+                                echo '<li>
+                                    <span class="category_s1">
+                                    <a target="_blank" href="https://www.meishichina.com/YuanLiao/WuHuaRou/" title="{$key}的做法"><b>'.$key.'</b></a>
+                                    </span>
+                                    <span class="category_s2">'.$value.'</span>
+                                </li>';
+                                }
+                        echo'
                             </ul>
                         </div>
-                    </fieldset>
+                    </fieldset>';
+                    }
+                    {/php}
+                    {php}
+                    if (isset($food['assist_material']) && !empty($food['assist_material'])){
+                    echo '
                     <fieldset class="particulars">
                         <legend>辅料</legend>
                         <div class="recipeCategory_sub_R clear">
-                            <ul>
-                                <li>
-<span class="category_s1">
-<a target="_blank" href="https://www.meishichina.com/YuanLiao/LaJiao/" title="辣椒的做法"><b>辣椒</b></a>
-</span>
-                                    <span class="category_s2">适量</span>
-                                </li>
-                                <li>
-<span class="category_s1">
-<a target="_blank" href="https://www.meishichina.com/YuanLiao/DaSuan/" title="蒜米的做法"><b>蒜米</b></a>
-</span>
-                                    <span class="category_s2">20g</span>
-                                </li>
+                            <ul>';
+                                foreach($food['assist_material'] as $key => $value)
+                                {
+                                echo '<li>
+                                    <span class="category_s1">
+                                    <a target="_blank" href="https://www.meishichina.com/YuanLiao/WuHuaRou/" title="{$key}的做法"><b>'.$key.'</b></a>
+                                    </span>
+                                    <span class="category_s2">'.$value.'</span>
+                                </li>';
+                                }
+                                echo'
                             </ul>
                         </div>
-                    </fieldset>
+                    </fieldset>';
+                    }
+                    {/php}
+                    {php}
+                    if (isset($food['mix_material']) && !empty($food['mix_material'])){
+                    echo '
+                    <fieldset class="particulars">
+                        <legend>其它配料</legend>
+                        <div class="recipeCategory_sub_R clear">
+                            <ul>';
+                                foreach($food['mix_material'] as $key => $value)
+                                {
+                                echo '<li>
+                                    <span class="category_s1">
+                                    <a target="_blank" href="https://www.meishichina.com/YuanLiao/WuHuaRou/" title="{$key}的做法"><b>'.$key.'</b></a>
+                                    </span>
+                                    <span class="category_s2">'.$value.'</span>
+                                </li>';
+                                }
+                                echo'
+                            </ul>
+                        </div>
+                    </fieldset>';
+                    }
+                    {/php}
                     <div class="recipeCategory_sub_R mt30 clear">
                         <ul>
                             <li>

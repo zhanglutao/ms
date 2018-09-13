@@ -17,7 +17,7 @@ use app\common\controller\Frontend;
 
 use think\Controller;
 use think\Db;
-class Base extends Frontend{
+class Base extends Controller{
     public $static_domain = 'http://static.meishiheavn.com';
 
     public function _initialize()
