@@ -735,6 +735,9 @@ class Caiji
 
                         if (isset($data[1]['main_material'])) {
                             preg_match_all('/<b>(.+?)<\/b>/', $data[1]['main_material'], $tag3);
+                            if (empty($tag3[0])){
+                                preg_match_all('/title="(.+?)"/', $data[1]['main_material'], $tag3);
+                            }
                             preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[1]['main_material'], $tag4);
                             str_replace('<b>', '', $tag3[1]);
                             str_replace('</b>', '', $tag3[1]);
@@ -812,16 +815,13 @@ class Caiji
 //                        var_dump($data[2]['main_material']);
                         if (isset($data[2]['main_material'])) {
                             preg_match_all('/target="_blank">(.+?)<\/a>/', $data[2]['main_material'], $tag33);
-                            var_dump($tag33);
                             if (empty($tag33[0])){
-//                                echo 00000;
                                 preg_match_all('/<b>(.+?)<\/b>/', $data[2]['main_material'], $tag33);
                             }
                             if (empty($tag33[0])){
-//                                echo 99999;
                                 preg_match_all('/title="(.+?)"/', $data[2]['main_material'], $tag33);
                             }
-//                            var_dump($tag33);
+
                             preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[2]['main_material'], $tag44);
                             str_replace('<b>', '', $tag33[1]);
                             str_replace('</b>', '', $tag33[1]);
