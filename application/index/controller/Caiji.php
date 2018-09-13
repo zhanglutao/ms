@@ -580,7 +580,7 @@ class Caiji
 //                        $value['food_url'] = 'https://home.meishichina.com/recipe-160102.html';
 //                        $value['food_url'] = 'https://home.meishichina.com/recipe-171603.html';
 //                        $value['food_url'] = 'https://home.meishichina.com/recipe-168634.html';
-                        $value['food_url'] = 'https://home.meishichina.com/recipe-167154.html';
+//                        $value['food_url'] = 'https://home.meishichina.com/recipe-167154.html';
 
                         if (Db::name('food')->where('old_id=' . $oldid)->find()) {
                             Db::rollback();
@@ -812,7 +812,6 @@ class Caiji
 //                            preg_match_all('/target="_blank">(.+?)<\/a>/', $data[2]['main_material'], $tag33);
                             preg_match_all('/title="(.+?)"/', $data[2]['main_material'], $tag33);
                             preg_match_all('/<b>(.+?)<\/b>/', $data[2]['main_material'], $tag33);
-//                            var_dump($tag33);exit;
                             preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[2]['main_material'], $tag44);
                             str_replace('<b>', '', $tag33[1]);
                             str_replace('</b>', '', $tag33[1]);
