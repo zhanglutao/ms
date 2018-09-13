@@ -581,7 +581,7 @@ class Caiji
 //                        $value['food_url'] = 'https://home.meishichina.com/recipe-171603.html';
 //                        $value['food_url'] = 'https://home.meishichina.com/recipe-168634.html';
 //                        $value['food_url'] = 'https://home.meishichina.com/recipe-167154.html';
-//                        $value['food_url'] = 'https://home.meishichina.com/recipe-168751.html';
+//                        $value['food_url'] = 'https://home.meishichina.com/recipe-168608.html';
 
                         if (Db::name('food')->where('old_id=' . $oldid)->find()) {
                             Db::rollback();
@@ -809,15 +809,19 @@ class Caiji
                             }
 
                         }
+//                        var_dump($data[2]['main_material']);
                         if (isset($data[2]['main_material'])) {
                             preg_match_all('/target="_blank">(.+?)<\/a>/', $data[2]['main_material'], $tag33);
-                            if (!is_array($tag33)){
+                            var_dump($tag33);
+                            if (empty($tag33[0])){
+//                                echo 00000;
                                 preg_match_all('/<b>(.+?)<\/b>/', $data[2]['main_material'], $tag33);
                             }
-                            if (!is_array($tag33)){
+                            if (empty($tag33[0])){
+//                                echo 99999;
                                 preg_match_all('/title="(.+?)"/', $data[2]['main_material'], $tag33);
                             }
-
+//                            var_dump($tag33);
                             preg_match_all('/<span class="category_s2">(.+?)<\/span>/', $data[2]['main_material'], $tag44);
                             str_replace('<b>', '', $tag33[1]);
                             str_replace('</b>', '', $tag33[1]);
