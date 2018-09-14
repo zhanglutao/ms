@@ -8,7 +8,6 @@
 
 namespace app\index\controller;
 
-use think\Controller;
 use think\Db;
 class Category extends Base{
     public function _initialize()

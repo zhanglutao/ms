@@ -2,6 +2,7 @@
 
 namespace app\index\controller;
 
+use app\common\controller\Frontend;
 use app\index\controller\Base;
 use think\Db;
 use think\Url;
@@ -10,7 +11,7 @@ use think\Url;
 /**
  * 会员中心
  */
-class Ucenter extends Base
+class Ucenter extends Frontend
 {
 
     protected $layout = 'default';
