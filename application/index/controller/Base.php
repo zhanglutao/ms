@@ -13,7 +13,6 @@
  */
 
 namespace app\index\controller;
-use app\common\controller\Frontend;
 
 use think\Controller;
 use think\Db;
