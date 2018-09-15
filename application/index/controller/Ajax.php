@@ -36,6 +36,27 @@ class Ajax extends Frontend
     public function upload()
     {
         return action('api/common/upload');
+        if (!empty($food['cooking_process'])){
+            echo'
+                    <div class="recipeStep">
+                        <ul>';
+            foreach($food['cooking_process'] as $key => $value)
+            {
+                echo'
+                            <li>
+                                <div class="recipeStep_img">
+                                    <img src="'.$food['images'][$key].'" alt="'.$food['food_name'].'的做法步骤：'.$key.'">
+                                </div>
+                                <div class="recipeStep_word">
+                                    <div class="recipeStep_num">'.$key.'</div>'.
+            $value.
+            '</div>
+                            </li>';
+                            }
+            echo'
+                        </ul>
+                    </div>';
+        }
     }
 
 }

@@ -1,0 +1,1131 @@
+---------------------------------------------------------------
+[ 2018-09-03T22:18:13+08:00 ] 114.240.134.47 GET /
+[ info ] test.meishiheavn.com/ [运行时间：0.539243s][吞吐率：1.85req/s] [内存消耗：3,518.13kb] [文件加载：86]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000149s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003757s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.022830s ]
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /home/wwwroot/ms/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:18:57+08:00 ] 114.240.134.47 GET /index.php
+[ info ] test.meishiheavn.com/index.php [运行时间：0.037267s][吞吐率：26.83req/s] [内存消耗：3,361.91kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000143s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001063s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001613s ]
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /home/wwwroot/ms/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:19:03+08:00 ] 114.240.134.47 GET /index.php/index/user/index.html
+[ info ] test.meishiheavn.com/index.php/index/user/index.html [运行时间：0.135127s][吞吐率：7.40req/s] [内存消耗：3,971.75kb] [文件加载：92]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000032s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001042s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001374s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000370s ] mysql:host=127.0.0.1;dbname=msheavn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ms_user_token` [ RunTime:0.000677s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_user_token` WHERE  `token` = 'd8aa945b8448d8a41ab99c04b04f9e522294b47c' LIMIT 1 [ RunTime:0.000274s ]
+---------------------------------------------------------------
+[ 2018-09-03T22:19:06+08:00 ] 114.240.134.47 GET /index.php/index/user/login.html
+[ info ] test.meishiheavn.com/index.php/index/user/login.html [运行时间：0.069236s][吞吐率：14.44req/s] [内存消耗：3,589.73kb] [文件加载：86]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000978s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php/index/user/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001298s ]
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->login[ /home/wwwroot/ms/application/index/controller/User.php ]
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/user/login.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'url',
+  4 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:19:07+08:00 ] 114.240.134.47 GET /index.php/index/ajax/lang?callback=define&controllername=user&v=1535984346
+[ info ] test.meishiheavn.com/index.php/index/ajax/lang?callback=define&controllername=user&v=1535984346 [运行时间：0.039780s][吞吐率：25.14req/s] [内存消耗：3,300.41kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000018s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001306s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php/index/user/login.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1535984346',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001336s ]
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /home/wwwroot/ms/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:19:17+08:00 ] 114.240.134.47 GET /index.php/index/user/login
+[ info ] test.meishiheavn.com/index.php/index/user/login [运行时间：0.037042s][吞吐率：27.00req/s] [内存消耗：3,431.22kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000017s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000980s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001337s ]
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->login[ /home/wwwroot/ms/application/index/controller/User.php ]
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/user/login.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'url',
+  4 => 'title',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:19:17+08:00 ] 114.240.134.47 GET /index.php/index/ajax/lang?callback=define&controllername=user&v=1535984357
+[ info ] test.meishiheavn.com/index.php/index/ajax/lang?callback=define&controllername=user&v=1535984357 [运行时间：0.035995s][吞吐率：27.78req/s] [内存消耗：3,300.38kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000020s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001019s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php/index/user/login',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1535984357',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001390s ]
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /home/wwwroot/ms/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:19:38+08:00 ] 114.240.134.47 GET /index.php/category/foodCategory/page/1/category/1.html
+[ info ] test.meishiheavn.com/index.php/category/foodCategory/page/1/category/1.html [运行时间：0.082976s][吞吐率：12.05req/s] [内存消耗：2,296.27kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000017s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000946s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'category',
+    1 => 'foodCategory',
+    2 => 'page',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  0 => 'category',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:19:45+08:00 ] 114.240.134.47 GET /index.php/Category/foodCategory/page/1/category/1.html
+[ info ] test.meishiheavn.com/index.php/Category/foodCategory/page/1/category/1.html [运行时间：0.027259s][吞吐率：36.69req/s] [内存消耗：2,296.27kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000017s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000957s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Category',
+    1 => 'foodCategory',
+    2 => 'page',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  0 => 'category',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:22:11+08:00 ] 114.240.134.47 GET /index.php/index/Category/foodCategory/page/1/category/1.html
+[ info ] test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/1.html [运行时间：0.089825s][吞吐率：11.13req/s] [内存消耗：3,851.94kb] [文件加载：86]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000017s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001246s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Category',
+    2 => 'foodCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'category' => '1',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002077s ]
+[ info ] [ RUN ] app\index\controller\Category->foodCategory[ /home/wwwroot/ms/application/index/controller/Category.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/category/food_category.html [ array (
+  0 => 'static',
+  1 => 'foodlist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000326s ] mysql:host=127.0.0.1;dbname=msheavn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ms_food_list` [ RunTime:0.000635s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_food_list` `a` INNER JOIN `ms_food_category_relation` `b` ON `a`.`food_id`=b.food_id and a.status = 1 WHERE  (  b.food_category_id =1 ) LIMIT 0,10 [ RunTime:0.038855s ]
+---------------------------------------------------------------
+[ 2018-09-03T22:22:12+08:00 ] 114.240.134.47 GET /index.php/index/Category/foodCategory/page/1/category/list_files/nr3.png
+[ info ] test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/list_files/nr3.png [运行时间：0.060704s][吞吐率：16.47req/s] [内存消耗：2,762.48kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000018s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001118s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Category',
+    2 => 'foodCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/1.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'category' => 'list_files',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004355s ]
+[ info ] [ RUN ] app\index\controller\Category->foodCategory[ /home/wwwroot/ms/application/index/controller/Category.php ]
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/category/food_category.html [ array (
+  0 => 'static',
+  1 => 'foodlist',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:22:12+08:00 ] 114.240.134.47 GET /index.php/index/Category/foodCategory/page/1/category/list_files/msc_app.png
+[ info ] test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/list_files/msc_app.png [运行时间：0.062618s][吞吐率：15.97req/s] [内存消耗：2,762.48kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000018s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000994s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Category',
+    2 => 'foodCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/1.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'category' => 'list_files',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004334s ]
+[ info ] [ RUN ] app\index\controller\Category->foodCategory[ /home/wwwroot/ms/application/index/controller/Category.php ]
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/category/food_category.html [ array (
+  0 => 'static',
+  1 => 'foodlist',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:22:12+08:00 ] 114.240.134.47 GET /index.php/index/Category/foodCategory/page/1/category/list_files/nir1.png
+[ info ] test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/list_files/nir1.png [运行时间：0.059108s][吞吐率：16.92req/s] [内存消耗：2,762.48kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000018s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000946s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Category',
+    2 => 'foodCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/1.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'category' => 'list_files',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004253s ]
+[ info ] [ RUN ] app\index\controller\Category->foodCategory[ /home/wwwroot/ms/application/index/controller/Category.php ]
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/category/food_category.html [ array (
+  0 => 'static',
+  1 => 'foodlist',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:22:12+08:00 ] 114.240.134.47 GET /index.php/index/Category/foodCategory/page/1/category/list_files/nir2.png
+[ info ] test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/list_files/nir2.png [运行时间：0.056767s][吞吐率：17.62req/s] [内存消耗：2,762.48kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000914s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Category',
+    2 => 'foodCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/1.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'category' => 'list_files',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003055s ]
+[ info ] [ RUN ] app\index\controller\Category->foodCategory[ /home/wwwroot/ms/application/index/controller/Category.php ]
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/category/food_category.html [ array (
+  0 => 'static',
+  1 => 'foodlist',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:22:12+08:00 ] 114.240.134.47 GET /index.php/index/Category/foodCategory/page/1/category/list_files/nir3.png
+[ info ] test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/list_files/nir3.png [运行时间：0.054407s][吞吐率：18.38req/s] [内存消耗：2,762.48kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000942s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Category',
+    2 => 'foodCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/1.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'category' => 'list_files',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001257s ]
+[ info ] [ RUN ] app\index\controller\Category->foodCategory[ /home/wwwroot/ms/application/index/controller/Category.php ]
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/category/food_category.html [ array (
+  0 => 'static',
+  1 => 'foodlist',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:22:12+08:00 ] 114.240.134.47 GET /index.php/index/Category/foodCategory/page/1/category/list_files/nr1.png
+[ info ] test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/list_files/nr1.png [运行时间：0.061080s][吞吐率：16.37req/s] [内存消耗：2,762.48kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000932s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Category',
+    2 => 'foodCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/1.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'category' => 'list_files',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004294s ]
+[ info ] [ RUN ] app\index\controller\Category->foodCategory[ /home/wwwroot/ms/application/index/controller/Category.php ]
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/category/food_category.html [ array (
+  0 => 'static',
+  1 => 'foodlist',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:22:12+08:00 ] 114.240.134.47 GET /index.php/index/Category/foodCategory/page/1/category/list_files/weixin.png
+[ info ] test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/list_files/weixin.png [运行时间：0.060003s][吞吐率：16.67req/s] [内存消耗：2,762.48kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000017s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005977s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Category',
+    2 => 'foodCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/1.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'category' => 'list_files',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004401s ]
+[ info ] [ RUN ] app\index\controller\Category->foodCategory[ /home/wwwroot/ms/application/index/controller/Category.php ]
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/category/food_category.html [ array (
+  0 => 'static',
+  1 => 'foodlist',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:22:12+08:00 ] 114.240.134.47 GET /index.php/index/Category/foodCategory/page/1/category/list_files/nr2.png
+[ info ] test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/list_files/nr2.png [运行时间：0.056234s][吞吐率：17.78req/s] [内存消耗：2,762.48kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000016s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001000s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Category',
+    2 => 'foodCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/1.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'category' => 'list_files',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001303s ]
+[ info ] [ RUN ] app\index\controller\Category->foodCategory[ /home/wwwroot/ms/application/index/controller/Category.php ]
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/category/food_category.html [ array (
+  0 => 'static',
+  1 => 'foodlist',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:23:15+08:00 ] 114.240.134.47 GET /index.php/index/Category/foodCategory/page/1/category/1.html
+[ info ] test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/1.html [运行时间：0.041989s][吞吐率：23.82req/s] [内存消耗：3,904.85kb] [文件加载：87]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000017s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000953s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Category',
+    2 => 'foodCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'category' => '1',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001270s ]
+[ info ] [ RUN ] app\index\controller\Category->foodCategory[ /home/wwwroot/ms/application/index/controller/Category.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/category/food_category.html [ array (
+  0 => 'static',
+  1 => 'foodlist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000278s ] mysql:host=127.0.0.1;dbname=msheavn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ms_food_list` [ RunTime:0.000592s ]
+[ sql ] [ SQL ] SELECT * FROM `ms_food_list` `a` INNER JOIN `ms_food_category_relation` `b` ON `a`.`food_id`=b.food_id and a.status = 1 WHERE  (  b.food_category_id =1 ) LIMIT 0,10 [ RunTime:0.000222s ]
+---------------------------------------------------------------
+[ 2018-09-03T22:23:16+08:00 ] 114.240.134.47 GET /index.php/index/Category/foodCategory/page/1/category/list_files/nr3.png
+[ info ] test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/list_files/nr3.png [运行时间：0.060614s][吞吐率：16.50req/s] [内存消耗：2,762.55kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000017s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000959s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Category',
+    2 => 'foodCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/1.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'category' => 'list_files',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001307s ]
+[ info ] [ RUN ] app\index\controller\Category->foodCategory[ /home/wwwroot/ms/application/index/controller/Category.php ]
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/category/food_category.html [ array (
+  0 => 'static',
+  1 => 'foodlist',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:23:16+08:00 ] 114.240.134.47 GET /index.php/index/Category/foodCategory/page/1/category/list_files/msc_app.png
+[ info ] test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/list_files/msc_app.png [运行时间：0.061337s][吞吐率：16.30req/s] [内存消耗：2,762.55kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003034s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001389s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Category',
+    2 => 'foodCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/1.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'category' => 'list_files',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001237s ]
+[ info ] [ RUN ] app\index\controller\Category->foodCategory[ /home/wwwroot/ms/application/index/controller/Category.php ]
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/category/food_category.html [ array (
+  0 => 'static',
+  1 => 'foodlist',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:23:16+08:00 ] 114.240.134.47 GET /index.php/index/Category/foodCategory/page/1/category/list_files/nir1.png
+[ info ] test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/list_files/nir1.png [运行时间：0.058222s][吞吐率：17.18req/s] [内存消耗：2,762.55kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000018s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000976s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Category',
+    2 => 'foodCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/1.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'category' => 'list_files',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001257s ]
+[ info ] [ RUN ] app\index\controller\Category->foodCategory[ /home/wwwroot/ms/application/index/controller/Category.php ]
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/category/food_category.html [ array (
+  0 => 'static',
+  1 => 'foodlist',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:23:16+08:00 ] 114.240.134.47 GET /index.php/index/Category/foodCategory/page/1/category/list_files/nir3.png
+[ info ] test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/list_files/nir3.png [运行时间：0.060631s][吞吐率：16.49req/s] [内存消耗：2,762.55kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003996s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Category',
+    2 => 'foodCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/1.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'category' => 'list_files',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004413s ]
+[ info ] [ RUN ] app\index\controller\Category->foodCategory[ /home/wwwroot/ms/application/index/controller/Category.php ]
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/category/food_category.html [ array (
+  0 => 'static',
+  1 => 'foodlist',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:23:16+08:00 ] 114.240.134.47 GET /index.php/index/Category/foodCategory/page/1/category/list_files/nir2.png
+[ info ] test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/list_files/nir2.png [运行时间：0.061945s][吞吐率：16.14req/s] [内存消耗：2,762.55kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000020s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000966s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Category',
+    2 => 'foodCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/1.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'category' => 'list_files',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001323s ]
+[ info ] [ RUN ] app\index\controller\Category->foodCategory[ /home/wwwroot/ms/application/index/controller/Category.php ]
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/category/food_category.html [ array (
+  0 => 'static',
+  1 => 'foodlist',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:23:16+08:00 ] 114.240.134.47 GET /index.php/index/Category/foodCategory/page/1/category/list_files/nr1.png
+[ info ] test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/list_files/nr1.png [运行时间：0.060038s][吞吐率：16.66req/s] [内存消耗：2,762.55kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000916s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Category',
+    2 => 'foodCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/1.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'category' => 'list_files',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001291s ]
+[ info ] [ RUN ] app\index\controller\Category->foodCategory[ /home/wwwroot/ms/application/index/controller/Category.php ]
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/category/food_category.html [ array (
+  0 => 'static',
+  1 => 'foodlist',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:23:16+08:00 ] 114.240.134.47 GET /index.php/index/Category/foodCategory/page/1/category/list_files/nr2.png
+[ info ] test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/list_files/nr2.png [运行时间：0.059862s][吞吐率：16.71req/s] [内存消耗：2,762.55kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000018s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000993s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Category',
+    2 => 'foodCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/1.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'category' => 'list_files',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001272s ]
+[ info ] [ RUN ] app\index\controller\Category->foodCategory[ /home/wwwroot/ms/application/index/controller/Category.php ]
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/category/food_category.html [ array (
+  0 => 'static',
+  1 => 'foodlist',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:23:16+08:00 ] 114.240.134.47 GET /index.php/index/Category/foodCategory/page/1/category/list_files/weixin.png
+[ info ] test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/list_files/weixin.png [运行时间：0.057230s][吞吐率：17.47req/s] [内存消耗：2,762.55kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000895s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Category',
+    2 => 'foodCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/1.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'category' => 'list_files',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001245s ]
+[ info ] [ RUN ] app\index\controller\Category->foodCategory[ /home/wwwroot/ms/application/index/controller/Category.php ]
+[ info ] [ VIEW ] /home/wwwroot/ms/public/../application/index/view/category/food_category.html [ array (
+  0 => 'static',
+  1 => 'foodlist',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T22:23:23+08:00 ] 114.240.134.47 GET /index.php/index/food/content/food_id/5.html
+[ info ] test.meishiheavn.com/index.php/index/food/content/food_id/5.html [运行时间：0.065156s][吞吐率：15.35req/s] [内存消耗：2,547.60kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000020s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001075s ]
+[ info ] [ LANG ] /home/wwwroot/ms/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'food',
+    2 => 'content',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535732424,1535810134,1535984338; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1535984338; PHPSESSID=bvujsjhb03e7q6fbog30ol8b9q',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://test.meishiheavn.com/index.php/index/Category/foodCategory/page/1/category/1.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'test.meishiheavn.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'food_id' => '5',
+)
+[ info ] [ LANG ] /home/wwwroot/ms/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001299s ]
+[ info ] [ LOG ] INIT File

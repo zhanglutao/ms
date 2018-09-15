@@ -455,7 +455,7 @@
                     </div>
 
                     {php}
-                    if (!empty($food.cooking_process)){
+                    if (!empty($food['cooking_process'])){
                     echo'
                     <div class="recipeStep">
                         <ul>';
@@ -464,10 +464,10 @@
                             echo'
                             <li>
                                 <div class="recipeStep_img">
-                                    <img src="'.$food['images'][$key].'" alt="'.$food['food_name'].'的做法步骤：'.$key+1.'">
+                                    <img src="'.$food['images'][$key].'?x-oss-process=style/p320" alt="'.$food['food_name'].'的做法步骤：'.intval($key+1).'">
                                 </div>
                                 <div class="recipeStep_word">
-                                    <div class="recipeStep_num">'.$key+1.'</div>'.
+                                    <div class="recipeStep_num">'.intval($key+1).'</div>'.
                                     $value.
                                 '</div>
                             </li>';
