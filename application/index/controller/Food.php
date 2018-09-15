@@ -43,12 +43,15 @@ class Food extends Base{
         }else{
             Log::error('菜谱里面什么都没有');
         }
+        foreach ($food['images'] as $key => &$value){
+            $value = str_replace('"','',$value);
+        }
         var_dump($food);
-
         $this->assign('page',$page);
         $this->assign('food',$food);
         return $this->fetch();
 
     }
+
 
 }

@@ -385,8 +385,11 @@
                     {php}
                     if (isset($food['assist_material']) && !empty($food['assist_material'])){
                     echo '
-                    <fieldset class="particulars">
-                        <legend>辅料</legend>
+                    <fieldset class="particulars">';
+                        if (isset($food['assist_material']) && !empty($food['assist_material']) && isset($food['other_tags']) && !empty($food['other_tags'])){
+                        echo '<legend>辅料</legend>';
+                        }
+                        echo '
                         <div class="recipeCategory_sub_R clear">
                             <ul>';
                                 foreach($food['assist_material'] as $key => $value)
@@ -411,7 +414,7 @@
                         if (isset($food['other_tags']) && !empty($food['other_tags'])){
                         echo '<legend>配料</legend>';
                         }
-                        echo'
+                        echo '
                         <div class="recipeCategory_sub_R clear">
                             <ul>';
                                 foreach($food['mix_material'] as $key => $value)
