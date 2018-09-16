@@ -480,18 +480,23 @@
                     </div>';
                     }
                     {/php}
+                    {neq name="$food.tips" value=''}
+                    <div class="recipeTip">
+                        小提示：
+                        {$food.tips}
+                    </div>
+                    {/neq}
                     <div class="recipeTip mt16">
-                        来自 美食天下 <a href="https://home.meishichina.com/space-786503.html" target="_blank">Elin厨房</a> 的作品
+                        来自 美食天堂 <a href="https://home.meishichina.com/space-786503.html" target="_blank">{$food.author_name}</a> 的作品
                     </div>
                     <div class="recipeTip mt16">
-                        使用的厨具：炒锅
+                        使用的厨具：{$food.kitchen_ware}
                     </div>
                     <div class="recipeTip mt16">
                         所属分类：
-                        <a title="热菜" href="https://home.meishichina.com/recipe/recai/" target="_blank">热菜</a>&nbsp;&nbsp;
-                        <a title="家常菜" href="https://home.meishichina.com/recipe/jiachang/" target="_blank">家常菜</a>&nbsp;&nbsp;
-                        <a title="午餐" href="https://home.meishichina.com/recipe/wucan/" target="_blank">午餐</a>&nbsp;&nbsp;
-                        <a title="晚餐" href="https://home.meishichina.com/recipe/wancan/" target="_blank">晚餐</a>&nbsp;&nbsp;
+                        {volist name="$category" id='vo'}
+                        <a title="{$vo.food_category_name}" href="{$vo.food_category_id}" target="_blank">{$vo.food_category_name}</a>&nbsp;&nbsp;
+                        {/volist}
                     </div>
                     <div class="recipeArction mt10 clear">
                         <ul class="collect_da">

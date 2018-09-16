@@ -46,9 +46,15 @@ class Food extends Base{
         foreach ($food['images'] as $key => &$value){
             $value = str_replace('"','',$value);
         }
-        var_dump($food);
+//        var_dump($food);
+        $category = Db::name('food_category')->alias('a')
+            ->join('food_category_relation b','a.food_category_id = b.food_category_id')
+            ->where('b.food_id ='.$food['food_id'].' and a.type = 1')
+            ->select();
+//        var_dump($category);
         $this->assign('page',$page);
         $this->assign('food',$food);
+        $this->assign('category',$category);
         return $this->fetch();
 
     }
