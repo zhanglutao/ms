@@ -17,10 +17,12 @@ class Ucenter extends Frontend
     protected $layout = 'default';
     protected $noNeedLogin = ['login', 'register', 'third'];
     protected $noNeedRight = ['*'];
+    public $static_domain = 'http://static.meishiheavn.com';
 
     public function _initialize()
     {
         parent::_initialize();
+        $this->assign('static',$this->static_domain);
     }
 
     public function menu(){

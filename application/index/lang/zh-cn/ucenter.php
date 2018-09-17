@@ -76,8 +76,15 @@ return [
     'Send back'                             => '退稿箱',
 
 
-    'Menu edit'                             => '编辑菜谱',
-    'Menu name'                             => '菜谱名称',
+    'Menu edit'                             => '编辑菜品',
+    'Menu name'                             => '菜品名称',
+    'Upload image'                          => '成品图片',
+    'Menu desc'                             => '菜品介绍',
+    'Category'                              => '菜品分类',
+    'Main material'                         => '菜品主料',
+    'Assist material'                       => '菜品辅料',
+    'Cooking process'                       => '做法步骤',
+    'Tips'                                  => '小窍门',
 
     'My dynamics'                           => '我的动态',
     'Dynamics of concern'                   => '关注的动态',
