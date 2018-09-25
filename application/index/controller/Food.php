@@ -11,6 +11,7 @@ namespace app\index\controller;
 use think\Controller;
 use think\Db;
 use think\Log;
+use think\Route;
 
 class Food extends Base{
     public function _initialize()
@@ -46,7 +47,20 @@ class Food extends Base{
         foreach ($food['images'] as $key => &$value){
             $value = str_replace('"','',$value);
         }
-//        var_dump($food);
+        var_dump($food);
+        foreach($food['main_material'] as $key => $value){
+//            echo $key;exit;
+            $category = Db::name('shicai_category')->field('category_id')->where('category_name = '.'"'.$key.'"')->find();
+            $url = url('index/Category/foodCategory',['category'=>$category['category_id']]);
+//            echo $key;exit;
+            echo $key = '<a href="/index.php'.$url.'">'.$key.'</a>';
+            echo 22222222;
+            echo $key;
+            echo '11111111111';
+            exit;
+            $temp[$key] = $value;
+        }
+        var_dump($temp);
         $category = Db::name('food_category')->alias('a')
             ->join('food_category_relation b','a.food_category_id = b.food_category_id')
             ->where('b.food_id ='.$food['food_id'].' and a.type = 1')
