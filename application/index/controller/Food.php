@@ -47,25 +47,51 @@ class Food extends Base{
         foreach ($food['images'] as $key => &$value){
             $value = str_replace('"','',$value);
         }
-        var_dump($food);
-        foreach($food['main_material'] as $key => $value){
-//            echo $key;exit;
-            $category = Db::name('shicai_category')->field('category_id')->where('category_name = '.'"'.$key.'"')->find();
-            $url = url('index/Category/foodCategory',['category'=>$category['category_id']]);
-//            echo $key;exit;
-            echo $key = '<a href="/index.php'.$url.'">'.$key.'</a>';
-            echo 22222222;
-            echo $key;
-            echo '11111111111';
-            exit;
-            $temp[$key] = $value;
+        if (!empty($food['main_material'])){
+            foreach($food['main_material'] as $key => $value){
+                $category = Db::name('shicai_category')->field('category_id')->where('category_name = '.'"'.$key.'"')->find();
+                $url = url('index/Category/foodCategory',['category'=>$category['category_id']]);
+                $key = '<a href="/index.php'.$url.'">'.$key.'</a>';
+                $temp1[$key] = $value;
+            }
+            $food['main_material_url'] = $temp1;
         }
-        var_dump($temp);
+
+        if (!empty($food['assist_material'])) {
+            foreach ($food['assist_material'] as $key => $value) {
+                $category = Db::name('shicai_category')->field('category_id')->where('category_name = ' . '"' . $key . '"')->find();
+                $url = url('index/Category/foodCategory', ['category' => $category['category_id']]);
+                $key = '<a href="/index.php' . $url . '">' . $key . '</a>';
+                $temp2[$key] = $value;
+            }
+            $food['assist_material_url'] = $temp2;
+        }
+
+        if (!empty($food['mix_material'])) {
+            foreach ($food['mix_material'] as $key => $value) {
+                $category = Db::name('shicai_category')->field('category_id')->where('category_name = ' . '"' . $key . '"')->find();
+                $url = url('index/Category/foodCategory', ['category' => $category['category_id']]);
+                $key = '<a href="/index.php' . $url . '">' . $key . '</a>';
+                $temp3[$key] = $value;
+            }
+            $food['mix_material_url'] = $temp3;
+        }
+        if (!empty($food['other_tags'])) {
+            foreach ($food['other_tags'] as $key => $value) {
+
+                $category = Db::name('shicai_category')->field('category_id')->where('category_name = ' . '"' . $key . '"')->find();
+                $url = url('index/Category/foodCategory', ['category' => $category['category_id']]);
+                $key = '<a href="/index.php' . $url . '">' . $key . '</a>';
+                $temp4[$key] = $value;
+            }
+            $food['other_tags_url'] = $temp4;
+        }
+
         $category = Db::name('food_category')->alias('a')
             ->join('food_category_relation b','a.food_category_id = b.food_category_id')
             ->where('b.food_id ='.$food['food_id'].' and a.type = 1')
             ->select();
-//        var_dump($category);
+        var_dump($food);
         $this->assign('page',$page);
         $this->assign('food',$food);
         $this->assign('category',$category);
